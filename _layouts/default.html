@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+   {% include head.html %}
+   <body id="home">
+   {% include svg.html %}
+      {% include mobile-menu.html %}
+      <div id="mobile" class="container-fluid ">
+         <div class="line">
+            {% include header.html %}
+            <section>
+               <div class="col-lg-12">
+                  {% include main-content.html %}
+               </div>
+            </section>
+         </div>
+            {% include projects.html %}
+            {% include contact.html %}
+      </div>
+      {% include footer.html %}
+   </body>
+</html>

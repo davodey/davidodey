@@ -1,0 +1,1 @@
+require([],function(){Modernizr.input.placeholder||require(["placeholder","app/ie-placeholder"]),Modernizr.mq("only all")||require(["respond"]),Modernizr.lastchild||require(["selectivzr"]),Modernizr.addTest("picture","HTMLPictureElement"in window)});

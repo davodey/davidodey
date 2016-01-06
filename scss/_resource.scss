@@ -1,0 +1,66 @@
+.resource-page {
+	margin-bottom:100px;
+	@media (max-width:640px){
+		padding-top:0;
+	}
+	
+	.row {
+		padding:0;
+	}
+	
+	em {
+		display:block;
+		margin-bottom:25px;
+	}
+	
+}
+
+.resource {
+	margin:50px 0 25px 0;	
+}
+
+.resource-row {
+	border-top:1px dotted $light-grey;
+	padding:25px;
+	text-align: left;
+	
+	&:hover {
+		background:$lighter-grey;
+	}
+	
+	@media (max-width:640px){
+		padding:25px 15px;
+	}
+	
+	h3 {
+		padding-top:0;
+		margin-top:0;
+		margin-bottom:5px;
+		font-size:1.2em;
+		
+		a {
+			color:$pink;
+			text-decoration: underline;
+		}
+	}
+	
+	img {
+		width:10%;
+		float:left;
+		border-radius:15%;
+		margin-right:30px;
+		
+		@media (max-width:640px){
+			width:30%;
+		}
+	}
+	
+	
+
+}
+
+.image, .description {
+	text-align: left;
+}
+
+

@@ -265,10 +265,12 @@ input, textarea, button {
 		background-color: $pink;
 		color:$white;
 		width:25%;
-		font-size:$unit * 1.68749999; /* 18px */
+		font-size:1em; /* 18px */
 		font-weight:700;
 		text-transform: uppercase;	
 		font-family:$button-font;
+		border:none;
+		border-radius:5px;
 		
 		&:hover {
 			background-color:lighten($pink, 10%);

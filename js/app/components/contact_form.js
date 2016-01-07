@@ -1,6 +1,6 @@
 $(document).ready(function(){
 $("#contactform").submit(function(){
-
+console.log('hello')
 var str = $(this).serialize();
 
    $.ajax({

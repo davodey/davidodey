@@ -108,6 +108,14 @@ img.profile-image {
 	
 }
 
+.blog-space {
+  padding:25px 0 0 0;
+  @media (max-width:640px){
+	margin-bottom:0;
+	padding-bottom:50px;
+  }
+}
+
 .margin-top {
 	margin-top:5%;
 }
@@ -409,4 +417,22 @@ a {
     }
 
 	
+}
+
+.second {
+  @media (max-width:640px){
+	display:none;
+  }
+}
+
+.margin-top-25 {
+  margin-top:25px;
+}
+
+.margin-top-75 {
+  margin-top:75px;
+}
+
+.padding-top-5 {
+  padding-top:5px;
 }

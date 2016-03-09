@@ -1,22 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-   {% include head.html %}
+   {% include meta/head.html %}
    <body id="home">
    {% include svg.html %}
-      {% include mobile-menu.html %}
+      {% include navigation.html %}
       <div id="mobile" class="container-fluid ">
          <div class="line">
-            {% include header.html %}
-            <section>
-               <div class="col-lg-12">
-                  {% include main-content.html %}
-               </div>
-            </section>
-         </div>
-            {% include blog.html %}
-            {% include projects.html %}
-            {% include contact.html %}
+            {{content}}
       </div>
-      {% include footer.html %}
+      {% include meta/footer.html %}
    </body>
 </html>

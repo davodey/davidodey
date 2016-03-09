@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-   {% include head.html %}
+   {% include meta/head.html %}
    <body id="home">
    {% include svg.html %}
-      {% include mobile-menu.html %}
+      {% include blog/navigation.html %}
       <div id="mobile" class="container-fluid ">
          <div class="line clear-fix">
-            {% include article.html %}
+            {% include blog/post.html %}
          </div>
       </div>
-      {% include footer.html %}
+      {% include meta/blog-footer.html %}
    </body>
 </html>

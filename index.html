@@ -35,9 +35,9 @@ layout: default
 			</div>
 			<div id="work" class="blog-space clear-fix">
 				<div class="col-md-12 article">
-					{% for post in site.posts %}
-					<img src="http://placehold.it/600x300">
-					<h3>{{ post.title }}</h3>
+					{% for post in site.posts limit:1 %}
+					{{post.main-image}}
+					<h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
 					<em> Written {% if post.author %} by {{ post.author }} {% endif %} on {{ post.date | date: "%b %-d, %Y" }}</em>
 					{{post.excerpt}}
 					<a href="{{ site.baseurl }}{{ post.url }}" class="button">Read Article</a>

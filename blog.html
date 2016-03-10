@@ -12,7 +12,7 @@ layout: blog
 </header>
 <section class="margin-top-75">
 	<div class="row">
-		<div class="col-lg-9 items">
+		<div class="col-lg-12 items">
 			{% for post in site.posts %}
 			<div class="col-lg-12 resource-row clear-fix">
 				<img src="img/patternlab.png">
@@ -21,17 +21,15 @@ layout: blog
 			</div>
 			{% endfor %}
 		</div>
-		<div class="col-lg-3 items">
+		<div class="col-lg-6 items">
 			<h2>Topics</h2>
 			<ul>
-				{% for post in site.posts %}
-				<li>
-					<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-				</li>
+				{% for category in site.categories %}
+				<li><a href="{{ site.baseurl }}/categories/{{ category | first }}" name="{{ category | first }}">{{ category | first }}</a></li>
 				{% endfor %}
 			</ul>
 		</div>
-		<div class="col-lg-3 items">
+		<div class="col-lg-6 items">
 			<h2>Latest Writings</h2>
 			<ul>
 				{% for post in site.posts %}

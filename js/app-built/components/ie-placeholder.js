@@ -1,3 +1,1 @@
-define(['placeholder','jquery'], function(placeholder,$) {
-    $('input, textarea').placeholder(); 
-});
+define(["placeholder","jquery"],function(e,t){t("input, textarea").placeholder()});

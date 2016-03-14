@@ -6,6 +6,7 @@ categories: opinion
 permalink: /:year/:month/:title
 author: David O'Dey
 main-image: <img src="http://placehold.it/600x300" alt="alt">
+active: blog
 ---
 
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.

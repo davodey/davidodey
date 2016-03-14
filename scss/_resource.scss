@@ -23,6 +23,11 @@
 	border-top:1px dotted $light-grey;
 	padding:25px;
 	text-align: left;
+
+  	&:last-child {
+	  border-bottom: 1px dotted $light-grey;
+	  margin-bottom:40px;
+	}
 	
 	&:hover {
 		background:$lighter-grey;
@@ -40,7 +45,7 @@
 		
 		a {
 			color:$pink;
-			text-decoration: underline;
+			text-decoration: none;
 		}
 	}
 	
@@ -62,5 +67,3 @@
 .image, .description {
 	text-align: left;
 }
-
-

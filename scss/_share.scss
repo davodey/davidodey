@@ -1,0 +1,36 @@
+.share {
+  padding:20px 0;
+}
+
+.share-links {
+	display:flex;
+	flex-direction:row;
+	flex-wrap:nowrap;
+	justify-content:space-between;
+  	li {
+	  flex-grow:1;
+	  width:auto;
+	  padding:10px;
+	  align-items: center;
+
+	  a {
+		color:$white;
+	  }
+	}
+}
+
+.twitter {
+  background-color:$twitter;
+}
+
+.facebook {
+  background-color:$facebook;
+}
+
+.google {
+  background-color:$google;
+}
+
+.email {
+  background-color:$email;
+}

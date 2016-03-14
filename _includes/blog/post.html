@@ -9,9 +9,15 @@
 		</div>
 		<div class="col-lg-8 article-copy">
 			{{content}}
+			<div class="share">
+				{% include blog/share.html %}
+			</div>
 		</div>
 		<div class="col-lg-2 padding-top-5">
 			Left sidebar content
+		</div>
+		<div class="comments">
+			{% include blog/disqus.html %}
 		</div>
 	</div>
 </article>

@@ -10,8 +10,9 @@ lib/selectivzr.js
 lib/feature-detection.js
 lib/validate/jquery.validate.js
 
-components/pages/home/main.js
+components/pages/main.js
 ----------------
-components/pages/home/main.js
+components/pages/main.js
 components/contact_form.js
 components/custom.js
+components/facebook.js

@@ -34,8 +34,8 @@
         
         
         //public modules
-            name: 'app/pages/home/main',
-            include:['app/contact_form', 'app/custom'],
+            name: 'app/pages/main',
+            include:['app/contact_form', 'app/custom', 'app/facebook'],
             exclude: ['../common']
        
         }        

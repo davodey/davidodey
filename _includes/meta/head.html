@@ -5,12 +5,29 @@
         <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
         <meta name="author" content="">
         <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+
         <!-- Modernizr -->
         <script src="{{ site.baseurl }}/js/app-built/lib/modernizr.js"></script>
+
         <!-- Loading SCSS -->
         <link href="{{ site.baseurl }}/css/style.css" rel="stylesheet">
 
-        <!--Typkit-->
-
-        <!-- jQuery -->
     </head>
+    <body id="home">
+    <script>
+            window.fbAsyncInit = function() {
+                    FB.init({
+                            appId      : '787364798035664',
+                            xfbml      : true,
+                            version    : 'v2.5'
+                    });
+            };
+
+            (function(d, s, id){
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) {return;}
+                    js = d.createElement(s); js.id = id;
+                    js.src = "//connect.facebook.net/en_US/sdk.js";
+                    fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+    </script>

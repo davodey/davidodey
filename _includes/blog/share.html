@@ -1,10 +1,13 @@
 <div class="share">
 	<strong>SHARE THIS ARTICLE</strong>
 	<ul class="share-links">
-		<li class="twitter"><a href="http://twitter.com/intent/tweet?text=Text%20%23hashtag&amp;via=JohnDoe">twitter</a></li>
-		<li class="facebook"><a href="#">facebook</a></li>
-		<li class="google"><a href="#">google</a></li>
-		<li class="email"><a href="#">email</a></li>
+		<li class="twitter"><a href="http://twitter.com/intent/tweet?text=Text%20%23hashtag&amp;via=JohnDoe" onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">twitter</a></li>
+		<li class="facebook"><a href="http://www.facebook.com/sharer/sharer.php?url=http://10.0.1.78/{{site.baseurl}}{{post.url}}&title={% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">facebook</a></li>
+		<li class="google"><a href="https://plus.google.com/share?url=http://10.0.1.78/{{site.baseurl}}{{post.url}}" onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">google</a></li>
+		<li class="email"><a href="mailto:?subject={% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}&amp;body=You%20should%20read%20this:%20http://10.0.1.78/{{site.baseurl}}{{post.url}}" title="Email this article">email</a></li>
 	</ul>
 </div>
 

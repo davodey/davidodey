@@ -1,8 +1,8 @@
 <script src="{{ site.baseurl }}/js/app-built/lib/require.js"></script>
 <script>
-    requirejs(['js/app-built/common'], function(common)
+    requirejs(['{{site.baseurl}}/js/app-built/common'], function(common)
     {
-        requirejs(['../js/app-built/components/pages/home/main']);
+        requirejs(['{{site.baseurl}}/js/app-built/components/pages/{{page.require}}']);
     });
 </script>
 

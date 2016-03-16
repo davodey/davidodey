@@ -1,12 +1,15 @@
 ---
-layout: post-page
-title:  "tutorial"
+layout: post
+title:  "opinion"
 date:   2015-12-07 10:28:30 -0700
-categories: tutorial
+categories: opinion
 permalink: /:year/:month/:title
 author: David O'Dey
 main-image: <img src="http://placehold.it/600x300" alt="alt">
 active: blog
+require: blog
+twitterText: Yowsers
+twitterHash: test
 ---
 
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.

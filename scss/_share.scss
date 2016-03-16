@@ -1,8 +1,15 @@
 .share {
   padding:20px 0;
+  strong {
+	font-family:$heading-font;
+	font-style: normal;
+	font-weight:bold;
+	color:darken($light-grey, 15%);
+  }
 }
 
 .share-links {
+
 	display:flex;
 	flex-direction:row;
 	flex-wrap:nowrap;
@@ -12,25 +19,77 @@
 	  width:auto;
 	  padding:10px;
 	  align-items: center;
+	  display:flex;
+	  padding:0;
 
 	  a {
+		font-family:$heading-font;
+		font-style: normal;
+		font-weight:bold;
+		flex-grow:1;
 		color:$white;
+		padding:10px 0;
+
+		&:hover {
+		  svg {
+			transform: rotate(1turn);
+		  }
+		}
+
+		svg {
+		  margin:0;
+		  background-color: transparent;
+		  width:30px;
+		  height:21px;
+		  position: relative;
+		  border-radius:0;
+		  transform:none;
+		}
+
+
 	  }
 	}
 }
 
 .twitter {
-  background-color:$twitter;
+  @include colorHover($twitter);
+  svg {
+	top:4px;
+  }
 }
 
 .facebook {
-  background-color:$facebook;
+  @include colorHover($facebook);
+  svg {
+	top:4px;
+  }
 }
 
 .google {
-  background-color:$google;
+  @include colorHover($google);
+  svg {
+	top:4px;
+	margin-right:4px;
+  }
 }
 
 .email {
-  background-color:$email;
+  @include colorHover($email);
+  svg {
+	top:4px;
+  }
+}
+
+.linkedin {
+  @include colorHover($linkedin);
+  svg {
+	top:2px;
+	margin-right:3px;
+  }
+}
+
+.social-text {
+  @media (max-width:640px) {
+	display:none;
+  }
 }

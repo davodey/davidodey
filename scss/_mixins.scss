@@ -35,6 +35,14 @@
 	
 }
 
+@mixin colorHover ($baseColor) {
+	background-color: $baseColor;
+	&:hover {
+		background-color: lighten($baseColor,5%);
+		text-decoration: none;
+	}
+}
+
 
 
 $devices: large 1200px, medium 990px, small 767px;

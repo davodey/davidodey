@@ -9487,8 +9487,15 @@ html.no-flexbox nav {
 .share {
   padding: 20px 0;
 }
+/* line 3, ../_share.scss */
+.share strong {
+  font-family: "tablet-gothic-narrow", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  color: #a6a6a6;
+}
 
-/* line 5, ../_share.scss */
+/* line 11, ../_share.scss */
 .share-links {
   display: -webkit-box;
   display: -webkit-flex;
@@ -9511,7 +9518,7 @@ html.no-flexbox nav {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-/* line 10, ../_share.scss */
+/* line 17, ../_share.scss */
 .share-links li {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -9525,30 +9532,122 @@ html.no-flexbox nav {
      -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
 }
-/* line 16, ../_share.scss */
+/* line 25, ../_share.scss */
 .share-links li a {
+  font-family: "tablet-gothic-narrow", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+     -moz-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   color: #fff;
+  padding: 10px 0;
+}
+/* line 34, ../_share.scss */
+.share-links li a:hover svg {
+  -webkit-transform: rotate(1turn);
+      -ms-transform: rotate(1turn);
+          transform: rotate(1turn);
+}
+/* line 39, ../_share.scss */
+.share-links li a svg {
+  margin: 0;
+  background-color: transparent;
+  width: 30px;
+  height: 21px;
+  position: relative;
+  border-radius: 0;
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
 }
 
-/* line 22, ../_share.scss */
+/* line 54, ../_share.scss */
 .twitter {
   background-color: #4099FF;
 }
+/* line 40, ../_mixins.scss */
+.twitter:hover {
+  background-color: #5aa7ff;
+  text-decoration: none;
+}
+/* line 56, ../_share.scss */
+.twitter svg {
+  top: 4px;
+}
 
-/* line 26, ../_share.scss */
+/* line 61, ../_share.scss */
 .facebook {
   background-color: #335795;
 }
+/* line 40, ../_mixins.scss */
+.facebook:hover {
+  background-color: #3a62a8;
+  text-decoration: none;
+}
+/* line 63, ../_share.scss */
+.facebook svg {
+  top: 4px;
+}
 
-/* line 30, ../_share.scss */
+/* line 68, ../_share.scss */
 .google {
   background-color: #DD4B39;
 }
+/* line 40, ../_mixins.scss */
+.google:hover {
+  background-color: #e15f4f;
+  text-decoration: none;
+}
+/* line 70, ../_share.scss */
+.google svg {
+  top: 4px;
+  margin-right: 4px;
+}
 
-/* line 34, ../_share.scss */
+/* line 76, ../_share.scss */
 .email {
   background-color: #FA6900;
+}
+/* line 40, ../_mixins.scss */
+.email:hover {
+  background-color: #ff7715;
+  text-decoration: none;
+}
+/* line 78, ../_share.scss */
+.email svg {
+  top: 4px;
+}
+
+/* line 83, ../_share.scss */
+.linkedin {
+  background-color: #0078B5;
+}
+/* line 40, ../_mixins.scss */
+.linkedin:hover {
+  background-color: #0089cf;
+  text-decoration: none;
+}
+/* line 85, ../_share.scss */
+.linkedin svg {
+  top: 2px;
+  margin-right: 3px;
+}
+
+@media (max-width: 640px) {
+  /* line 91, ../_share.scss */
+  .social-text {
+    display: none;
+  }
 }
 
 /* line 1, ../_syntax.scss */

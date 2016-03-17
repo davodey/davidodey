@@ -8,13 +8,11 @@ components/ie-placeholder.js
 lib/respond.js
 lib/selectivzr.js
 lib/feature-detection.js
+lib/snap.js
+components/mobile-snap.js
 lib/validate/jquery.validate.js
 
 components/pages/main.js
 ----------------
 components/pages/main.js
 components/contact_form.js
-components/custom.js
-components/facebook.js
-lib/snap.js
-components/mobile-snap.js

@@ -13,6 +13,7 @@
             include: [
             'feature-detection', 
             'jquery',
+            'app/mobile-snap',
             'validate/jquery.validate',
 
             
@@ -36,7 +37,7 @@
         
         //public modules
             name: 'app/pages/main',
-            include:['app/contact_form', 'app/custom', 'app/facebook', 'app/mobile-snap'],
+            include:['app/contact_form'],
             exclude: ['../common']
        
         }        

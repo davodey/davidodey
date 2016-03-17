@@ -1,1 +1,0 @@
-$(document).ready(function(){$(".facebookShare").click(function(){return console.log("facebook loaded"),elem=$(this),postToFeed(elem.data("title"),elem.data("desc"),elem.prop("href"),elem.data("image")),!1})});

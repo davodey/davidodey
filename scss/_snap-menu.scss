@@ -8,7 +8,7 @@
   width: auto;
   height: auto;
   z-index: 2;
-  overflow: auto;
+ // overflow: auto;
   -webkit-overflow-scrolling: touch;
 
   @media (max-width: 640px) {
@@ -18,6 +18,7 @@
 	-o-transform: translate3d(0, 0, 0);
 	transform: translate3d(0, 0, 0);
 	position: absolute;
+    overflow:auto;
   }
 }
 
@@ -78,6 +79,7 @@
 #content {
   padding:0;
   background-color: $background;
+
   @media (min-width: 640px) {
 	transform: none !important;
 
@@ -158,11 +160,12 @@
 /* Default demo styles */
 
 .snap-drawers {
-  background: $pink;
+  background: $dark-grey;
 }
 
 .snap-drawer {
-  background: $pink;
+  background: $dark-grey;
+  border-right:2px solid $pink;
   color: #eee;
 }
 
@@ -185,6 +188,70 @@
 
   li {
 	margin-left: 0;
+
+    &:first-child {
+      background:$pink;
+
+      &:hover {
+        background:lighten($pink, 5%);
+      }
+    }
+
+    &:nth-child(2){
+      background:darken($pink, 5%);
+
+      &:hover {
+        background:lighten($pink, 5%);
+      }
+    }
+
+    &:nth-child(3){
+      background:darken($pink, 10%);
+
+      &:hover {
+        background:lighten($pink, 5%);
+      }
+    }
+
+    &:nth-child(4){
+      background:darken($pink, 15%);
+
+      &:hover {
+        background:lighten($pink, 5%);
+      }
+    }
+
+    &:nth-child(5){
+      background:darken($pink, 20%);
+
+      &:hover {
+        background:lighten($pink, 5%);
+      }
+    }
+
+    &:nth-child(6){
+      background:darken($pink, 25%);
+
+      &:hover {
+        background:lighten($pink, 5%);
+      }
+    }
+  }
+  li.active {
+    background-color:$nav-hover;
+    &:hover {
+      background-color:lighten($nav-hover, 5%);
+    }
+    a {
+      color:darken($nav-hover, 30%);
+      @media (max-width:640px){
+
+      }
+    }
+
+    svg {
+      fill:darken($nav-hover, 30%);
+    }
   }
 }
 
@@ -196,7 +263,15 @@
   font-weight: bold;
   text-shadow: 0 1px 0 #000;
   text-decoration: none;
-  color: $white;
+  padding:10px 0;
+  display: block;
+  font-family: $button-font;
+  font-weight:bold;
+  text-align: center;
+  text-transform: uppercase;
+  color:$white;
+  text-decoration:none;
+  font-style: normal;
 
   &:last-child {
 	border-bottom: 1px solid rgba(255, 255, 255, 0.1);

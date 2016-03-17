@@ -446,3 +446,14 @@ a {
 	text-decoration: none;
   }
 }
+
+.mobile-hide {
+  @media(max-width:640px) {
+	display:none;
+  }
+}
+.mobile-show {
+  @media(min-width:641px) {
+	display:none;
+  }
+}

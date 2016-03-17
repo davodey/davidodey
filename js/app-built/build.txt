@@ -16,3 +16,5 @@ components/pages/main.js
 components/contact_form.js
 components/custom.js
 components/facebook.js
+lib/snap.js
+components/mobile-snap.js

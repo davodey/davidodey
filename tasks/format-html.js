@@ -4,7 +4,7 @@ var gulp = require('gulp'),
 
 
 gulp.task('format-html', function() {
-  gulp.src('**/*.html')
+  gulp.src('**/**/*.html')
     .pipe(prettify({indent_size: 4}))
     .pipe(gulp.dest('dist'))
 });

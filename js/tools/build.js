@@ -12,8 +12,9 @@
             //nested dependencies.
             include: [
             'feature-detection', 
-            'jquery',  
-            'validate/jquery.validate'
+            'jquery',
+            'validate/jquery.validate',
+
             
                       
             ]
@@ -35,7 +36,7 @@
         
         //public modules
             name: 'app/pages/main',
-            include:['app/contact_form', 'app/custom', 'app/facebook'],
+            include:['app/contact_form', 'app/custom', 'app/facebook', 'app/mobile-snap'],
             exclude: ['../common']
        
         }        

@@ -77,42 +77,6 @@ html.no-flexbox {
 	}
 }
 
-#mobile-navigation {
-@include transition;
-	@media (min-width:640px){
-		display:none;
-		
-	}
-	
-	.button {
-		background: #e80741;
-		position: fixed;
-		display: inline-block;
-		bottom: 26px;
-		padding: 10px;
-		color: white;
-		font-family: $heading-font;
-		font-weight: bold;
-		text-decoration: none;
-		z-index: 2;
-		width:100px;
-		
-		@include transition;
-		
-	}
-	
-	a {
-		span {
-			margin-right:5px;
-		}
-	}
-	
-	.left {
-		left:0;
-		@include transition;
-	}
-}
-
 #off-canvas {
 	background:$light-grey;
 	z-index: 2;

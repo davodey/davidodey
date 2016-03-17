@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en"> {% include meta/head.html %} {% include mobile-navigation.html %} {% include svg.html %}
+    <div id="content" class="snap-content"> {% include blog/category-navigation.html %}
+        <div id="mobile" class="container-fluid ">
+            <div class="line clear-fix">
+                <header class="resource">
+                    <div class="col-lg-12">
+                        <h1 class="title">{{ page.title }}</h1> <em>A collection of useful sites that will help you level up your skills</em> </div>
+                </header>
+                <section class="margin-top-75">
+                    <div class="row">
+                        <div class="col-lg-12 items"> {{content}} </div>
+                        <div class="col-lg-6 items">
+                            <h2>Topics</h2>
+                            <ul> {% for category in site.categories %}
+                                <li><a href="{{ site.baseurl }}/categories/{{ category | first }}" name="{{ category | first }}">{{ category | first }}</a></li> {% endfor %} </ul>
+                        </div>
+                        <div class="col-lg-6 items">
+                            <h2>Latest Writings</h2>
+                            <ul> {% for post in site.posts %}
+                                <li> <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> </li> {% endfor %} </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div> {% include meta/footer.html %} </div>
+    </body>

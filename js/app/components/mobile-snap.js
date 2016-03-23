@@ -17,6 +17,9 @@ require(['jquery', 'snap'], function($) {
 					snapper.open('left');
 				}
 			});
+			snapper.settings({
+				disable: 'right'
+			});
 		}
 	});
 });

@@ -1,0 +1,29 @@
+label.error {
+  @extend .clear-fix;
+  position:absolute;
+  top:20px;
+  right:0;
+  background-color:$pink;
+  color:$white;
+  font-size:.7em;
+  padding:0 15px;
+
+  @media (max-width:530px) {
+    position:relative;
+    top:auto;
+    font-size:.6em;
+    display: block;
+    width: 100%;
+    border-radius: 0px 0px 5px 5px;
+    margin-top:-3px;
+  }
+}
+
+input.error, textarea.error {
+  border:1px solid $pink;
+}
+
+.not-ok {
+  margin:5px;
+  clear:both;
+}

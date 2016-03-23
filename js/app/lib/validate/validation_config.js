@@ -35,28 +35,6 @@ define(
 			}, jQuery.validator.messages.basicChar);
 
 			jQuery.validator.setDefaults({
-				highlight: function(element){
-					var a = $(element).attr('name') + 'Validate',
-							b = '.fa.fa-check-circle' + '.'+ a,
-							c = '<i class="fa fa-times-circle ' + a + '"></i>';
-					if($('i', element.parentNode).hasClass('fa-check-circle')){
-						$(b).remove();
-					}
-					if(!$('i').hasClass(a)){
-						$(c).insertAfter(element);
-					}
-				},
-				unhighlight: function(element) {
-					var a = $(element).attr('name') + 'Validate',
-							b = '.fa.fa-times-circle' + '.'+ a,
-							c = '<i class="fa fa-check-circle ' + a + '"></i>';
-					if($('i').hasClass('fa-times-circle')){
-						$(b).remove();
-					}
-					if(!$('i').hasClass(a)){
-						$(c).insertAfter(element);
-					}
-				},
 				onfocusout: function(element) {
 					this.element(element);
 				}

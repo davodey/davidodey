@@ -7,13 +7,15 @@ require([
 	'use strict';
 
 	$(document).ready(function(){
+		var $honey = $('#honey').val();
 		$('#contactForm').validate({
 			rules: {
 				'name': {
 					required: true
 				},
 				'email': {
-					required: true
+					required: true,
+					email: true
 				},
 				'message': {
 					required: true
@@ -24,14 +26,19 @@ require([
 					required: 'Please Enter Your Name'
 				},
 				'email': {
-					required: 'Please Enter Your Email'
+					required: 'Please Enter Your Email Address',
+					email: 'Please Enter a Valid Email poopAddress'
 				},
 				'message': {
 					required: 'Please Enter a Message'
 				}
 			},
 			submitHandler: function(form) {
-				form.submit();
+				if ( $honey.length !== 0) {
+					console.log('go away bot');
+				} else {
+					form.submit();
+				}
 			}
 		});
 	});

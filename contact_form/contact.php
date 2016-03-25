@@ -7,12 +7,17 @@ include 'config.php';
 if($post)
 	{
 		include 'functions.php';
+		$honey = $_POST['honey'];
 		$name = stripslashes($_POST['name']);
 		$email = trim($_POST['email']);
 		$message = stripslashes($_POST['message']);
 
 		$error = '';
 
+if($honey)
+	{
+		$error .= 'Go Away Robot<br />';
+	}
 // Check name
 if(!$name)
 	{

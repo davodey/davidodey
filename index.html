@@ -18,7 +18,7 @@ require: main
 	</div>
 </header>
 <section>
-	<div class="col-lg-12">
+	<div class="col-lg-12 margin-sides-30">
 		<blockquote>
 			<span class="fa fa-quote-left fa-3x pull-left"></span>
 			I have a strong passion for web standards, and creating uniquely awesome user experiences that can be accessed on all devices.
@@ -37,13 +37,15 @@ require: main
 				<em>Topics, Case Studies, Tutorials and more...</em>
 			</div>
 			<div id="work" class="blog-space clear-fix">
-				<div class="col-md-12 article">
-					{% for post in site.posts limit:1 %}
-					{{post.main-image}}
-					<h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
-					<em> Written {% if post.author %} by {{ post.author }} {% endif %} on {{ post.date | date: "%b %-d, %Y" }}</em>
-					{{post.excerpt}}
-					<a href="{{ site.baseurl }}{{ post.url }}" class="button">Read Article</a>
+				<div class="col-sm-12 article">
+					{% for post in site.posts limit:4%}
+					<div class="col-sm-3 grid-change">
+						{{post.main-image}}
+						<h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+						<em> Written {% if post.author %} by {{ post.author }} {% endif %} on {{ post.date | date: "%b %-d, %Y" }}</em>
+						{{post.excerpt }}
+						<a href="{{ site.baseurl }}{{ post.url }}" class="button">Read Article</a>
+					</div>
 					{% endfor %}
 				</div>
 			</div>
@@ -59,7 +61,6 @@ require: main
 			</div>
 			<div id="work" class="project-space clear-fix">
 				<div class="col-sm-12"><!-- START Project Row -->
-					<p>Take a look at some of my work.  I put a lot of love into my designs, all projects are hand coded by yours truly.  I don't ever work with pre-made templates, </p>
 					{% include projects/bhgre.html %}
 					{% include projects/wrpc.html %}
 				</div> <!-- END Project Row -->

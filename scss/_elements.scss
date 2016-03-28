@@ -44,13 +44,8 @@ h3, blockquote {
 	font-size:$unit * 2.24999999; /* 24px */	
 	}
 	
-	@media (min-width: 2100px) {
-	font-size:$unit * 2.62499999179688; /* 28px */	
-	}
-	
-	@media (min-width: 2530px) {
-	font-size:$unit * 3.37499999; /* 36px */	
-	}
+
+
 }
 h3 {
 	font-weight: 700;
@@ -238,6 +233,10 @@ section {
 	
 	> div {
 		margin-bottom:150px;
+
+	  	@media (min-width:1400px) {
+		  margin-bottom:175px;
+		}
 		@media (max-width:640px){
 			margin-bottom:75px;
 		}

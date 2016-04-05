@@ -2,10 +2,14 @@
 layout: post
 title:  "easter"
 date:   2015-12-07 10:28:30 -0700
-categories: tutorial
-permalink: /:year/:month/:title
+categories:
+- blog
+- tutorial
+tags:
+- tutorial
 author: David O'Dey
 main-image: <img src="http://placehold.it/600x300" alt="alt">
+thumb-image: patternlab.png
 active: blog
 require: blog
 twitterText: Yowsers

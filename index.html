@@ -29,7 +29,7 @@ require: main
 	</div>
 </section>
 </div>
-<section id="projects" class="line-alt">
+<section class="line-alt">
 	<div class="row bottom-margin">
 		<div class="col-lg-12">
 			<div class="title-bg">
@@ -38,36 +38,38 @@ require: main
 			</div>
 			<div id="work" class="blog-space clear-fix">
 				<div class="col-sm-12 article">
-					{% for post in site.posts limit:4%}
-					<div class="col-sm-3 grid-change">
-						{{post.main-image}}
-						<h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
-						<em> Written {% if post.author %} by {{ post.author }} {% endif %} on {{ post.date | date: "%b %-d, %Y" }}</em>
-						{{post.excerpt }}
-						<a href="{{ site.baseurl }}{{ post.url }}" class="button">Read Article</a>
-					</div>
+					{% for post in site.categories['blog'] limit:4 %}
+						<div class="col-sm-3 grid-change">
+							{{post.main-image}}
+							<h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+							<em> Written {% if post.author %} by {{ post.author }} {% endif %} on {{ post.date | date: "%b %-d, %Y" }}</em>
+							{{post.excerpt }}
+							<a href="{{ site.baseurl }}{{ post.url }}" class="button">Read Article</a>
+						</div>
 					{% endfor %}
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
-<section id="projects" class="line-alt">
-	<div class="row bottom-margin">
+<section class="line-alt">
+	<div class="row bottom-margin project-adjust">
 		<div class="col-lg-12">
 			<div class="title-bg">
 				<h2 class="title">Projects</h2>
 				<em>Recent web projects I've worked on</em>
 			</div>
-			<div id="work" class="project-space clear-fix">
-				<div class="col-sm-12"><!-- START Project Row -->
-					{% include projects/bhgre.html %}
-					{% include projects/wrpc.html %}
-				</div> <!-- END Project Row -->
-				<div class="col-sm-12"><!-- START Project Row -->
-					{% include projects/motive.html %}
-					{% include projects/oreilly.html %}
-				</div> <!-- END Project Row -->
+			<div id=projects class="project-space clear-fix">
+				{% for post in site.categories['projects']%}
+				<div class="col-sm-2 grid-change">
+					<div class="col-lg-12 project-image">
+						{{post.main-image}}
+					</div>
+					<div class="col-lg-12 project-description">
+						<h3>{{ post.title }}</h3>
+					</div>
+				</div>
+				{% endfor %}
 			</div>
 		</div>
 	</div>

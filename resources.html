@@ -18,14 +18,13 @@ require: resources
 	<div class="row">
 		<div class="col-lg-12 items">
 			<h2>Tools</h2>
-			{% include tools/pattern-lab.html %}
-			{% include tools/basehold.html %}
-			{% include tools/gulp.html %}
-			{% include tools/sass.html %}
-			{% include tools/font-awesome.html %}
-			{% include tools/git.html %}
-			{% include tools/balsamiq.html %}
-			{% include tools/caniuse.html %}
+			{% for post in site.categories['tools'] %}
+			<div class="col-lg-12 resource-row clear-fix">
+				<img src="{{ site.baseurl }}/img/{{post.thumb-image}}">
+				<h3><a href="{{post.link}}" target="_blank">{{post.title}}</a></h3>
+				{{post.content}}
+			</div>
+			{% endfor %}
 		</div>
 	</div>
 </section>

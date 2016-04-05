@@ -1,11 +1,15 @@
 ---
 layout: post
 title:  "Case Study"
-date:   2015-12-07 10:28:30 -0700
-categories: casestudy
-permalink: /:year/:month/:title
+date:   2015-12-01 10:28:30 -0700
+categories:
+- blog
+- casestudy
+tags:
+- casestudy
 author: David O'Dey
 main-image: <img src="http://placehold.it/600x300" alt="alt">
+thumb-image: patternlab.png
 active: blog
 require: blog
 twitterText: Yowsers

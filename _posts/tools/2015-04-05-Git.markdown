@@ -1,0 +1,17 @@
+---
+layout: post
+title:  "Git"
+date:   2016-03-10 10:28:30 -0700
+category: tools
+thumb-image: git.png
+link: http://git-scm.com/
+
+---
+
+Have you ever been working on project, when things go wrong, really quick?  Maybe you were working on a new feature for a site,  and you realize after its too late, that something got over written and you have no way of getting that code back.  This happens more than it should in teams, I know first hand.  This can cause wasted time and unnecessary frustration in development.  To prevent this I use a tool called Git.  Git is a local version control system, that will clone copies of your files locally and allow you to switch between these different files as you need to. If your using a MAC for your development Git is already installed, all you have to do is initate the system. You can get started below.
+
+* Git Training [View Website]
+* Git from the bottom up [Read PDF]
+
+[View Website]: https://training.github.com/resources/videos/
+[Read PDF]: http://ftp.newartisans.com/pub/git.from.bottom.up.pdf

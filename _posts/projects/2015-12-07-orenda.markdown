@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "Orenda Force"
+date:   2016-03-05 10:28:30 -0700
+category: projects
+subtitle: 'wordpress, html, css, javascript, mobile strategy'
+main-image: <img src="img/projects/wrpc.jpg" alt="wrp containers">
+
+---

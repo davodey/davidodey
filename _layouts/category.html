@@ -22,15 +22,15 @@
 				<div class="col-lg-6 items">
 					<h2>Topics</h2>
 					<ul>
-						{% for category in site.categories %}
-						<li><a href="{{ site.baseurl }}/categories/{{ category | first }}" name="{{ category | first }}">{{ category | first }}</a></li>
+						{% for tags in site.tags %}
+						<li><a href="{{ site.baseurl }}/categories/{{ tags | first }}" name="{{ tags | first }}">{{ tags| first }}</a></li>
 						{% endfor %}
 					</ul>
 				</div>
 				<div class="col-lg-6 items">
 					<h2>Latest Writings</h2>
 					<ul>
-						{% for post in site.posts %}
+						{% for post in site.categories['blog']%}
 						<li>
 							<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
 						</li>

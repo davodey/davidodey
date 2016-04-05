@@ -13,6 +13,7 @@ baseurl: "/~dodey/dev/jekyll/jekyll-davidodey/_site"
 url: "" # the base hostname & protocol for your site
 twitter_username: davdey
 github_username:  davodey
+permalink: /:categories/:title
 
 # Build settings
 markdown: kramdown

@@ -19,6 +19,7 @@
 	margin:50px 0 25px 0;	
 }
 
+
 .resource-row {
 	border-top:1px dotted $light-grey;
 	padding:25px;
@@ -27,10 +28,19 @@
   	&:last-child {
 	  border-bottom: 1px dotted $light-grey;
 	  margin-bottom:40px;
+
+	  a & {
+		margin-bottom:0;
+		border-bottom:0;
+	  }
 	}
 	
 	&:hover {
 		background:$lighter-grey;
+
+	  a & {
+		color:$pink;
+	  }
 	}
 	
 	@media (max-width:640px){

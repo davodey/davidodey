@@ -16,17 +16,20 @@
 }
 
 .resource {
-	margin:50px 0 25px 0;	
+	margin:50px 0 25px 0;
+  	@media (max-width:640px) {
+	  margin-top:0;
+	}
 }
 
 
 .resource-row {
-	border-top:1px dotted $light-grey;
+	border-top:1px dotted $grey;
 	padding:25px;
 	text-align: left;
 
   	&:last-child {
-	  border-bottom: 1px dotted $light-grey;
+	  border-bottom: 1px dotted $grey;
 	  margin-bottom:40px;
 
 	  a & {
@@ -36,11 +39,7 @@
 	}
 	
 	&:hover {
-		background:$lighter-grey;
-
-	  a & {
-		color:$pink;
-	  }
+		background:$light-grey;
 	}
 	
 	@media (max-width:640px){
@@ -52,11 +51,6 @@
 		margin-top:0;
 		margin-bottom:5px;
 		font-size:1.2em;
-		
-		a {
-			color:$pink;
-			text-decoration: none;
-		}
 	}
 	
 	img {

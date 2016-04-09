@@ -1,5 +1,7 @@
 .share {
-  padding:20px 0;
+  clear:both;
+  overflow:hidden;
+  padding-bottom:45px;
   strong {
 	font-family:$heading-font;
 	font-style: normal;
@@ -29,6 +31,7 @@
 		flex-grow:1;
 		color:$white;
 		padding:10px 0;
+		text-decoration:none;
 
 		&:hover {
 		  svg {

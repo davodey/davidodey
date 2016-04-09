@@ -6,25 +6,58 @@ $button-font:"tablet-gothic-narrow",sans-serif;
 
 
 /* Color Variables */
+$white: #fff;
+$black: #000;
+$lighter-grey: lighten($black, 97%);
+$light-grey: lighten($black, 92%);
+$grey: lighten($black, 50%);
+$dark-grey: lighten($black, 15%);
 
-$white:#fff;
-$light-grey: #ccc;
-$grey: #888;
-$lighter-grey: #efefef;
-$dark-grey:#222;
-$background: #fafafa;
-$pink: #E80741;
-$nav-hover:complement($pink);
-$link: $pink;
-$link-hover: $nav-hover;
+// Main Colors
+$color1: #3E606F;
+$color2: #BCFA51;
+
+// Messaging, Alert, Warning Colors
+$color3: #E73E6E;
+$color4: #E73E6E;
+$color5: #468966;
+
+
+
+$highlight: lighten($color2, 25%);
+$validation: $color4;
+$success: $color2;
+$background: $lighter-grey;
+$code: $color2;
+$project:$white;
+
+$nav-menu: $color1;
+$nav-hover: $color2;
+$nav-menu-active: $color2;
+
+$link: $color1;
+$link-hover: $color2;
+
 $twitter: #4099FF;
 $facebook: #335795;
 $linkedin: #0078B5;
 $google: #DD4B39;
 $email: #FA6900;
-$alt-color:#89CC14;
-$project:$white;
-$validation: $pink;
 
-$code: $link-hover;
+
+
+
+
+
+
+
+
+
+
+
+
+
+$button: lighten($link, 10%);
+
+//$color1: #E80741;
 

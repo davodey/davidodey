@@ -4,7 +4,7 @@ label.error {
   top:20px;
   right:0;
   background-color:$validation;
-  color:$white;
+  color:white;
   font-size:.7em;
   padding:0 15px;
 
@@ -19,6 +19,11 @@ label.error {
 input.error, textarea.error {
   border:1px solid $validation
 }
+
+input.valid, textarea.valid {
+  border:1px solid $success
+}
+
 
 .not-ok {
   margin:5px;

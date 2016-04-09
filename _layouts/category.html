@@ -3,7 +3,7 @@
 {% include meta/head.html %}
 {% include svg.html %}
 {% include mobile-bars.html %}
-{% include mobile-navigation.html %}
+{% include mobile-category-navigation.html %}
 <div id="content" class="snap-content">
 {% include blog/category-navigation.html %}
 <div id="mobile" class="container-fluid ">
@@ -19,20 +19,22 @@
 				<div class="col-lg-12 items">
 					{{content}}
 				</div>
-				<div class="col-lg-6 items">
-					<h2>Topics</h2>
-					<ul>
+				<div class="col-lg-6 items border-right">
+					<h2>Discussion Topics</h2>
+					<ul class="topics">
 						{% for tags in site.tags %}
-						<li><a href="{{ site.baseurl }}/categories/{{ tags | first }}" name="{{ tags | first }}">{{ tags| first }}</a></li>
+						<li>
+							<svg class="icon color small"><use xlink:href="#folder-open"></use></svg> <a href="{{ site.baseurl }}/categories/{{ tags | first }}" name="{{ tags | first }}"> {{ tags| first }} </a>
+						</li>
 						{% endfor %}
 					</ul>
 				</div>
 				<div class="col-lg-6 items">
-					<h2>Latest Writings</h2>
-					<ul>
+					<h2>Recent Blog Posts</h2>
+					<ul class="recent">
 						{% for post in site.categories['blog']%}
 						<li>
-							<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+							<svg class="icon color small"><use xlink:href="#star"></use></svg> <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
 						</li>
 						{% endfor %}
 					</ul>

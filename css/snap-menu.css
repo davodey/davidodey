@@ -2,11 +2,11 @@
 Error: Invalid CSS after "  color": expected ";", was ": #eee;"
         on line 169 of ./snap-menu.scss
 
-164:   background: $pink;
+164:   background: $color1;
 165: }
 166: 
 167: .snap-drawer {
-168:   background: $pink
+168:   background: $color1
 169:   color: #eee;
 170: }
 171: 
@@ -51,4 +51,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"  color\": expected \";\", was \": #eee;\"\A         on line 169 of ./snap-menu.scss\A \A 164:   background: $pink;\A 165: }\A 166: \A 167: .snap-drawer {\A 168:   background: $pink\A 169:   color: #eee;\A 170: }\A 171: \A 172: .snap-drawer h3 {\A 173:   font-size: 36px;\A 174:   font-weight: normal;"; }
+  content: "Error: Invalid CSS after \"  color\": expected \";\", was \": #eee;\"\A         on line 169 of ./snap-menu.scss\A \A 164:   background: $color1;\A 165: }\A 166: \A 167: .snap-drawer {\A 168:   background: $color1\A 169:   color: #eee;\A 170: }\A 171: \A 172: .snap-drawer h3 {\A 173:   font-size: 36px;\A 174:   font-weight: normal;"; }

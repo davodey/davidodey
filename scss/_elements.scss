@@ -11,7 +11,7 @@ body {
 	text-rendering: optimizelegibility;
 	
 	@media (max-width:640px){
-		padding-top:108px;
+		padding-top:50px;
 	}
 }
 body, p {
@@ -58,7 +58,7 @@ h4 {
 	padding:$unit / 1 0 0 0;
 	font-weight:700;
 	text-transform: uppercase;
-	color:$pink;
+	color:$color1;
 	
 }
 
@@ -112,8 +112,8 @@ header {
 }
 
 svg {
-	background-color: $light-grey;
-	border-radius: 50%;
+	background-color: $color1;
+	border-radius: 5px;
 	width:30px;
 	height:30px;
 	margin:20px 4px;
@@ -121,6 +121,7 @@ svg {
 	fill:#fff;
 	@include transition;
 	display:inline-block;
+
 	
 	&:hover {
 		background-color: $dark-grey;
@@ -131,12 +132,13 @@ svg {
 	}
 }
 a {
-	color:$pink;
-	text-decoration: none;
+	color:$link;
+	text-decoration: underline;
   	&:hover {
-	  color: darken($nav-hover,15%);
+	  color: lighten($link,10%);
 	}
 }
+
 nav {
 	position:relative;
 	border-radius:3px;
@@ -154,50 +156,58 @@ nav {
 			@include transition;
 			
 			&:first-child {
-				background:$pink;
+				background:$nav-menu;
+				@media (max-width:640px) {
+				  border-radius:10px;
+				  width: 50px;
+				  height:50px;
+				}
 				
 				&:hover {
-					background:lighten($pink, 5%);
+					background:lighten($nav-menu, 5%);
+				}
+			  	svg {
+				  margin-left:0;
 				}
 			}
 			
 			&:nth-child(2){
-				background:darken($pink, 5%);
+				background:darken($nav-menu, 5%);
 				
 				&:hover {
-					background:lighten($pink, 5%);
+					background:lighten($nav-menu, 5%);
 				}
 			}
 			
 			&:nth-child(3){
-				background:darken($pink, 10%);
+				background:darken($nav-menu, 10%);
 				
 				&:hover {
-					background:lighten($pink, 5%);
+					background:lighten($nav-menu, 5%);
 				}
 			}
 			
 			&:nth-child(4){
-				background:darken($pink, 15%);
+				background:darken($nav-menu, 15%);
 				
 				&:hover {
-					background:lighten($pink, 5%);
+					background:lighten($nav-menu, 5%);
 				}
 			}
 			
 			&:nth-child(5){
-				background:darken($pink, 20%);
+				background:darken($nav-menu, 20%);
 				
 				&:hover {
-					background:lighten($pink, 5%);
+					background:lighten($nav-menu, 5%);
 				}
 			}
 			
 			&:nth-child(6){
-				background:darken($pink, 25%);
+				background:darken($nav-menu, 25%);
 				
 				&:hover {
-					background:lighten($pink, 5%);
+					background:lighten($nav-menu, 5%);
 				}
 			}
 			
@@ -218,6 +228,9 @@ nav {
 				color:$white;
 				text-decoration:none;
 				font-style: normal;
+			  @media (max-width:640px) {
+				text-align:center;
+			  }
 				
 				
 			
@@ -273,12 +286,12 @@ input, textarea, button, a.button {
 	-webkit-appearance:none;
 	
 	&:focus {
-		border:1px solid $pink;
-		outline:$pink;
+		border:1px solid $color2;
+		outline:$color2;
 	}
 	
 	&[type="submit"] {
-		background-color: $pink;
+		background-color: $button;
 		color:$white;
 		width:225px;
 		font-size:1em; /* 18px */
@@ -289,7 +302,7 @@ input, textarea, button, a.button {
 		border-radius:5px;
 		
 		&:hover {
-			background-color:lighten($pink, 10%);
+			background-color:lighten($button, 10%);
 		}
 		
 		@include respond-to(small){
@@ -338,7 +351,7 @@ label {
 }
 
 .button {
-	background-color: $pink;
+	background-color: $button;
   	padding: 10px 20px;
 	text-decoration: none;
 	color:$white;
@@ -351,7 +364,7 @@ label {
 	border-radius:5px;
 
 	&:hover {
-	  background-color:lighten($pink, 10%);
+	  background-color:lighten($button, 10%);
 	  color:$white;
 	  text-decoration: none;
 	}
@@ -362,8 +375,8 @@ label {
 }
 
 code {
-  color: darken($code, 30%);
-  background: lighten($code, 47%);
+  color: $dark-grey;
+  background: $highlight;
 }
 
 figure {
@@ -373,5 +386,6 @@ figure {
 
 pre {
   padding-left:15px;
+  background:$white;
 }
  

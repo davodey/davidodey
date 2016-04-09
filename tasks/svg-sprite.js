@@ -7,7 +7,7 @@ var spritesmith = require('gulp.spritesmith');
 
 gulp.task('svg-sprite', function () {
     return gulp
-        .src('icons/svg-sprite/*.svg')
+        .src('_icons/svg-sprite/*.svg')
         .pipe(svgmin(function (file) {
             var prefix = path.basename(file.relative, path.extname(file.relative));
             return {

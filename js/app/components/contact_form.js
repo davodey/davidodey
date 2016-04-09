@@ -1,39 +1,38 @@
-$(document).ready(function(){
-$("#contactform").submit(function(){
-console.log('hello')
-var str = $(this).serialize();
+$(document).ready(function () {
+	$("#contactForm").submit(function () {
+		console.log('hello')
+		var str = $(this).serialize();
 
-   $.ajax({
-   type: "POST",
-   url: "contact_form/contact.php",
-   data: str,
-   success: function(msg){
-    
-$("#note").ajaxComplete(function(event, request, settings){
+		$.ajax({
+			type: "POST",
+			url: "contact_form/contact.php",
+			data: str,
+			success: function (msg) {
 
-if(msg == 'OK') // Message Sent? Show the 'Thank You' message
-{	
-result = '<div class="notification_ok">Your message has been sent Succesfully. Thank you!</div>';
-$("#contactform").find(".textbox").val("");
-}
-else
-{
-result = msg;
-}
+				$("#note").ajaxComplete(function (event, request, settings) {
 
-$(this).hide();
-$(this).html(result).slideDown("slow");
-$(this).html(result);
+					if (msg == 'OK') // Message Sent? Show the 'Thank You' message
+					{
+						result = '<div class="notification_ok">Your message has been sent Succesfully. Thank you!</div>';
+						$("#contactform").find(".textbox").val("");
+					}
+					else {
+						result = msg;
+					}
+
+					$(this).hide();
+					$(this).html(result).slideDown("slow");
+					$(this).html(result);
 
 
-});
+				});
 
-}
+			}
 
- });
+		});
 
-return false;
+		return false;
 
-});
+	});
 
 });

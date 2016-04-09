@@ -4,7 +4,7 @@ var gulp = require('gulp'),
 
 
 gulp.task('format-svg', function() {
-    gulp.src('icons/*.svg')
+    gulp.src('_icons/*.svg')
         .pipe(prettify({indent_size: 4}))
         .pipe(gulp.dest('img/icons/'))
 });

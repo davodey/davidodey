@@ -7,35 +7,21 @@ include 'config.php';
 if($post)
 	{
 		include 'functions.php';
+		$subject = "davidodey.com message";
 		$honey = $_POST['honey'];
-		$name = stripslashes($_POST['name']);
-		$email = trim($_POST['email']);
-		$message = stripslashes($_POST['message']);
-
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $message = $_POST['message'];
 		$error = '';
 
 if($honey)
 	{
 		$error .= 'Go Away Robot<br />';
 	}
-// Check name
-if(!$name)
-	{
-		$error .= 'Enter your name<br />';
-	}
-// Check email
-if(!$email)
-	{
-		$error .= 'Enter your email address<br />';
-	}
-if($email && !ValidateEmail($email))
-	{
-		$error .= 'Invalid E-mail address.<br />';
-	}
 if(!$error)
 	{
 		$mail = mail(WEBMASTER_EMAIL, $subject, $message,
-     		"From: ".$name." <".$email.">\r\n"
+     		"From: ".$firstname." <".$email.">\r\n"
     		."Reply-To: ".$email."\r\n"
 			."X-Mailer: PHP/" . phpversion());
 if($mail)

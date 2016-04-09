@@ -9391,7 +9391,7 @@ nav ul li.active:hover {
 }
 /* line 53, ../_navigation.scss */
 nav ul li.active a {
-  color: #4f7b04;
+  color: #304a02;
 }
 /* line 60, ../_navigation.scss */
 nav ul li.active svg {
@@ -9739,7 +9739,6 @@ html.no-flexbox nav {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 15px 15px 15px 30px;
   font-weight: bold;
-  text-shadow: 0 1px 0 #000;
   text-decoration: none;
   padding: 10px 0;
   display: block;
@@ -9751,81 +9750,81 @@ html.no-flexbox nav {
   text-decoration: none;
   font-style: normal;
 }
-/* line 276, ../_snap-menu.scss */
+/* line 275, ../_snap-menu.scss */
 .snap-drawer li > a:last-child {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-/* line 280, ../_snap-menu.scss */
+/* line 279, ../_snap-menu.scss */
 .snap-drawer li > a i {
   color: #ebebeb;
   padding-right: 10px;
   width: 25px;
 }
 
-/* line 287, ../_snap-menu.scss */
+/* line 286, ../_snap-menu.scss */
 .snap-drawer p {
   opacity: 0.5;
   padding: 15px;
   font-size: 12px;
 }
 
-/* line 293, ../_snap-menu.scss */
+/* line 292, ../_snap-menu.scss */
 .mobile-logo-container {
   text-align: center;
   padding-top: 25px;
 }
 
-/* line 298, ../_snap-menu.scss */
+/* line 297, ../_snap-menu.scss */
 .mobile-menu-logo {
   width: 100px;
   opacity: 0.3;
 }
 
-/* line 303, ../_snap-menu.scss */
+/* line 302, ../_snap-menu.scss */
 .snapjs-left #content {
   overflow: hidden !important;
   position: fixed;
 }
 
-/* line 309, ../_snap-menu.scss */
+/* line 308, ../_snap-menu.scss */
 .mobile-filtering .checkbox-container {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-/* line 313, ../_snap-menu.scss */
+/* line 312, ../_snap-menu.scss */
 .mobile-filtering .check-container {
   padding: 4.5px 0;
 }
-/* line 317, ../_snap-menu.scss */
+/* line 316, ../_snap-menu.scss */
 .mobile-filtering .box-container {
   border: 0;
 }
-/* line 321, ../_snap-menu.scss */
+/* line 320, ../_snap-menu.scss */
 .mobile-filtering button {
   color: #3E606F;
   margin: 15px 0;
 }
-/* line 327, ../_snap-menu.scss */
+/* line 326, ../_snap-menu.scss */
 .mobile-filtering h2 i {
   color: #ebebeb;
 }
-/* line 333, ../_snap-menu.scss */
+/* line 332, ../_snap-menu.scss */
 .mobile-filtering label.css-label {
   color: #f7f7f7;
 }
-/* line 338, ../_snap-menu.scss */
+/* line 337, ../_snap-menu.scss */
 .mobile-filtering strong {
   color: #fff;
 }
-/* line 342, ../_snap-menu.scss */
+/* line 341, ../_snap-menu.scss */
 .mobile-filtering .vehicle-docs {
   display: none;
 }
-/* line 346, ../_snap-menu.scss */
+/* line 345, ../_snap-menu.scss */
 .mobile-filtering .vehicle-attributes {
   margin-top: -20px;
   border-bottom: 0;
 }
-/* line 351, ../_snap-menu.scss */
+/* line 350, ../_snap-menu.scss */
 .mobile-filtering .product-attributes {
   margin-top: -20px;
 }

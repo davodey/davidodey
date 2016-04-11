@@ -27,7 +27,7 @@ require([
 				},
 				'email': {
 					required: 'Please Enter Your Email Address',
-					email: 'Please Enter a Valid Email poopAddress'
+					email: 'Please Enter a Valid Email Address'
 				},
 				'message': {
 					required: 'Please Enter a Message'
@@ -35,7 +35,6 @@ require([
 			},
 			submitHandler: function(form) {
 				if ( $honey.length !== 0) {
-					console.log('go away bot');
 				} else {
 					var formData = $('#contactForm').serialize();
 					console.log(formData);
@@ -44,7 +43,6 @@ require([
 						url: 'contact_form/contact.php',
 						data: formData,
 						success: function(response) {
-							console.log(response);
 							if (response === 'OK') {
 								$('#submitForm').hide();
 								$('#message').fadeIn('fast');

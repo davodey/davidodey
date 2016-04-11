@@ -2,7 +2,7 @@
 var gulp = require('gulp'),
     notify = require('gulp-notify'),
     requireDir = require('require-dir'),
-    tasks = requireDir('./tasks');
+    tasks = requireDir('./_tasks');
     
 /*************************** Below are standard tasks that we will use regularly    
 **************************** Another list of tasks is provided below, please use as a reference */   

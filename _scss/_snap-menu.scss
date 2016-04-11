@@ -243,14 +243,14 @@
       background-color:lighten($nav-hover, 5%);
     }
     a {
-      color:darken($nav-hover, 30%);
+      color:darken($nav-hover, 45%);
       @media (max-width:640px){
 
       }
     }
 
     svg {
-      fill:darken($nav-hover, 30%);
+      fill:darken($nav-hover, 45%);
     }
   }
 }
@@ -261,7 +261,6 @@
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 15px 15px 15px 30px;
   font-weight: bold;
-  text-shadow: 0 1px 0 #000;
   text-decoration: none;
   padding:10px 0;
   display: block;

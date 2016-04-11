@@ -1,22 +1,16 @@
-<div id="navigation" class="container-fluid">
-	<nav>
-		<ul>
-			{% if page.active == "home" %}
-				<li class="active mobile-hide"><a href="index.html"><svg class="icon"><use xlink:href="#home-alt"></use></svg> Home</a></li>
-				{% else %}
-				<li class="mobile-hide"><a href="index.html"><svg class="icon"><use xlink:href="#home-alt"></use></svg> Home</a></li>
-			{% endif %}
-			{% if page.active == "blog" %}
-				<li class="active mobile-hide"><a href="blog.html"><svg class="icon book"><use xlink:href="#book"></use></svg>Blog</a></li>
-				{% else %}
-				<li class="mobile-hide"><a href="blog.html"><svg class="icon book"><use xlink:href="#book"></use></svg>Blog</a></li>
-			{% endif %}
-			{% if page.active == "resources" %}
-				<li class="active mobile-hide"><a href="resources.html"><svg class="icon"><use xlink:href="#paperclip"></use></svg> Resources</a></li>
-				{% else %}
-				<li class="mobile-hide"><a href="resources.html"><svg class="icon"><use xlink:href="#paperclip"></use></svg> Resources</a></li>
-			{% endif %}
-			<li class="mobile-hide"><a href="index.html#contact"><svg class="icon"><use xlink:href="#child"></use></svg> Lets Talk</a></li>
-		</ul>
-	</nav>
-</div>
+{% if page.active == "home" %}
+<li class="active mobile-hide"><a href="{{ site.baseurl }}/index.html"><svg class="icon"><use xlink:href="#home-alt"></use></svg> Home</a></li>
+{% else %}
+<li class="mobile-hide"><a href="{{ site.baseurl }}/index.html"><svg class="icon"><use xlink:href="#home-alt"></use></svg> Home</a></li>
+{% endif %}
+{% if page.active == "blog" %}
+<li class="active mobile-hide"><a href="{{ site.baseurl }}/blog.html"><svg class="icon book"><use xlink:href="#book"></use></svg>Blog</a></li>
+{% else %}
+<li class="mobile-hide"><a href="{{ site.baseurl }}/blog.html"><svg class="icon book"><use xlink:href="#book"></use></svg>Blog</a></li>
+{% endif %}
+{% if page.active == "resources" %}
+<li class="active mobile-hide"><a href="{{ site.baseurl }}/resources.html"><svg class="icon"><use xlink:href="#paperclip"></use></svg> Resources</a></li>
+{% else %}
+<li class="mobile-hide"><a href="{{ site.baseurl }}/resources.html"><svg class="icon"><use xlink:href="#paperclip"></use></svg> Resources</a></li>
+{% endif %}
+<li class="mobile-hide"><a href="{{ site.baseurl }}/index.html#contact"><svg class="icon"><use xlink:href="#child"></use></svg> Lets Talk</a></li>

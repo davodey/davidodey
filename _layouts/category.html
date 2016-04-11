@@ -2,10 +2,30 @@
 <html lang="en">
 {% include meta/head.html %}
 {% include svg.html %}
-{% include mobile-bars.html %}
-{% include mobile-category-navigation.html %}
+<div id="open-left" class="bar-nav container-fluid">
+	<nav>
+		<ul>
+			<li class="mobile-show mobile-menu"><a href="#/"><svg class="icon bar"><use xlink:href="#bars"></use></svg><span class="menu-text">Menu</span></a></li>
+		</ul>
+	</nav>
+</div>
+<div class="snap-drawers">
+	<div class="snap-drawer snap-drawer-left">
+		<div>
+			<ul>
+				{% include mobile-navigation.html %}
+			</ul>
+		</div>
+	</div>
+</div>
 <div id="content" class="snap-content">
-{% include blog/category-navigation.html %}
+	<div id="navigation" class="container-fluid">
+		<nav>
+			<ul>
+				{% include navigation.html %}
+			</ul>
+		</nav>
+	</div>
 <div id="mobile" class="container-fluid ">
 	<div class="line clear-fix">
 		<header class="resource">

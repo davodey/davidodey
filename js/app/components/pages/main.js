@@ -27,7 +27,7 @@ require([
 				},
 				'email': {
 					required: 'Please Enter Your Email Address',
-					email: 'Please Enter a Valid Email poopAddress'
+					email: 'Please Enter a Valid Email Address'
 				},
 				'message': {
 					required: 'Please Enter a Message'

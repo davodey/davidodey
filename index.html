@@ -84,7 +84,7 @@ require: main
 		</div>
 		<div class="col-lg-12 margin-top">
 			<div class="contact_form">
-				<form id="contactForm">
+				<form id="contactForm" autocomplete="off">
 					<div id="note"></div>
 					<div class="input-holder no-margin">
 						<label class="no-margin">Full Name:</label>
@@ -101,6 +101,13 @@ require: main
 					<div class="not-ok">
 						<p><i class="fa fa-exclamation-circle fa-lg"></i> <em>It is NOT ok for you to contact me to solicit your services.  I only team up with friends in the local Phoenix Arizona area.</em></p>
 						<input type="hidden" id="honey" name="honey">
+						<div id="message" class="success-message">
+							{% highlight ruby %}
+							Success: function(response) {
+								messageSent = "Thanks for the message, I'll reply to you shortly";
+							}
+							{% endhighlight %}
+						</div>
 						<button id="submitForm" type="submit">Send Message<svg class="icon"><use xlink:href="#envelope"></use></svg></button>
 					</div>
 				</form>

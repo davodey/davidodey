@@ -15,5 +15,4 @@ components/pages/main.js
 ----------------
 lib/validate/jquery.validate.js
 lib/validate/validation_config.js
-components/contact_form.js
 components/pages/main.js

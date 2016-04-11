@@ -6,7 +6,6 @@ include 'config.php';
 
 if($post)
 	{
-		include 'functions.php';
 		$honey = $_POST['honey'];
 		$name = stripslashes($_POST['name']);
 		$email = trim($_POST['email']);
@@ -18,20 +17,7 @@ if($honey)
 	{
 		$error .= 'Go Away Robot<br />';
 	}
-// Check name
-if(!$name)
-	{
-		$error .= 'Enter your name<br />';
-	}
-// Check email
-if(!$email)
-	{
-		$error .= 'Enter your email address<br />';
-	}
-if($email && !ValidateEmail($email))
-	{
-		$error .= 'Invalid E-mail address.<br />';
-	}
+
 if(!$error)
 	{
 		$mail = mail(WEBMASTER_EMAIL, $subject, $message,

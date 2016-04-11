@@ -1,8 +1,8 @@
 require([
 	//libs
 	'jquery',
-	'validate/validation_config',
-	'app/contact_form'
+	'validate/validation_config'
+	//'app/contact_form'
 ], function($) {
 	'use strict';
 
@@ -37,7 +37,21 @@ require([
 				if ( $honey.length !== 0) {
 					console.log('go away bot');
 				} else {
-					form.submit();
+					var formData = $('#contactForm').serialize();
+					console.log(formData);
+					$.ajax({
+						type: 'POST',
+						url: 'contact_form/contact.php',
+						data: formData,
+						success: function(response) {
+							console.log(response);
+							if (response === 'OK') {
+								$('#submitForm').hide();
+								$('#message').fadeIn('fast');
+								$('input, textarea').removeClass('valid').val('');
+							}
+						}
+					});
 				}
 			}
 		});

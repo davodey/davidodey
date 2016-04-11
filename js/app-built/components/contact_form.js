@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-$(document).ready(function(){$("#contactForm").submit(function(){console.log("hello");var e=$(this).serialize();return $.ajax({type:"POST",url:"contact_form/contact.php",data:e,success:function(e){$("#note").ajaxComplete(function(t,n,r){e=="OK"?(result='<div class="notification_ok">Your message has been sent Succesfully. Thank you!</div>',$("#contactform").find(".textbox").val("")):result=e,$(this).hide(),$(this).html(result).slideDown("slow"),$(this).html(result)})}}),!1})});
-=======
 require(["jquery"],function(e){"use strict";e(document).ready(function(){e("#contactForm").submit(function(){var t=e("#honey").val();if(t.length!==0)console.log("go away bot");else{console.log("shit");var n=e(this).serialize(),r;console.log(n),e.ajax({type:"POST",url:"contact_form/contact2.php",data:n,success:function(t){console.log(t),e("#note").ajaxComplete(function(){t=="OK"?(r='<div class="notification_ok">Your message has been sent Succesfully. Thank you!</div>',e("#contactform").find(".textbox").val("")):r=t,e(this).hide(),e(this).html(r).slideDown("slow"),e(this).html(r)})}})}return!1})})});
->>>>>>> master

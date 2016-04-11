@@ -29,3 +29,15 @@ input.valid, textarea.valid {
   margin:5px;
   clear:both;
 }
+
+.success-message {
+  display:none;
+  text-align: left;
+  padding:0;
+  pre {
+    text-align: center;
+    code {
+     white-space: normal;
+    }
+  }
+}

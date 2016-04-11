@@ -10117,6 +10117,21 @@ input.valid, textarea.valid {
   clear: both;
 }
 
+/* line 33, ../_validation.scss */
+.success-message {
+  display: none;
+  text-align: left;
+  padding: 0;
+}
+/* line 37, ../_validation.scss */
+.success-message pre {
+  text-align: center;
+}
+/* line 39, ../_validation.scss */
+.success-message pre code {
+  white-space: normal;
+}
+
 /* line 1, ../_syntax.scss */
 .c {
   color: #998;

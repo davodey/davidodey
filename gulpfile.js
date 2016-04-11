@@ -13,7 +13,7 @@ gulp.task('default', function() {
     gulp.start('compile-scss');
     //gulp.start('scss-lint');
     gulp.start('require-js');
-    gulp.watch('scss/*.scss', ['compile-scss']);
+    gulp.watch('_scss/*.scss', ['compile-scss']);
     gulp.watch('js/app/*.js', ['require-js']);
     gulp.watch('js/tools/*.js', ['require-js']);
     gulp.watch('js/app/**/*.js', ['require-js']);

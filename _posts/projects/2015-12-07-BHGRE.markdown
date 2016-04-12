@@ -4,7 +4,8 @@ title:  "Better Homes & Gardens"
 date:   2016-03-04 10:28:30 -0700
 category: projects
 subtitle: 'ui/ux, wireframes, prototypes, creative direction'
-main-image: <img src="img/projects/bhgre.jpg" alt="better homes & gardens">
+main-image: bhgre.jpg
+alt: better homes & gardens
 
 ---
 

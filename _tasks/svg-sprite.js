@@ -20,6 +20,6 @@ gulp.task('svg-sprite', function () {
             }
         }))
         .pipe(svgstore())
-        .pipe(gulp.dest('icons/'));
+        .pipe(gulp.dest('_icons/'));
 
 });

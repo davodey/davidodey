@@ -1,16 +1,25 @@
 {% if page.active == "home" %}
-<li class="active mobile-hide"><a href="{{ site.baseurl }}/index.html"><svg class="icon"><use xlink:href="#home-alt"></use></svg> Home</a></li>
+<li class="active"><a href="{{ site.baseurl }}/index.html"><svg class="icon"><use xlink:href="#home-alt"></use></svg> Home</a></li>
 {% else %}
-<li class="mobile-hide"><a href="{{ site.baseurl }}/index.html"><svg class="icon"><use xlink:href="#home-alt"></use></svg> Home</a></li>
+<li><a href="{{ site.baseurl }}/index.html"><svg class="icon"><use xlink:href="#home-alt"></use></svg> Home</a></li>
 {% endif %}
+
+{% if page.active == "portfolio" %}
+<li class="active"><a href="{{ site.baseurl }}/portfolio.html"><svg class="icon book"><use xlink:href="#picture-o"></use></svg>Portfolio</a></li>
+{% else %}
+<li><a href="{{ site.baseurl }}/portfolio.html"><svg class="icon book"><use xlink:href="#picture-o"></use></svg>Portfolio</a></li>
+{% endif %}
+
 {% if page.active == "blog" %}
-<li class="active mobile-hide"><a href="{{ site.baseurl }}/blog.html"><svg class="icon book"><use xlink:href="#book"></use></svg>Blog</a></li>
+<li class="active"><a href="{{ site.baseurl }}/blog.html"><svg class="icon book"><use xlink:href="#book"></use></svg>Blog</a></li>
 {% else %}
-<li class="mobile-hide"><a href="{{ site.baseurl }}/blog.html"><svg class="icon book"><use xlink:href="#book"></use></svg>Blog</a></li>
+<li><a href="{{ site.baseurl }}/blog.html"><svg class="icon book"><use xlink:href="#book"></use></svg>Blog</a></li>
 {% endif %}
+
 {% if page.active == "resources" %}
-<li class="active mobile-hide"><a href="{{ site.baseurl }}/resources.html"><svg class="icon"><use xlink:href="#paperclip"></use></svg> Resources</a></li>
+<li class="active"><a href="{{ site.baseurl }}/resources.html"><svg class="icon"><use xlink:href="#paperclip"></use></svg> Resources</a></li>
 {% else %}
-<li class="mobile-hide"><a href="{{ site.baseurl }}/resources.html"><svg class="icon"><use xlink:href="#paperclip"></use></svg> Resources</a></li>
+<li><a href="{{ site.baseurl }}/resources.html"><svg class="icon"><use xlink:href="#paperclip"></use></svg> Resources</a></li>
 {% endif %}
-<li class="mobile-hide"><a href="{{ site.baseurl }}/index.html#contact"><svg class="icon"><use xlink:href="#child"></use></svg> Lets Talk</a></li>
+
+<li><a href="{{ site.baseurl }}/index.html#contact"><svg class="icon"><use xlink:href="#child"></use></svg> Lets Talk</a></li>

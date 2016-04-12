@@ -9419,21 +9419,20 @@ html.no-flexbox nav {
   margin: 0;
   top: 3px;
   position: relative;
-  margin-left: 10px;
   border-radius: 0;
 }
-/* line 91, ../_navigation.scss */
+/* line 90, ../_navigation.scss */
 .icon:hover {
   -webkit-transform: none;
       -ms-transform: none;
           transform: none;
   background: none;
 }
-/* line 96, ../_navigation.scss */
+/* line 95, ../_navigation.scss */
 .icon.book {
   margin-right: 5px;
 }
-/* line 99, ../_navigation.scss */
+/* line 98, ../_navigation.scss */
 .icon.bar {
   width: 25px;
   height: 25px;
@@ -9441,7 +9440,7 @@ html.no-flexbox nav {
   top: 1px;
 }
 
-/* line 108, ../_navigation.scss */
+/* line 107, ../_navigation.scss */
 .bar-nav {
   z-index: 12000;
   position: fixed;
@@ -9450,12 +9449,12 @@ html.no-flexbox nav {
   opacity: 0.9;
   border-radius: 10px;
 }
-/* line 116, ../_navigation.scss */
+/* line 115, ../_navigation.scss */
 .bar-nav a {
   padding: 15px;
 }
 
-/* line 121, ../_navigation.scss */
+/* line 120, ../_navigation.scss */
 .menu-text {
   font-size: .47em;
   display: block;
@@ -9910,6 +9909,24 @@ a .resource-row:last-child {
 /* line 71, ../_resource.scss */
 .image, .description {
   text-align: left;
+}
+
+/* line 1, ../_portfolio.scss */
+.portfolio-row {
+  border-top: 1px dotted gray;
+  padding: 25px;
+  text-align: left;
+  background: none;
+}
+/* line 7, ../_portfolio.scss */
+.portfolio-row img {
+  width: 50%;
+}
+
+/* line 12, ../_portfolio.scss */
+.title-tags {
+  text-align: left;
+  margin-bottom: 25px;
 }
 
 /* line 1, ../_share.scss */

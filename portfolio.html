@@ -1,0 +1,52 @@
+---
+layout: default
+group: "navigation"
+active: portfolio
+require: portfolio
+
+---
+<header class="resource">
+	<div class="col-lg-12 margin-sides-30">
+		<h1 class="title">Portfolio</h1>
+		<em>A collection of useful sites that will help you level up your skills</em>
+	</div>
+</header>
+<section class="margin-top-75">
+	<div class="row">
+		<div class="col-lg-12 items blog-snips margin-sides-30">
+			{% for post in site.categories['projects']%}
+				<div class="col-lg-12 portfolio-row project clear-fix">
+					<div class="title-tags">
+						<h3>{{ post.title }}</h3>
+						<ul>
+							{% for category in post.categories %}
+								{% unless post.category == "projects"%}
+								<li>{{ category }}</li>
+								{% endunless %}
+							{% endfor %}
+						</ul>
+					</div>
+					<img src="{{ site.baseurl }}/img/projects/{{post.main-image}}" alt="{{post.alt}}">
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>
+<!--<section>-->
+	<!--<div class="row bottom-margin project-adjust">-->
+		<!--<div class="col-lg-12">-->
+			<!--<div id=projects class="project-space clear-fix">-->
+				<!--{% for post in site.categories['projects']%}-->
+				<!--<div class="col-sm-2 grid-change">-->
+					<!--<div class="col-lg-12 project-image">-->
+						<!--{{post.main-image}}-->
+					<!--</div>-->
+					<!--<div class="col-lg-12 project-description">-->
+						<!--<h3>{{ post.title }}</h3>-->
+					<!--</div>-->
+				<!--</div>-->
+				<!--{% endfor %}-->
+			<!--</div>-->
+		<!--</div>-->
+	<!--</div>-->
+<!--</section>-->

@@ -11,9 +11,9 @@ require: portfolio
 		<em>A collection of useful sites that will help you level up your skills</em>
 	</div>
 </header>
-<section class="margin-top-75">
+<section class="margin-top-50">
 	<div class="row">
-		<div class="col-lg-12 items blog-snips margin-sides-30">
+		<div class="col-lg-12 items margin-sides-30">
 			{% for post in site.categories['projects']%}
 				<div class="col-lg-12 portfolio-row project clear-fix">
 					<div class="title-tags">
@@ -21,12 +21,15 @@ require: portfolio
 						<ul>
 							{% for category in post.categories %}
 								{% unless post.category == "projects"%}
-								<li>{{ category }}</li>
+								<li><code>{{ category }}</code></li>
 								{% endunless %}
 							{% endfor %}
 						</ul>
 					</div>
+					<div class="portfolio-content">
 					<img src="{{ site.baseurl }}/img/projects/{{post.main-image}}" alt="{{post.alt}}">
+						{{post.content}}
+					</div>
 				</div>
 			{% endfor %}
 		</div>

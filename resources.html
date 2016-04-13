@@ -16,14 +16,28 @@ require: resources
 </header>
 <section>
 	<div class="row">
-		<div class="col-lg-12 items">
-			<h2>Tools</h2>
+		<div class="col-lg-4 items">
+			<h3>Tools</h3>
 			{% for post in site.categories['tools'] %}
-			<div class="col-lg-12 resource-row clear-fix">
-				<img src="{{ site.baseurl }}/img/{{post.thumb-image}}">
-				<h3><a href="{{post.link}}" target="_blank">{{post.title}}</a></h3>
-				{{post.content}}
-			</div>
+			<ul class="resource-list">
+				<li><a href="{{post.link}}" target="_blank"><img src="{{ site.baseurl }}/img/{{post.thumb-image}}">{{post.title}}</a></li>
+			</ul>
+			{% endfor %}
+		</div>
+		<div class="col-lg-4 items">
+			<h3>Podcasts</h3>
+			{% for post in site.categories['tools'] %}
+			<ul class="resource-list">
+				<li><a href="{{post.link}}" target="_blank"><img src="{{ site.baseurl }}/img/{{post.thumb-image}}">{{post.title}}</a></li>
+			</ul>
+			{% endfor %}
+		</div>
+		<div class="col-lg-4 items">
+			<h3>Superheros</h3>
+			{% for post in site.categories['tools'] %}
+			<ul class="resource-list">
+				<li><a href="{{post.link}}" target="_blank"><img src="{{ site.baseurl }}/img/{{post.thumb-image}}">{{post.title}}</a></li>
+			</ul>
 			{% endfor %}
 		</div>
 	</div>

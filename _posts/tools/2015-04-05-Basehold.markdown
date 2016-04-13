@@ -7,5 +7,3 @@ thumb-image: baseholdit.jpg
 link: http://basehold.it/
 
 ---
-
-Basehold.it is a stylesheet that you can temporarily include in your projects, to help achieve vertical rhythm by establishing a baseline grid. Its fully customizable.

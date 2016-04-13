@@ -301,6 +301,10 @@ input, textarea, button, a.button {
 		font-family:$button-font;
 		border:none;
 		border-radius:5px;
+
+	  	svg {
+		  margin-left:10px;
+		}
 		
 		&:hover {
 			background-color:lighten($button, 10%);
@@ -373,6 +377,16 @@ label {
 	@include respond-to(small){
 	  width:100%;
 	}
+
+  svg {
+	margin-left:10px;
+  }
+}
+
+button {
+  svg {
+	margin-left:10px;
+  }
 }
 
 code {
@@ -389,4 +403,4 @@ pre {
   padding-left:15px;
   background:$white;
 }
- 
+

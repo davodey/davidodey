@@ -3,10 +3,7 @@ layout: post
 title:  "Balsamiq Mockups"
 date:   2016-03-10 10:28:30 -0700
 category: tools
-main-image: <img src="img/projects/bhgre.jpg" alt="better homes & gardens">
 thumb-image: balsamiq.png
 link: https://balsamiq.com/products/mockups/mybalsamiq/
 
 ---
-
-My Balsamiq is a quick and easy way to design low fidelity mockups.  If you're not using a wireframe tool or are using Photoshop or Illustrator to do this, I challenge you to try something different.  I can design mockups in half the time, focus less on colors and art and concentrate more on the UX.  Using Balsamiq for wireframing, in combination with patternlab, you will be well on your way to designing in the browser.

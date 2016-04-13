@@ -7,7 +7,3 @@ thumb-image: caniuse.png
 link: http://caniuse.com
 
 ---
-
-Have you ever decided not to use a new HTML or CSS feature because you were unsure about the browser support?  I know I have.  Can I Use can help.  All you do is go to the website, [http://caniuse.com] type in the CSS or HTML feature you are thinking of using, and a table will populate with all the supported browsers. It will also tell you how supported a feature is and if you need to use a vendor prefix or not.
-
-[http://caniuse.com]: http://caniuse.com

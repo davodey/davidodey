@@ -7,12 +7,3 @@ thumb-image: sass.png
 link: http://sass-lang.com/
 
 ---
-
-I first heard of Sass last year while attending a CSS conference. I'll admit, I wasn't that excited to have to learn a new way to write CSS. It felt like one more thing to do. Luckily I heard a talk from @laurakalbag on the benefits of using Sass and how to incorporate it into your workflow. By the end of her talk, I was excited to try and learn this new language.  Since then, I use Sass on all my projects and encourage it on the teams I work on.  The ability to store and call variables, write functions, and nest css selectors is just Sasstastic, and its only a fraction of what you can actually do with this powerful language.
-
-* Want to learn the basics of SASS? [Read Article]
-* More on Sass [The Sass Way].
-
-[Read Article]: http://sass-lang.com/guide
-[The Sass Way]: http://thesassway.com/
- 

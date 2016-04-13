@@ -8598,6 +8598,10 @@ input[type="submit"], textarea[type="submit"], button[type="submit"], a.button[t
   border-radius: 5px;
 }
 /* line 305, ../_elements.scss */
+input[type="submit"] svg, textarea[type="submit"] svg, button[type="submit"] svg, a.button[type="submit"] svg {
+  margin-left: 10px;
+}
+/* line 309, ../_elements.scss */
 input[type="submit"]:hover, textarea[type="submit"]:hover, button[type="submit"]:hover, a.button[type="submit"]:hover {
   background-color: #6896ab;
 }
@@ -8615,7 +8619,7 @@ input[type="submit"]:hover, textarea[type="submit"]:hover, button[type="submit"]
   }
 }
 
-/* line 320, ../_elements.scss */
+/* line 324, ../_elements.scss */
 textarea {
   width: 100%;
   height: 100px;
@@ -8624,7 +8628,7 @@ textarea {
   padding-left: 18px;
 }
 @media (max-width: 767px) {
-  /* line 320, ../_elements.scss */
+  /* line 324, ../_elements.scss */
   textarea {
     width: 100%;
     margin-left: 0;
@@ -8632,7 +8636,7 @@ textarea {
   }
 }
 
-/* line 334, ../_elements.scss */
+/* line 338, ../_elements.scss */
 label {
   display: block;
   text-align: left;
@@ -8643,19 +8647,19 @@ label {
 }
 
 @media (max-width: 991px) {
-  /* line 343, ../_elements.scss */
+  /* line 347, ../_elements.scss */
   .article {
     margin-bottom: 50px;
   }
 }
 @media (max-width: 640px) {
-  /* line 343, ../_elements.scss */
+  /* line 347, ../_elements.scss */
   .article {
     margin-bottom: 0;
   }
 }
 
-/* line 354, ../_elements.scss */
+/* line 358, ../_elements.scss */
 .button {
   background-color: #507c90;
   padding: 10px 20px;
@@ -8670,32 +8674,41 @@ label {
   border: none;
   border-radius: 5px;
 }
-/* line 367, ../_elements.scss */
+/* line 371, ../_elements.scss */
 .button:hover {
   background-color: #6896ab;
   color: #fff;
   text-decoration: none;
 }
 @media (max-width: 767px) {
-  /* line 354, ../_elements.scss */
+  /* line 358, ../_elements.scss */
   .button {
     width: 100%;
   }
 }
+/* line 381, ../_elements.scss */
+.button svg {
+  margin-left: 10px;
+}
 
-/* line 378, ../_elements.scss */
+/* line 387, ../_elements.scss */
+button svg {
+  margin-left: 10px;
+}
+
+/* line 392, ../_elements.scss */
 code {
   color: #262626;
   background: #ecfecd;
 }
 
-/* line 383, ../_elements.scss */
+/* line 397, ../_elements.scss */
 figure {
   text-align: left;
   margin-bottom: 25px;
 }
 
-/* line 388, ../_elements.scss */
+/* line 402, ../_elements.scss */
 pre {
   padding-left: 15px;
   background: #fff;
@@ -9895,7 +9908,7 @@ a .resource-row:last-child {
 .resource-row h3 {
   padding-top: 0;
   margin-top: 0;
-  margin-bottom: 5px;
+  margin-bottom: 0;
   font-size: 1.2em;
 }
 /* line 56, ../_resource.scss */
@@ -9913,6 +9926,33 @@ a .resource-row:last-child {
 }
 
 /* line 71, ../_resource.scss */
+.resource-list {
+  clear: both;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+/* line 77, ../_resource.scss */
+.resource-list a {
+  display: block;
+  padding: 5px;
+}
+/* line 81, ../_resource.scss */
+.resource-list a:hover {
+  background-color: #ebebeb;
+}
+/* line 85, ../_resource.scss */
+.resource-list li {
+  border-top: 1px dotted gray;
+}
+/* line 88, ../_resource.scss */
+.resource-list img {
+  width: 5%;
+  margin-right: 10px;
+}
+
+/* line 94, ../_resource.scss */
 .image, .description {
   text-align: left;
 }

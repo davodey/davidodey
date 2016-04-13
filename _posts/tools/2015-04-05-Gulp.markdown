@@ -8,11 +8,4 @@ link: http://gulpjs.com/
 
 ---
 
-Gulp is a build tool that runs on node.js, its main purpose is to automate tedious and time consuming tasks.  I use gulp.js to compile and minify my SASS, add vendor pre-fixes to my css, clean up and combine my javascript, and compress my images. The beauty of this, is it happens automatically when i type one command: $ gulp.
-
-* Find out more about Gulp: [Read Article]
-* Never used a tool like this before? No worries [Step by step instructions to get you started].
-
-[Read Article]: http://www.smashingmagazine.com/2014/06/11/building-with-gulp/
-[Step by step instructions to get you started]: http://travismaynard.com/writing/getting-started-with-gulp
  

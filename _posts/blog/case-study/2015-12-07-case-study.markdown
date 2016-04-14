@@ -11,7 +11,7 @@ author: David O'Dey
 main-image: <img src="http://placehold.it/600x300" alt="alt">
 thumb-image: patternlab.png
 active: blog
-require: blog
+require: post
 twitterText: Yowsers
 twitterHash: test
 ---

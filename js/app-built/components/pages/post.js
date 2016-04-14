@@ -1,1 +1,1 @@
-require(["jquery"],function(e){"use strict";e(document).ready(function(){})});
+require(["jquery"],function(e){"use strict";e(document).ready(function(){var t=e("#post-list").length;e(".post-count").text(t)})}),define("app/pages/post",function(){});

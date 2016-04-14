@@ -1,14 +1,15 @@
 ---
 layout: default
 active: blog
-require: blog
+require: post
 ---
-
-<article>
-	<div class="col-lg-12">
+<header class="resource">
+	<div class="col-lg-12 margin-sides-30">
 		<h1 class="title">{{ page.title }}</h1>
 		<em> Written {% if page.author %} by {{ page.author }} {% endif %} on {{ page.date | date: "%b %-d, %Y" }}</em>
 	</div>
+</header>
+<article>
 	<div class="col-lg-12 margin-top-25">
 		<div class="col-lg-3 padding-top-5">
 			Left sidebar content

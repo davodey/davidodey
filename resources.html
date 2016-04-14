@@ -6,39 +6,38 @@ require: resources
 ---
 
 <header class="resource">
-	<div class="col-lg-12 margin-sides-30">
+	<div class="col-lg-12">
 		<h1 class="title">Resources</h1>
 		<em>A collection of useful sites that will help you level up your skills</em>
-		<p>
-			If you’re new to web design or front-end development, you can quickly become overwhelmed, with the wide variety of tools, resources, and news sites, on the web.  Over the years I have collected a pretty good go-to list of sites I can visit on a regular basis, that help me level up my skills, keep me current with styles and techniques, and tools that have become vital, as part of my everyday workflow.  I want to share these with you, so you can become the  rock star designer / developer you want to be.
-		</p>
 	</div>
 </header>
-<section>
+<section class="margin-top-50">
 	<div class="row">
-		<div class="col-lg-4 items">
-			<h3>Tools</h3>
-			{% for post in site.categories['tools'] %}
-			<ul class="resource-list">
-				<li><a href="{{post.link}}" target="_blank"><img src="{{ site.baseurl }}/img/{{post.thumb-image}}">{{post.title}}</a></li>
-			</ul>
-			{% endfor %}
-		</div>
-		<div class="col-lg-4 items">
-			<h3>Podcasts</h3>
-			{% for post in site.categories['tools'] %}
-			<ul class="resource-list">
-				<li><a href="{{post.link}}" target="_blank"><img src="{{ site.baseurl }}/img/{{post.thumb-image}}">{{post.title}}</a></li>
-			</ul>
-			{% endfor %}
-		</div>
-		<div class="col-lg-4 items">
-			<h3>Superheros</h3>
-			{% for post in site.categories['tools'] %}
-			<ul class="resource-list">
-				<li><a href="{{post.link}}" target="_blank"><img src="{{ site.baseurl }}/img/{{post.thumb-image}}">{{post.title}}</a></li>
-			</ul>
-			{% endfor %}
+		<div class="col-lg-12 border-top padding-top-25">
+			<div class="col-lg-4 items padding-left-0">
+				<h3>Tools</h3>
+				{% for post in site.categories['tools'] %}
+				<ul class="resource-list">
+					<li><a href="{{post.link}}" target="_blank"><img src="{{ site.baseurl }}/img/{{post.thumb-image}}">{{post.title}}</a></li>
+				</ul>
+				{% endfor %}
+			</div>
+			<div class="col-lg-4 items">
+				<h3>Podcasts</h3>
+				{% for post in site.categories['tools'] %}
+				<ul class="resource-list">
+					<li><a href="{{post.link}}" target="_blank"><img src="{{ site.baseurl }}/img/{{post.thumb-image}}">{{post.title}}</a></li>
+				</ul>
+				{% endfor %}
+			</div>
+			<div class="col-lg-4 items padding-right-0">
+				<h3>Superheros</h3>
+				{% for post in site.categories['tools'] %}
+				<ul class="resource-list">
+					<li><a href="{{post.link}}" target="_blank"><img src="{{ site.baseurl }}/img/{{post.thumb-image}}">{{post.title}}</a></li>
+				</ul>
+				{% endfor %}
+			</div>
 		</div>
 	</div>
 </section>

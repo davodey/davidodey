@@ -6,5 +6,7 @@ require([
 
 	$(document).ready(function(){
 		//do stuff
+		var postLength = $('#post-list').length;
+		$('.post-count').text(postLength);
 	});
 });

@@ -13,6 +13,26 @@ components/mobile-snap.js
 
 components/pages/main.js
 ----------------
+components/pages/main.js
+
+components/pages/contact.js
+----------------
 lib/validate/jquery.validate.js
 lib/validate/validation_config.js
-components/pages/main.js
+components/pages/contact.js
+
+components/pages/blog.js
+----------------
+components/pages/blog.js
+
+components/pages/portfolio.js
+----------------
+components/pages/portfolio.js
+
+components/pages/post.js
+----------------
+components/pages/post.js
+
+components/pages/resources.js
+----------------
+components/pages/resources.js

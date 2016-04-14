@@ -61,6 +61,13 @@
   }
 }
 
+.comment {
+  @include colorHover($comment);
+  svg {
+	top:4px;
+  }
+}
+
 .facebook {
   @include colorHover($facebook);
   svg {

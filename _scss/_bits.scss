@@ -501,12 +501,14 @@ a  {
   text-align:left;
   padding-left:17%;
   li {
-	@media (max-width:768px) {
-	  padding:10px 0;
-	  font-size:1.2em;
+	&:last-child {
+	  border-bottom:1px dotted $grey;
 	}
 	a {
-	  text-decoration: underline;
+	  text-decoration: none;
+	  @media (max-width:640px) {
+		padding:10px 0;
+	  }
 	}
   }
 }
@@ -524,4 +526,20 @@ a  {
 	  padding:5px;
 	}
   }
+}
+
+.padding-left-0 {
+  padding-left:0;
+}
+
+.padding-right-0 {
+  padding-right:0;
+}
+
+.border-top {
+  border-top: 1px dotted $grey;
+}
+
+.padding-top-25 {
+  padding-top: 25px;
 }

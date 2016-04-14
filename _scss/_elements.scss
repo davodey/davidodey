@@ -12,6 +12,7 @@ body {
 	
 	@media (max-width:640px){
 		padding-top:50px;
+	  	padding-bottom:0;
 	}
 }
 body, p {
@@ -244,7 +245,7 @@ nav {
 section {
 	
 	> div {
-		margin-bottom:150px;
+		margin-bottom:75px;
 
 	  @media (min-width:1920px) {
 		margin-bottom:200px;
@@ -253,7 +254,7 @@ section {
 		margin-bottom:150px;
 	  }
 	  @media (max-width:640px){
-		  margin-bottom:100px;
+		  margin-bottom:50px;
 	  }
 		
 	  &.bottom-margin {
@@ -403,4 +404,30 @@ pre {
   padding-left:15px;
   background:$white;
 }
+
+footer {
+	text-align: left;
+	padding:0;
+  padding-top:25px;
+  white-space: nowrap;;
+  @media(max-width:640px) {
+	font-size:.875em;
+  }
+
+  pre {
+	  text-align: center;
+	border:0;
+	background:none;
+	  code {
+		white-space: normal;
+		background-color: $color3;
+		color: white;
+		padding: 10px;
+		@media (max-width:472px) {
+		  font-size:0.645em;
+		}
+	  }
+	}
+  }
+
 

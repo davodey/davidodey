@@ -3,11 +3,6 @@
   text-align: left;
   background:none;
 
-  @media (max-width:640px) {
-    padding-left:0;
-    padding-right:0;
-  }
-
   img {
     width:50%;
     @media (max-width:640px) {

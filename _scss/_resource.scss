@@ -68,22 +68,32 @@
 
 }
 
+a {
+  h3 {
+	color:$black;
+  }
+}
 .resource-list {
   clear:both;
   overflow:hidden;
   margin:0;
   padding:0;
   text-align: left;
+
   a {
 	display:block;
 	padding:5px;
+	text-decoration: none;
 
 	&:hover {
 	  background-color:$light-grey;
 	}
+
+
   }
   li {
 	border-top:1px dotted $grey;
+
   }
   img {
 	width:5%;

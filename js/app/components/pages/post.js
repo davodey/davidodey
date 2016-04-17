@@ -5,8 +5,15 @@ require([
 	'use strict';
 
 	$(document).ready(function(){
-		//do stuff
-		var postLength = $('#post-list').length;
-		$('.post-count').text(postLength);
+		// load twitter counts
+		$.getScript("http://opensharecount.com/bubble.js")
+			.done(function() {
+				$('style').remove();
+			});
 	});
+});
+
+define(['//opensharecount.com/bubble.js'],
+function () {
+	$('style').remove();
 });

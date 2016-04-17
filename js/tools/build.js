@@ -11,13 +11,10 @@
             //top level dependencies, "include" will find
             //nested dependencies.
             include: [
-            'feature-detection', 
-            'jquery',
-            'app/mobile-snap',
-
-
-            
-                      
+            'feature-detection',
+                'app/typescript',
+                'jquery',
+            'app/mobile-snap'
             ]
         },
         //Now set up a build layer for each main layer, but exclude
@@ -53,7 +50,7 @@
     },
     {
         name: 'app/pages/post',
-        include:[],
+        include:['app/remove-style'],
         exclude: ['../common']
     },
     {

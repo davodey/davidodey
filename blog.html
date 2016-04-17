@@ -24,24 +24,6 @@ require: blog
 			</a>
 			{% endfor %}
 		</div>
-		<div class="col-lg-6 items margin-top-50">
-			<h2>Discussion Topics</h2>
-			<ul class="topics resource-list">
-				{% for tags in site.tags %}
-				<li><a href="{{ site.baseurl }}/categories/{{ tags | first }}" name="{{ tags | first }}"> <svg class="icon color small"><use xlink:href="#folder-open"></use></svg> {{ tags| first }} </a></li>
-				{% endfor %}
-			</ul>
-
-		</div>
-		<div class="col-lg-6 items margin-top-50">
-			<h2>Recent Blog Posts</h2>
-			<ul class="recent resource-list">
-				{% for post in site.categories['blog']%}
-				<li>
-					 <a href="{{ site.baseurl }}{{ post.url }}"><svg class="icon color small"><use xlink:href="#star"></use></svg> {{ post.title }}</a>
-				</li>
-				{% endfor %}
-			</ul>
-		</div>
+		{% include blog/topic-post-links.html %}
 	</div>
 </section>

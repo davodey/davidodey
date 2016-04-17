@@ -39,26 +39,7 @@
 				<div class="col-lg-12 items">
 					{{content}}
 				</div>
-				<div class="col-lg-6 items border-right">
-					<h2>Discussion Topics</h2>
-					<ul class="topics">
-						{% for tags in site.tags %}
-						<li>
-							<svg class="icon color small"><use xlink:href="#folder-open"></use></svg> <a href="{{ site.baseurl }}/categories/{{ tags | first }}" name="{{ tags | first }}"> {{ tags| first }} </a>
-						</li>
-						{% endfor %}
-					</ul>
-				</div>
-				<div class="col-lg-6 items">
-					<h2>Recent Blog Posts</h2>
-					<ul class="recent">
-						{% for post in site.categories['blog']%}
-						<li>
-							<svg class="icon color small"><use xlink:href="#star"></use></svg> <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-						</li>
-						{% endfor %}
-					</ul>
-				</div>
+				{% include blog/topic-post-links.html %}
 			</div>
 		</section>
 	</div>

@@ -246,16 +246,6 @@ section {
 	
 	> div {
 		margin-bottom:75px;
-
-	  @media (min-width:1920px) {
-		margin-bottom:200px;
-	  }
-	  @media (max-width:1400px) {
-		margin-bottom:150px;
-	  }
-	  @media (max-width:640px){
-		  margin-bottom:50px;
-	  }
 		
 	  &.bottom-margin {
 		  @media(max-width:640px){
@@ -420,7 +410,7 @@ footer {
 	background:none;
 	  code {
 		white-space: normal;
-		background-color: $color3;
+		background-color: darken($color3, 20%);
 		color: white;
 		padding: 10px;
 		@media (max-width:472px) {

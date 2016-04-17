@@ -26,6 +26,5 @@ requirejs.config({
         'lib/selectivizr': ['jquery'],
         'respond':['jquery'],
         'checkbox/icheck': ['jquery']
-
     }
 });

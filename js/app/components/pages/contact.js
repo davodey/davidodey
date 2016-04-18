@@ -1,6 +1,7 @@
 require([
 	//libs
 	'jquery',
+	'typescript',
 	'validate/validation_config'
 ], function($) {
 	'use strict';

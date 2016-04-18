@@ -1,1 +1,1 @@
-require(["jquery"],function(e){"use strict";e(document).ready(function(){})}),define("app/pages/portfolio",function(){});
+define("typescript",["//use.typekit.net/jag4iyt.js"],function(){try{Typekit.load()}catch(e){}}),require(["jquery","typescript"],function(e){"use strict";e(document).ready(function(){})}),define("app/pages/portfolio",function(){});

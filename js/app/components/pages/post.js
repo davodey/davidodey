@@ -1,19 +1,13 @@
 require([
 	//libs
-	'jquery'
+	'jquery',
+	'disqus',
+	'//opensharecount.com/bubble.js',
+	'//davidodey.disqus.com/count.js',
+	'typescript',
 ], function($) {
 	'use strict';
-
 	$(document).ready(function(){
-		// load twitter counts
-		$.getScript("http://opensharecount.com/bubble.js")
-			.done(function() {
-				$('style').remove();
-			});
+		//$('style').remove();
 	});
-});
-
-define(['//opensharecount.com/bubble.js'],
-function () {
-	$('style').remove();
 });

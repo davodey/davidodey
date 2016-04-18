@@ -12,9 +12,9 @@
             //nested dependencies.
             include: [
             'feature-detection',
-                'app/typescript',
-                'jquery',
-            'app/mobile-snap'
+            'jquery',
+            'app/mobile-snap',
+             'ga'
             ]
         },
         //Now set up a build layer for each main layer, but exclude
@@ -50,7 +50,7 @@
     },
     {
         name: 'app/pages/post',
-        include:['app/remove-style'],
+        include:[],
         exclude: ['../common']
     },
     {

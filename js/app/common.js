@@ -9,6 +9,7 @@ requirejs.config({
     baseUrl: 'lib',
     paths: {
         'app': '../components',
+        
     },
     shim: {
         'bootstrap/affix': ['jquery'],
@@ -25,6 +26,6 @@ requirejs.config({
         'bootstrap/transition': ['jquery'],
         'lib/selectivizr': ['jquery'],
         'respond':['jquery'],
-        'checkbox/icheck': ['jquery']
+        'checkbox/icheck': ['jquery'],
     }
 });

@@ -14,7 +14,7 @@
             'feature-detection',
             'jquery',
             'app/mobile-snap',
-             'ga'
+            'ga'
             ]
         },
         //Now set up a build layer for each main layer, but exclude

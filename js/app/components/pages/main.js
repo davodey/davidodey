@@ -6,6 +6,7 @@ require([
 	'use strict';
 
 	$(document).ready(function(){
-
+		// do stuff
+		
 	});
 });

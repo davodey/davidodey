@@ -5,6 +5,7 @@
 //Configure loading modules from the lib directory,
 //except for 'app' ones, which are in a sibling
 //directory.
+
 requirejs.config({
     baseUrl: 'lib',
     paths: {
@@ -27,5 +28,8 @@ requirejs.config({
         'lib/selectivizr': ['jquery'],
         'respond':['jquery'],
         'checkbox/icheck': ['jquery'],
-    }
+    },
+
+
 });
+

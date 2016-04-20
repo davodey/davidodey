@@ -38,6 +38,9 @@ components/pages/post.js
 ----------------
 lib/disqus.js
 lib/typescript.js
+lib/share/jquery.sharrre.js
+lib/share/platform/platform.js
+lib/share/platform/twitter.js
 components/pages/post.js
 
 components/pages/resources.js

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
    {% include meta/head.html %}
-   <script src="//opensharecount.com/bubble.js"></script>
    {% include svg.html %}
    <div id="open-left" class="bar-nav container-fluid">
       <nav>
@@ -35,26 +34,27 @@
                   <em> Written {% if page.author %} by {{ page.author }} {% endif %} on {{ page.date | date: "%b %-d, %Y" }}</em>
                </div>
             </header>
-         <article>
-            <div class="col-lg-12 margin-top-25">
-               <div class="col-lg-2 col-md-2 padding-top-5">
+            <article>
+               <div class="col-lg-12 margin-top-25">
+                  <div class="col-lg-2 col-md-2 padding-top-5">
 
-               </div>
-               <div class="col-lg-8 col-md-8 article-copy">
-                  {{content}}
-               </div>
-               <div class="col-lg-2 col-md-2 padding-top-5">
+                  </div>
+                  <div class="col-lg-8 col-md-8 article-copy">
+                     {{content}}
+                  </div>
+                  <div class="col-lg-2 col-md-2 padding-top-5">
 
+                  </div>
+                  <div class="share">
+                     {% include blog/share.html %}
+                  </div>
+                  <div class="comments">
+                     <div id="disqus_thread"></div>
+                  </div>
                </div>
-               <div class="share">
-                  {% include blog/share.html %}
-               </div>
-               <div class="comments">
-                  <div id="disqus_thread"></div>
-               </div>
-            </div>
-         </article>
-      </div>
+            </article>
+
+         </div>
       {% include meta/footer.html %}
       </div>
 </html>

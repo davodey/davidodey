@@ -10169,7 +10169,12 @@ a h3 {
           transform: none;
 }
 
-/* line 57, ../_share.scss */
+/* line 56, ../_share.scss */
+.share-items {
+  margin-bottom: 60px;
+}
+
+/* line 59, ../_share.scss */
 .twitter {
   background-color: #4099FF;
 }
@@ -10178,12 +10183,12 @@ a h3 {
   background-color: #5aa7ff;
   text-decoration: none;
 }
-/* line 59, ../_share.scss */
+/* line 61, ../_share.scss */
 .twitter svg {
   top: 4px;
 }
 
-/* line 64, ../_share.scss */
+/* line 66, ../_share.scss */
 .comment {
   background-color: #FFB540;
 }
@@ -10192,12 +10197,12 @@ a h3 {
   background-color: #ffbf5a;
   text-decoration: none;
 }
-/* line 66, ../_share.scss */
+/* line 68, ../_share.scss */
 .comment svg {
   top: 4px;
 }
 
-/* line 71, ../_share.scss */
+/* line 73, ../_share.scss */
 .facebook {
   background-color: #335795;
 }
@@ -10206,12 +10211,12 @@ a h3 {
   background-color: #3a62a8;
   text-decoration: none;
 }
-/* line 73, ../_share.scss */
+/* line 75, ../_share.scss */
 .facebook svg {
   top: 4px;
 }
 
-/* line 78, ../_share.scss */
+/* line 80, ../_share.scss */
 .google {
   background-color: #DD4B39;
 }
@@ -10220,13 +10225,13 @@ a h3 {
   background-color: #e15f4f;
   text-decoration: none;
 }
-/* line 80, ../_share.scss */
+/* line 82, ../_share.scss */
 .google svg {
   top: 4px;
   margin-right: 4px;
 }
 
-/* line 86, ../_share.scss */
+/* line 88, ../_share.scss */
 .email {
   background-color: #FA6900;
 }
@@ -10235,12 +10240,12 @@ a h3 {
   background-color: #ff7715;
   text-decoration: none;
 }
-/* line 88, ../_share.scss */
+/* line 90, ../_share.scss */
 .email svg {
   top: 4px;
 }
 
-/* line 93, ../_share.scss */
+/* line 95, ../_share.scss */
 .linkedin {
   background-color: #0078B5;
 }
@@ -10249,14 +10254,14 @@ a h3 {
   background-color: #0089cf;
   text-decoration: none;
 }
-/* line 95, ../_share.scss */
+/* line 97, ../_share.scss */
 .linkedin svg {
   top: 2px;
   margin-right: 3px;
 }
 
 @media (max-width: 640px) {
-  /* line 101, ../_share.scss */
+  /* line 103, ../_share.scss */
   .social-text {
     display: none;
   }

@@ -1,20 +1,24 @@
 <div class="share-items">
 	<strong>SHARE THIS ARTICLE</strong>
 	<ul class="share-links">
-		<li>
-			<a class="twitter osc-counter" data-dir="left" href="http://twitter.com/intent/tweet?text={{page.twitterText}}%20%23{{page.twitterHash}}&amp;via=davodey" ><svg><use xlink:href="#twitter"></use></svg>0</a>
+		<li id="twitterShare" data-url="http://10.0.1.78{{site.baseurl}}{{page.url}}" data-text="{{page.twitterText}} #{{page.twitterHash}}">
 		</li>
 		<li>
-			<a class="facebook" href="http://www.facebook.com/sharer/sharer.php?url=http://10.0.1.78/{{site.baseurl}}{{post.url}}&title={% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"><svg><use xlink:href="#facebook"></use></svg><span class="facebook-count">0<span></span></a>
+			<a class="facebook popup" href="https://www.facebook.com/sharer/sharer.php?u=http%3A//10.0.1.78{{site.baseurl}}{{page.url}}&title={% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"><svg><use xlink:href="#facebook"></use></svg><span class="facebook-count">0<span></span></a>
 		</li>
 		<li>
-			<a class="linkedin" href="http://www.linkedin.com/shareArticle?mini=true&url=http://10.0.1.78/{{site.baseurl}}{{post.url}}&title={% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}}"><svg><use xlink:href="#linkedin"></use></svg><span class="linkedin-count">0</span></a>
+			<a class="linkedin popup" href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A//10.0.1.78{{site.baseurl}}{{page.url}}&title={% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"><svg><use xlink:href="#linkedin"></use></svg><span class="linkedin-count">0</span></a>
 		</li>
 		<li>
-			<a class="google" href="https://plus.google.com/share?url=http://10.0.1.78/{{site.baseurl}}{{post.url}}"><svg><use xlink:href="#google-plus"></use></svg><span class="google-count">0</span></a>
+			<a class="google popup" href="https://plus.google.com/share?url=http%3A//10.0.1.78{{site.baseurl}}{{page.url}}"><svg><use xlink:href="#google-plus"></use></svg><span class="google-count">0</span></a>
 		</li>
 		<li>
-			<a class="email" href="mailto:?subject={% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}&amp;body=You%20should%20read%20this:%20http://10.0.1.78/{{site.baseurl}}{{post.url}}" title="Email this article"><svg><use xlink:href="#plane"></use></svg><span class="social-text">Email</span></a>
+			<a class="email" href="mailto:?subject={% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}&amp;body=You%20should%20read%20this:%20http://10.0.1.78{{site.baseurl}}{{page.url}}" title="Email this article"><svg><use xlink:href="#plane"></use></svg><span class="social-text">Email</span></a>
 		</li>
 	</ul>
+	<div id="twitter" data-url="http://sharrre.com/" data-text="Make your sharing widget with Sharrre (jQuery Plugin)">
+
+		<!--<div id="twitterShare" data-url="http://sharrre.com/" data-text="Make your sharing widget with Sharrre (jQuery Plugin)"></div>-->
+		<!--<div id="facebookShare" data-url="http://sharrre.com/" data-text="Make your sharing widget with Sharrre (jQuery Plugin)"></div>-->
+		<!--<div id="googleplusShare" data-url="http://sharrre.com/" data-text="Make your sharing widget with Sharrre (jQuery Plugin)"></div>-->
 </div>

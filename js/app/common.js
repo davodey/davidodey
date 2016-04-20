@@ -28,6 +28,8 @@ requirejs.config({
         'lib/selectivizr': ['jquery'],
         'respond':['jquery'],
         'checkbox/icheck': ['jquery'],
+        'share/jquery.sharrre': ['jquery'],
+        'share/platform/platform': ['jquery','share/jquery.sharrre'],
     },
 
 

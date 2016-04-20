@@ -53,7 +53,9 @@
 	  }
 	}
 }
-
+.share-items {
+  margin-bottom:60px;
+}
 .twitter {
   @include colorHover($twitter);
   svg {

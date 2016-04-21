@@ -2,9 +2,7 @@ require([
 	//libs
 	'jquery',
 	'disqus',
-	'typescript',
-	'share/platform/platform',
-	'share/platform/twitter'
+	'typescript'
 ], function($) {
 	'use strict';
 	$(document).ready(function () {
@@ -17,6 +15,9 @@ require([
 				linkedin: true,
 				googlePlus: true,
 
+				//in order to get twitter counts you must sign up for a free account @ https://opensharecount.com/
+				twitter:true,
+
 				// set the page url you want to get the counts from
 				pageUrl: $thisUrl,
 
@@ -24,15 +25,19 @@ require([
 				facebookClass: 'facebook-count',
 				linkedinClass: 'linkedin-count',
 				googlePlusClass: 'google-count',
+				twitterPlusClass: 'twitter-count',
 
+				// opensharecount requires data sent as json, while others are jsonp
+				dataTypeJson: 'json',
+				dataTypeJsonp: 'jsonp'
 			};
 
-		function loadCounts (url, callback) {
+		function loadCounts (url, type, callback) {
 			$.ajax({
 				url: url,
 				cache: true,
 				type: 'POST',
-				dataType: 'jsonp',
+				dataType: type,
 				data: {
 			 		url: settings.pageUrl
 			 	},
@@ -46,8 +51,7 @@ require([
 			facebook: {
 				url: 'http://graph.facebook.com/?id='+ settings.pageUrl,
 				getCount: function (){
-					loadCounts(this.url, function (data){
-						console.log(data);
+					loadCounts(this.url, settings.dataTypeJsonp, function (data){
 						$('.'+ settings.facebookClass).text(data.shares);
 					});
 				}
@@ -55,8 +59,7 @@ require([
 			linkedin: {
 				url: 'https://www.linkedin.com/countserv/count/share?url='+ settings.pageUrl +'&format=json?callback=JSON_CALLBACK',
 				getCount: function (){
-					loadCounts(this.url, function (data){
-						console.log(data);
+					loadCounts(this.url, settings.dataTypeJsonp, function (data){
 						$('.'+ settings.linkedinClass).text(data.count);
 					});
 				}
@@ -64,9 +67,16 @@ require([
 			googlePlus: {
 				url: 'https://count.donreach.com/',
 				getCount: function (){
-					loadCounts(this.url, function (data){
-						console.log(data);
+					loadCounts(this.url, settings.dataTypeJsonp, function (data){
 						$('.'+ settings.googlePlusClass).text(data.shares.google);
+					});
+				}
+			},
+			twitter: {
+				url: 'http://opensharecount.com/count.json?url=' + settings.pageUrl,
+				getCount: function (){
+					loadCounts(this.url, settings.dataTypeJson, function (data){
+						$('.'+ settings.twitterPlusClass).text(data.count);
 					});
 				}
 			},
@@ -80,31 +90,18 @@ require([
 				if (settings.googlePlus === true) {
 					this.googlePlus.getCount();
 				}
+				if (settings.twitter === true) {
+					this.twitter.getCount();
+				}
 			}
 		};
 		
 		$(function () {
-			var $shareList = $('.share-links li');
-			$shareList.on('click', 'a.popup', function () {
+			socialCounts.execute();
+			$('.share-links li').on('click', 'a.popup', function () {
 				window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');
 				return false;
 			});
-
-			$('#twitterShare').sharrre({
-				share: {
-					twitter: true
-				},
-				template: '<a class="twitter" href="#"><svg><use xlink:href="#twitter"></use></svg>{total}</a>',
-				enableHover: false,
-				enableTracking: true,
-				buttons: { twitter: {via: 'dodey'}},
-				click: function(api){
-					api.simulateClick();
-					api.openPopup('twitter');
-				}
-			});
-
-			socialCounts.execute();
 		});
 	});
 });

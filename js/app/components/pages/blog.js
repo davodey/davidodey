@@ -1,12 +1,12 @@
 require([
 	//libs
 	'jquery',
-	'typescript',
-	'//davidodey.disqus.com/count.js'
+	'typescript'
+
 ], function ($) {
 	'use strict';
 
 	$(document).ready(function () {
-		//do stuff
+		
 	});
 });

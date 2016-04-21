@@ -8719,7 +8719,7 @@ footer pre {
 /* line 411, ../_elements.scss */
 footer pre code {
   white-space: normal;
-  background-color: #aa153f;
+  background-color: #E73E6E;
   color: white;
   padding: 10px;
 }
@@ -9376,6 +9376,24 @@ a:hover span.viewlink {
 /* line 551, ../_bits.scss */
 .margin-bottom-50 {
   margin-bottom: 50px;
+}
+
+/* line 555, ../_bits.scss */
+.blog-titles {
+  text-align: left;
+  font-family: "tablet-gothic-narrow", sans-serif;
+}
+/* line 559, ../_bits.scss */
+.blog-titles .post-date, .blog-titles .comment-count {
+  font-size: .875em;
+  font-weight: bold;
+  color: #E73E6E;
+  margin-right: 15px;
+}
+/* line 565, ../_bits.scss */
+.blog-titles .icon {
+  width: 15px;
+  fill: #000;
 }
 
 /* line 1, ../_navigation.scss */

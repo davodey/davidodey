@@ -1,1 +1,1 @@
-define("typescript",["//use.typekit.net/jag4iyt.js"],function(){try{Typekit.load()}catch(e){}}),require(["jquery","typescript","//davidodey.disqus.com/count.js"],function(e){"use strict";e(document).ready(function(){})}),define("app/pages/blog",function(){});
+define("typescript",["//use.typekit.net/jag4iyt.js"],function(){try{Typekit.load()}catch(e){}}),require(["jquery","typescript"],function(e){"use strict";e(document).ready(function(){})}),define("app/pages/blog",function(){});

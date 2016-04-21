@@ -551,3 +551,19 @@ a  {
 .margin-bottom-50 {
   margin-bottom:50px;
 }
+
+.blog-titles {
+  text-align:left;
+	font-family: $heading-font;
+
+  .post-date, .comment-count {
+	font-size:.875em;
+	font-weight:bold;
+	color:$color3;
+	margin-right:15px;
+  }
+  .icon {
+	width:15px;
+	fill:$black;
+  }
+}

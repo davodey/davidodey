@@ -410,7 +410,7 @@ footer {
 	background:none;
 	  code {
 		white-space: normal;
-		background-color: darken($color3, 20%);
+		background-color: $color3;
 		color: white;
 		padding: 10px;
 		@media (max-width:472px) {

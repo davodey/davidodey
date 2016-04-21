@@ -18,16 +18,13 @@ require([
 				googlePlus: true,
 
 				// set the page url you want to get the counts from
-				pageUrl: 'http://www.google.com',
+				pageUrl: $thisUrl,
 
 				// classes that will display the counts
 				facebookClass: 'facebook-count',
 				linkedinClass: 'linkedin-count',
 				googlePlusClass: 'google-count',
 
-				// enter google plus api
-				// get it here https://developers.google.com/+/web/api/rest/oauth#acquiring-and-using-an-api-key
-				// googlePlusApi: 'AIzaSyABnfY5UqFkTVEzpw5a1oTmbzBM_vbdlts'
 			};
 
 		function loadCounts (url, callback) {
@@ -36,6 +33,9 @@ require([
 				cache: true,
 				type: 'POST',
 				dataType: 'jsonp',
+				data: {
+			 		url: settings.pageUrl
+			 	},
 				success: function(data){
 					callback(data);
 				}
@@ -62,16 +62,11 @@ require([
 				}
 			},
 			googlePlus: {
-				url: 'https://clients6.google.com/rpc?key=' + settings.googlePlusApi + 'callback=?',
+				url: 'https://count.donreach.com/',
 				getCount: function (){
-					var params = {
-						nolog: true,
-						id: settings.pageUrl
-					};
-					gapi.client.setApiKey('AIzaSyCKSbrvQasunBoV16zDH9R33D88CeLr9gQ')
-					gapi.client.rpcRequest('pos.plusones.get', 'v1', params).execute(function(data) {
-						console.log(data.metadata.globalCounts.count);
-						$('.'+ settings.googlePlusClass).text(data.metadata.globalCounts.count)
+					loadCounts(this.url, function (data){
+						console.log(data);
+						$('.'+ settings.googlePlusClass).text(data.shares.google);
 					});
 				}
 			},

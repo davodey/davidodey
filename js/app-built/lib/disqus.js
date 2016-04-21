@@ -1,10 +1,1 @@
-define([
-	//libs
-	'disqus'
-], function() {
-		var d = document, s = d.createElement('script');
-		s.src = '//davidodey.disqus.com/embed.js';
-		s.setAttribute('data-timestamp', +new Date());
-		(d.head || d.body).appendChild(s);
-	
-});
+define(["disqus"],function(){var e=document,t=e.createElement("script");t.src="//davidodey.disqus.com/embed.js",t.setAttribute("data-timestamp",+(new Date)),(e.head||e.body).appendChild(t)});

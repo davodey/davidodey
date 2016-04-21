@@ -1,11 +1,1 @@
-require([
-	//libs
-	'jquery',
-	'typescript'
-], function($) {
-	'use strict';
-
-	$(document).ready(function(){
-		//do stuff
-	});
-});
+define("typescript",["//use.typekit.net/jag4iyt.js"],function(){try{Typekit.load()}catch(e){}}),require(["jquery","typescript"],function(e){"use strict";e(document).ready(function(){})}),define("app/pages/resources",function(){});

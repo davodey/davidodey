@@ -1,12 +1,1 @@
-require([
-	//libs
-	'jquery',
-	'typescript',
-	'//davidodey.disqus.com/count.js'
-], function ($) {
-	'use strict';
-
-	$(document).ready(function () {
-		//do stuff
-	});
-});
+define("typescript",["//use.typekit.net/jag4iyt.js"],function(){try{Typekit.load()}catch(e){}}),require(["jquery","typescript","//davidodey.disqus.com/count.js"],function(e){"use strict";e(document).ready(function(){})}),define("app/pages/blog",function(){});

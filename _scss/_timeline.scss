@@ -21,12 +21,18 @@
   @media (max-width:640px) {
 	flex-direction: column;
   }
+  &:hover {
+	.flex-item.year {
+	  animation: bounce 1.5s;
+	}
+  }
 }
 
 .flex-item {
 	flex: 1;
 }
 .year {
+
   span {
 	font-weight:bold;
 	font-family: $heading-font;
@@ -45,6 +51,11 @@
 
 .event {
   background-color:$light-grey;
+  transition: all .2s ease-in-out;
+
+  &:hover {
+	perspective: 600px;
+  }
 
   span {
 	display:block;

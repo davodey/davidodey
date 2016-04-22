@@ -36,6 +36,7 @@ nav {
 				padding-right:15px;
 				  position: relative;
 				  top: -8px;
+
 				}
 			}
 		}
@@ -45,10 +46,15 @@ nav {
 			background-color:$nav-menu;
 			color:$white;
 		  }
+
 			background-color:$nav-menu-active;
+
 
 			&:hover {
 				background-color:lighten($nav-menu-active, 5%);
+			  box-shadow:none;
+			  transform: scale(1);
+
 			}
 			a {
 				color:darken($nav-menu-active, 40%);

@@ -7,6 +7,7 @@ label.error {
   color:white;
   font-size:.7em;
   padding:0 15px;
+  animation:wiggle .3s 2;
 
   @media (max-width:1280px){
     font-size:.6em;

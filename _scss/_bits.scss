@@ -486,6 +486,7 @@ a  {
   }
   a {
 	display:block;
+
 	&:last-child {
 	  border-bottom: 1px dotted $grey;
 	  margin-bottom:25px;
@@ -504,8 +505,10 @@ a  {
 	&:last-child {
 	  border-bottom:1px dotted $grey;
 	}
+
 	a {
 	  text-decoration: none;
+		//padding-left:30px;
 	  @media (max-width:640px) {
 		padding:10px 0;
 	  }
@@ -566,4 +569,12 @@ a  {
 	width:15px;
 	fill:$black;
   }
+}
+
+.padding-left-45 {
+  padding-left:45px;
+}
+
+.padding-right-45 {
+  padding-right:45px;
 }

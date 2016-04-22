@@ -246,6 +246,10 @@ section {
 	
 	> div {
 		margin-bottom:75px;
+
+	  @media(max-width:768px) {
+		margin-bottom:0;
+	  }
 		
 	  &.bottom-margin {
 		  @media(max-width:640px){

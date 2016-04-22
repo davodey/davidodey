@@ -1,0 +1,80 @@
+.bio-timeline {
+  margin-bottom:75px;
+  div.row {
+	  margin-bottom:0;
+	@media(max-width:640px) {
+	  margin-bottom:25px;
+	}
+	ul {
+	  margin-bottom:0;
+	}
+  }
+}
+
+.flex {
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  flex-wrap: wrap;
+  overflow:hidden;
+  flex-direction: row;
+  @media (max-width:640px) {
+	flex-direction: column;
+  }
+}
+
+.flex-item {
+	flex: 1;
+}
+.year {
+  span {
+	font-weight:bold;
+	font-family: $heading-font;
+	display:block;
+  }
+  &.left {
+	text-align: right;
+	order:1;
+	padding-right:15px;
+  }
+  &.right {
+	text-align: left;
+	order:2;
+  }
+}
+
+.event {
+  background-color:$light-grey;
+
+  span {
+	display:block;
+	padding:10px;
+  }
+
+  &.left {
+	text-align: right;
+	order:1;
+	padding-right:15px;
+	border-right:1px dotted $black;
+	margin-bottom: -2px;
+	border-radius: 10px 0px 0px 10px;
+
+	@media (max-width:640px) {
+	  border:0;
+	  order:2;
+	  border-radius:10px;
+	}
+  }
+  &.right {
+	text-align: left;
+	order:2;
+	border-left:1px dotted $black;
+	margin-bottom: -2px;
+	border-radius: 0px 10px 10px 0px;
+	@media (max-width:640px) {
+	  border:0;
+	  order:1;
+	  border-radius:10px;
+	}
+  }
+}

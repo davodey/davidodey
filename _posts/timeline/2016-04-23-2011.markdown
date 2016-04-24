@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "2016 - OReilly"
+date:   2016-04-21 10:28:30 -0700
+categories:
+- timeline
+year: 2011
+description: Got introduced to the front end frameworks Bootstrap & Foundation which ultimately changed my design process, by including rapid prototyping before I start the UI.
+
+year-direction: left
+year-duplicate: true
+---

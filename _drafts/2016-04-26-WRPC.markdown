@@ -1,16 +1,16 @@
 ---
 layout: post
-title:  "O'Reilly Auto"
-date:   2016-03-04 10:28:30 -0700
+title:  "WRP Containers"
+date:   2016-04-26 00:00:54 -0700
 category:
 - projects
 - ui / ux
 - javascript
 - jekyll
 - html
-subtitle: 'css, mobile strategy'
-main-image: oreilly.jpg
-alt: oreilly
+subtitle: 'wordpress, html, css, javascript, mobile strategy'
+main-image: wrpc.jpg
+alt: wrp containers
 
 ---
 

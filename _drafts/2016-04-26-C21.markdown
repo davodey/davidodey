@@ -1,0 +1,28 @@
+---
+layout: post
+title:  "Century 21 - Fine Homes & Estates"
+date:   2016-04-26 00:00:55 -0700
+category:
+- projects
+- OmniGraffle
+- Adobe Photoshop
+- Adobe Illustrator
+- Bootstrap 3
+subtitle: 'ui/ux, wireframes, prototypes, creative direction'
+main-image: bhgre.jpg
+alt: better homes & gardens
+
+---
+
+**When:** 2014 - 2015
+
+**Contribution:** Creative Director, Designer
+
+**Description:** Better Homes & Gardens - Real Estate brings the core values from the popular magazine to the real estate market
+
+One of the most innovative features to this UI, is the way we handled our property search filtering.  We designed an icon-driven system that was the first in the industry; to let users select there must haves, before finding a home.   We knew that when users searched for real estate, they glance at content quick, so when providing the users neighborhood statistics, school information, etc. we served up info graphics.   These would clearly show the information they were looking for.  It is truly a unique experience.
+
+The design process started with stakeholder interviews.  We learned everything we could about the brand, the vision and the users.  We really wanted all ideas on the table, so after our discovery phase, every designer on the team was tasked to come up with at least two different ‘blue sky’ concepts, followed by presentations from the designers.  We made some revisions to what we felt were the best and narrowed the selection. I would present three of these to our stakeholders.
+
+Once we got direction and approval of a concept, the team started working on the product.  One team member would work on all the assets, font types, icons, color scheme, etc. Others worked on wire framing new pages.  After our wireframes would get approved they would be prototyped, this would inform the client and developers of our interactive design decisions for our production site and took the guessing out of what interactions we chose.
+

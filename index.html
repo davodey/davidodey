@@ -24,6 +24,7 @@ require: main
 		<div class="col-lg-12 flex">
 			<div class="col-lg-6 clear-fix flex-item year {% if post.year-direction == 'left' %}left{% else %} right {% endif %}">
 				<span>{% if post.year-duplicate == true %} {% else %} {{post.year}} {% endif %}</span>
+				{% if post.year-duplicate == true %} {% else %} {% if post.year-direction == 'left' %}<svg class="arrow left"><use xlink:href="#caret-left"></use></svg>{% else %} <svg class="arrow right"><use xlink:href="#caret-right"></use></svg>{% endif %} {% endif %}
 			</div>
 			<div class="col-lg-6 clear-fix flex-item event {% if post.year-direction == 'left' %}right{% else %} left {% endif %}">
 				<span>{{ post.description }}</span>

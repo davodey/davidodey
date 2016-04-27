@@ -482,7 +482,7 @@ a  {
   padding:0;
   p {
 	color:$grey;
-	margin-bottom:0;
+
   }
   a {
 	display:block;
@@ -577,4 +577,8 @@ a  {
 
 .padding-right-45 {
   padding-right:45px;
+}
+
+.scale {
+  transform: scale(1.1);
 }

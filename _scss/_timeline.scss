@@ -89,3 +89,29 @@
 	}
   }
 }
+
+.arrow {
+  margin: 0;
+  position: absolute;
+  top: -31px;
+  background: none;
+  fill: $color3;
+  top:0;
+
+  @media(max-width:640px) {
+	display:none;
+  }
+
+  &.left {
+	right: -9px;
+  }
+  &.right {
+	left: -9px;
+  }
+
+  &:hover {
+	background:none;
+	transform:none;
+  }
+}
+

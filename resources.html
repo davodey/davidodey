@@ -18,23 +18,23 @@ require: resources
 				<h3>Tools</h3>
 				{% for post in site.categories['tools'] %}
 				<ul class="resource-list">
-					<li><a href="{{post.link}}" target="_blank"><img src="{{ site.baseurl }}/img/{{post.thumb-image}}">{{post.title}}</a></li>
+					<li><a href="{{post.link}}" target="_blank"><img src="{{ site.baseurl }}/img/{{post.thumb-image}}" alt="{{post.alt-tag}}">{{post.title}}</a></li>
 				</ul>
 				{% endfor %}
 			</div>
 			<div class="col-md-4 col-sm-6 margin-bottom-50 items">
 				<h3>Podcasts</h3>
-				{% for post in site.categories['tools'] %}
+				{% for post in site.categories['podcasts'] %}
 				<ul class="resource-list">
-					<li><a href="{{post.link}}" target="_blank"><img src="{{ site.baseurl }}/img/{{post.thumb-image}}">{{post.title}}</a></li>
+					<li><a href="{{post.link}}" target="_blank"><img src="{{ site.baseurl }}/img/{{post.thumb-image}}" alt="{{post.alt-tag}}">{{post.title}}</a></li>
 				</ul>
 				{% endfor %}
 			</div>
 			<div class="col-md-4 col-sm-6 margin-bottom-50 items padding-right-0">
 				<h3>Superheros</h3>
-				{% for post in site.categories['tools'] %}
+				{% for post in site.categories['superheros'] %}
 				<ul class="resource-list">
-					<li><a href="{{post.link}}" target="_blank"><img src="{{ site.baseurl }}/img/{{post.thumb-image}}">{{post.title}}</a></li>
+					<li><a href="{{post.link}}" target="_blank"><img src="{{post.twitter-img}}" alt="{{post.alt-tag}}">{{post.title}}</a></li>
 				</ul>
 				{% endfor %}
 			</div>

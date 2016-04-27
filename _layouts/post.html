@@ -2,36 +2,59 @@
 <html lang="en">
    {% include meta/head.html %}
    {% include svg.html %}
-   {% include mobile-bars.html %}
-   {% include mobile-blog-navigation.html %}
+   <div id="open-left" class="bar-nav container-fluid">
+      <nav>
+         <ul>
+            <li class="mobile-show mobile-menu"><a href="#/"><svg class="icon bar"><use xlink:href="#bars"></use></svg><span class="menu-text">Menu</span></a></li>
+         </ul>
+      </nav>
+   </div>
+   <div class="snap-drawers">
+      <div class="snap-drawer snap-drawer-left">
+         <div>
+            <ul>
+               {% include navigation.html %}
+            </ul>
+         </div>
+      </div>
+   </div>
    <div id="content" class="snap-content">
-      {% include blog/navigation.html %}
+      <div id="navigation" class="container-fluid">
+         <nav>
+            <ul>
+               {% include navigation.html %}
+            </ul>
+         </nav>
+      </div>
       <div id="mobile" class="container-fluid ">
-         <article>
-            <div class="col-lg-12">
-               <h1 class="title">{{ page.title }}</h1>
-               <em> Written {% if page.author %} by {{ page.author }} {% endif %} on {{ page.date | date: "%b %-d, %Y" }}</em>
-            </div>
-            <div class="col-lg-12 margin-top-25">
-               <div class="col-lg-3 col-md-2 padding-top-5">
-                  Left sidebar content
+         <div class="line">
+            <header class="resource">
+               <div class="col-lg-12">
+                  <h1 class="title">{{ page.title }}</h1>
+                  <em> Written {% if page.author %} by {{ page.author }} {% endif %} on {{ page.date | date: "%b %-d, %Y" }}</em>
                </div>
-               <div class="col-lg-6 col-md-8 article-copy">
-                  {{content}}
+            </header>
+            <article>
+               <div class="col-lg-12 margin-top-25">
+                  <div class="col-lg-2 col-md-2 padding-top-5">
+
+                  </div>
+                  <div class="col-lg-8 col-md-8 article-copy">
+                     {{content}}
+                  </div>
+                  <div class="col-lg-2 col-md-2 padding-top-5">
+
+                  </div>
+                  <div class="share">
+                     {% include blog/share.html %}
+                  </div>
+                  <div class="comments">
+                     <div id="disqus_thread"></div>
+                  </div>
                </div>
-               <div class="col-lg-3 col-md-2 padding-top-5">
-                  Left sidebar content
-               </div>
-               <div class="share">
-                  {% include blog/share.html %}
-               </div>
-               <div class="comments">
-                  {% include blog/disqus.html %}
-               </div>
-            </div>
-         </article>
+            </article>
+
+         </div>
+      {% include meta/footer.html %}
       </div>
-      {% include meta/blog-footer.html %}
-      </div>
-   </body>
 </html>

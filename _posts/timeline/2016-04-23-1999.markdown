@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "2016 - OReilly"
+date:   2016-04-21 10:28:30 -0700
+categories:
+- timeline
+year: 1999
+description: Bought my first book on HTML and built my first website, hosted for free on Lycos.
+
+year-direction: left
+year-duplicate: false
+---

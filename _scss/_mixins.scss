@@ -52,3 +52,17 @@ $devices: large 1200px, medium 990px, small 767px;
 	/* ...and now for the proper property */
 	transition:.5s;
 }
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+	transform: translateY(0);
+  }
+  40% {
+	transform: translateY(-15px);
+  }
+  60% {
+	transform: translateY(-15px);
+  }
+}
+
+@keyframes wiggle{0%{transform:rotate(3deg);}50%{transform:rotate(-3deg);}100%{transform:rotate(3deg);}}

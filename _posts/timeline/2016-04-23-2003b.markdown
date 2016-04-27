@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "2016 - OReilly"
+date:   2016-04-21 10:28:30 -0700
+categories:
+- timeline
+year: 2003
+description: Moved from Chicago to Phoenix to pursue my Bachelors degree in Interactive Design / Web Management at UAT.  At that time, UAT was one of the only schools in country teaching Web & Interactive Design.
+
+year-direction: left
+year-duplicate: false
+---

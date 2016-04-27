@@ -1,0 +1,1 @@
+var SharrrePlatform=SharrrePlatform||function(){var e={};return{register:function(t,n){e[t]=n},get:function(t,n){return e[t]?new e[t](n):(console.error("Sharrre - No platform found for "+t),!1)}}}();

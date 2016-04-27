@@ -1,0 +1,27 @@
+---
+layout: post
+title:  "WRP Containers"
+date:   2016-04-26 00:00:54 -0700
+category:
+- projects
+- ui / ux
+- javascript
+- jekyll
+- html
+subtitle: 'wordpress, html, css, javascript, mobile strategy'
+main-image: wrpc.jpg
+alt: wrp containers
+
+---
+
+**When:** 2012-2014
+
+**Contribution:** Solo Founder, Architect, Full Stack Engineer, System Administrator
+
+**Description:** Author Alcove is a book discovery service. "Even if your best friend was a book critic he couldn't give you recommendations this good."
+
+Book and author data is pulled in via an API. The site uses a variation of the item-item algorithm which was shown to have the best performance on this dataset. A few of the smaller details that make the web application shine are a full site search powered by Solr, infinite scroll, a streamlined account creation process, and a delightfully simple UI.
+
+Stats tracking, conversion analysis, and lifecycle emails have been built into the project from the outset.
+
+**More info:** An IPython notebook with website traffic analysis and notes on scaling and capacity planning is available. Visit the live site at authoralcove.com.

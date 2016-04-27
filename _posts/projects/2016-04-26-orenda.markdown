@@ -1,0 +1,26 @@
+---
+layout: post
+title:  "Orenda Force"
+date:   2016-04-26 00:00:59 -0700
+category:
+- projects
+- HTML5
+- SCSS
+- JQuery
+- Require JS
+- Gulp
+- GIT
+- Jekyll
+
+subtitle: 'wordpress, html, css, javascript, mobile strategy'
+main-image: orenda.jpg
+alt: orenda force
+---
+
+**When:** 2015 - 2016
+
+**Contribution:** UX Consultant, Architect, Designer, Developer.
+
+**Description:** Orenda Force is a personal training facility that focuses on individual, custom training programs including, nutritional coaching, physical training and mind performance therapy.
+
+The user experience and interface was designed from feedback and testing we did, with the current customer base along with analytics gathered from the old site.  After our UX exercises and wireframes were complete, I used a pattern library called pattern lab to create a web component based modular system, that allowed for rapid, pixel perfect, development.  To maintain good performance I chose to use require JS to build and optimize our Javascript files and a static site generator called Jekyll to render the HTML.  Finishing it off we loaded the site with analytics, including click events all action items and goal conversion tracking, so we can use the data we get back to make further enhancements.

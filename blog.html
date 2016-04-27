@@ -5,44 +5,36 @@ active: blog
 require: blog
 
 ---
+<script id="dsq-count-scr" src="//davidodey.disqus.com/count.js" async></script>
 <header class="resource">
-	<div class="col-lg-12 margin-sides-30">
+	<div class="col-lg-12">
 		<h1 class="title">Articles</h1>
 		<em>A collection of useful sites that will help you level up your skills</em>
 	</div>
 </header>
-<section class="margin-top-75">
+<section class="margin-top-50">
 	<div class="row">
-		<div class="col-lg-12 items blog-snips margin-sides-30">
+		<div class="col-lg-12 items blog-snips">
 			{% for post in site.categories['blog']%}
 			<a href="{{ site.baseurl }}{{ post.url }}">
 				<div class="col-lg-12 resource-row clear-fix">
 					<img src="{{ site.baseurl }}/img/{{post.thumb-image}}">
-					<h3>{{ post.title }}</h3>
+					<div class="blog-titles">
+						<h3>{{ post.title }}</h3>
+						<span class="post-date">
+							<svg class="icon"><use xlink:href="#calendar-o"></use></svg>
+							{{ post.date | date: "%-m/%-d/%Y" }}
+						</span>
+						<span class="comment-count">
+							<svg class="icon"><use xlink:href="#comment-o"></use></svg>
+							<span class="disqus-comment-count" data-disqus-url="{{ site.baseurl }}{{ post.url }}"></span>
+						</span>
+					</div>
 					{{ post.excerpt }}
 				</div>
 			</a>
 			{% endfor %}
 		</div>
-		<div class="col-lg-6 items border-right">
-			<h2>Discussion Topics</h2>
-			<ul class="topics">
-				{% for tags in site.tags %}
-				<li>
-					<svg class="icon color small"><use xlink:href="#folder-open"></use></svg> <a href="{{ site.baseurl }}/categories/{{ tags | first }}" name="{{ tags | first }}"> {{ tags| first }} </a>
-				</li>
-				{% endfor %}
-			</ul>
-		</div>
-		<div class="col-lg-6 items">
-			<h2>Recent Blog Posts</h2>
-			<ul class="recent">
-				{% for post in site.categories['blog']%}
-				<li>
-					<svg class="icon color small"><use xlink:href="#star"></use></svg> <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-				</li>
-				{% endfor %}
-			</ul>
-		</div>
+		{% include blog/topic-post-links.html %}
 	</div>
 </section>

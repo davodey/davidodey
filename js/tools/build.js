@@ -11,13 +11,10 @@
             //top level dependencies, "include" will find
             //nested dependencies.
             include: [
-            'feature-detection', 
+            'feature-detection',
             'jquery',
             'app/mobile-snap',
-
-
-            
-                      
+            'ga'
             ]
         },
         //Now set up a build layer for each main layer, but exclude
@@ -32,15 +29,36 @@
         //needs to be delayed from loading until common.js finishes.
         //That loading sequence is controlled in page1.html.
         {
-        //module names are relative to baseUrl/paths config
-        
-        
-        //public modules
             name: 'app/pages/main',
             include:[],
             exclude: ['../common']
-       
-        }        
+        },
+    {
+        name: 'app/pages/contact',
+        include:[],
+        exclude: ['../common']
+    },
+    {
+        name: 'app/pages/blog',
+        include:[],
+        exclude: ['../common']
+    },
+    {
+        name: 'app/pages/portfolio',
+        include:[],
+        exclude: ['../common']
+    },
+    {
+        name: 'app/pages/post',
+        include:[],
+        exclude: ['../common']
+    },
+    {
+        name: 'app/pages/resources',
+        include:[],
+        exclude: ['../common']
+    }
+
     ],
     preserveLicenseComments: false
     

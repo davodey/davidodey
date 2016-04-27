@@ -5,10 +5,12 @@
 //Configure loading modules from the lib directory,
 //except for 'app' ones, which are in a sibling
 //directory.
+
 requirejs.config({
     baseUrl: 'lib',
     paths: {
         'app': '../components',
+        
     },
     shim: {
         'bootstrap/affix': ['jquery'],
@@ -25,7 +27,11 @@ requirejs.config({
         'bootstrap/transition': ['jquery'],
         'lib/selectivizr': ['jquery'],
         'respond':['jquery'],
-        'checkbox/icheck': ['jquery']
+        'checkbox/icheck': ['jquery'],
+        'share/jquery.sharrre': ['jquery'],
+        'share/platform/platform': ['jquery','share/jquery.sharrre'],
+    },
 
-    }
+
 });
+

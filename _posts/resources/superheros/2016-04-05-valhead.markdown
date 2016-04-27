@@ -1,0 +1,8 @@
+---
+layout: post
+title:  "Val Head"
+category: superheros
+alt-tag: "Val Head Profile Pic"
+link: https://twitter.com/vlh
+twitter-img: https://pbs.twimg.com/profile_images/669650293747900416/GApkPcFY_400x400.jpg
+---

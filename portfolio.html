@@ -1,0 +1,38 @@
+---
+layout: default
+group: "navigation"
+active: portfolio
+require: portfolio
+
+---
+<header class="resource">
+	<div class="col-lg-12">
+		<h1 class="title">Portfolio</h1>
+		<em>A collection of my latest work and accomplishments</em>
+	</div>
+</header>
+<section class="margin-top-50">
+	<div class="row">
+		<div class="col-lg-12 items blog-snips">
+			{% for post in site.categories['projects'] %}
+				<div class="col-lg-12 portfolio-row project clear-fix">
+					<div class="title-tags">
+						<h3>{{ post.title }}</h3>
+						<ul>
+							<li>TECH USED:</li>
+							{% for category in post.categories %}
+								{% unless post.category == "projects"%}
+								<li><code>{{ category }}</code></li>
+								{% endunless %}
+							{% endfor %}
+						</ul>
+					</div>
+					<div class="portfolio-content">
+					<img src="{{ site.baseurl }}/img/projects/{{post.main-image}}" alt="{{post.alt}}">
+						{{post.content}}
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>

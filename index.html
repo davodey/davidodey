@@ -4,11 +4,12 @@ group: "navigation"
 active: home
 require: main
 ---
+
 <header>
 	<div class="col-lg-12">
 		<img class="profile-image" src="img/dave-profile.png" alt="profile picture">
 		<h1 class="title">David ODey</h1>
-		<em>Web Designer & Front End Developer</em>
+		<em>UI / UX Designer & Front End Developer</em>
 		<div class="connect-social">
 			<a href="https://www.facebook.com/dave.odey"><svg class="padding-5"><use xlink:href="#facebook"></use></svg></a>
 			<a href="https://twitter.com/davodey"><svg class="padding-5"><use xlink:href="#twitter"></use></svg></a>
@@ -17,101 +18,19 @@ require: main
 		</div>
 	</div>
 </header>
-<section>
-	<div class="col-lg-12 margin-sides-30">
-		<blockquote>
-			<span class="fa fa-quote-left fa-3x pull-left"></span>
-			I have a strong passion for web standards, and creating uniquely awesome user experiences that can be accessed on all devices.
-		</blockquote>
-		<p class="three-col">There has never been a better time to be a web designer, it’s really exciting.  The web has finally evolved enough to do some pretty wicked things that are lightweight, and native to most browsers.  IE has finally been overthrown as the browser of choice, and mobile device use is skyrocketing, out selling desktop machines 3 to1. Designers have also realized that desktop experiences are not the same on mobile devices, and we can’t just re-purpose them, to fit the small screen.  A completely new approach must be taken, a mobile first approach.  You cant build a mobile first website from a pre-made template, or service.  You need to hire a qualified consultant.  Someone who can handle content strategy, user experience, and pays attention to the details.
-			If you are looking for this type of web designer, let me introduce myself.  I am a responsive web designer and front-end developer located in, Phoenix Arizona and yes it’s really hot here in the summer.   I have a strong passion for web standards, and create unique, awesome user experiences, that can be accessed on all devices.  I am not a template designer, I don’t design banner ads or graphics, and I choose my clients carefully.  You can <a href="#contact">contact me</a> by using the form below, or you can send me a <a href="http://twitter.com/davodey">message on twitter.</a>  I’m always available, and I enjoy answer questions and solving problems.
-		</p>
+<section class="bio-timeline">
+	{% for post in site.categories['timeline']%}
+	<div class="row">
+		<div class="col-lg-12 flex">
+			<div class="col-lg-6 clear-fix flex-item year {% if post.year-direction == 'left' %}left{% else %} right {% endif %}">
+				<span>{% if post.year-duplicate == true %} {% else %} {{post.year}} {% endif %}</span>
+				{% if post.year-duplicate == true %} {% else %} {% if post.year-direction == 'left' %}<svg class="arrow left"><use xlink:href="#caret-left"></use></svg>{% else %} <svg class="arrow right"><use xlink:href="#caret-right"></use></svg>{% endif %} {% endif %}
+			</div>
+			<div class="col-lg-6 clear-fix flex-item event {% if post.year-direction == 'left' %}right{% else %} left {% endif %}">
+				<span>{{ post.description }}</span>
+			</div>
+		</div>
 	</div>
+	{% endfor %}
 </section>
 </div>
-<!--<section class="line-alt">-->
-	<!--<div class="row bottom-margin">-->
-		<!--<div class="col-lg-12">-->
-			<!--<div class="title-bg">-->
-				<!--<h2 class="title">Recent Articles</h2>-->
-				<!--<em>Topics, Case Studies, Tutorials and more...</em>-->
-			<!--</div>-->
-			<!--<div id="work" class="blog-space clear-fix">-->
-				<!--<div class="col-sm-12 article">-->
-					<!--{% for post in site.categories['blog'] limit:4 %}-->
-						<!--<div class="col-sm-3 grid-change">-->
-							<!--{{post.main-image}}-->
-							<!--<h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>-->
-							<!--<em> Written {% if post.author %} by {{ post.author }} {% endif %} on {{ post.date | date: "%b %-d, %Y" }}</em>-->
-							<!--{{post.excerpt }}-->
-							<!--<a href="{{ site.baseurl }}{{ post.url }}" class="button">Read Article</a>-->
-						<!--</div>-->
-					<!--{% endfor %}-->
-				<!--</div>-->
-			<!--</div>-->
-		<!--</div>-->
-	<!--</div>-->
-<!--</section>-->
-<section class="line-alt">
-	<div class="row bottom-margin project-adjust">
-		<div class="col-lg-12">
-			<div class="title-bg">
-				<h2 class="title">Projects</h2>
-				<em>Recent web projects I've worked on</em>
-			</div>
-			<div id=projects class="project-space clear-fix">
-				{% for post in site.categories['projects']%}
-				<div class="col-sm-2 grid-change">
-					<div class="col-lg-12 project-image">
-						{{post.main-image}}
-					</div>
-					<div class="col-lg-12 project-description">
-						<h3>{{ post.title }}</h3>
-					</div>
-				</div>
-				{% endfor %}
-			</div>
-		</div>
-	</div>
-</section>
-<section id="contact" class="line-alt margin-bottom">
-	<div class="row padding-15 negative-margin">
-		<div class="col-lg-12">
-			<div class="title-bg padding-bottom">
-				<h2 class="title">Contact Me</h2> <em>Send me your questions or a message. Quote requests too!</em> </div>
-			<p>One aspect I love about web design is our outstanding community. We have this passion for helping each other, designers and non-designers. If you need some help, have a question, or would like to request a quote. Please send it along. You
-				can also tweet me your questions at <a href="http://twitter.com/davodey">@davodey</a></p>
-		</div>
-		<div class="col-lg-12 margin-top">
-			<div class="contact_form">
-				<form id="contactForm" autocomplete="off">
-					<div id="note"></div>
-					<div class="input-holder no-margin">
-						<label class="no-margin">Full Name:</label>
-						<input type="text" id="name" name="name" class="input-margin textbox">
-					</div>
-					<div class="input-holder">
-						<label class="no-margin">Email Address:</label>
-						<input type="email" id="email" name="email" class="textbox">
-					</div>
-					<div class="input-holder textarea">
-						<label>How Can I Be Of Service?</label>
-						<textarea name="message" class="textbox"></textarea>
-					</div>
-					<div class="not-ok">
-						<p><i class="fa fa-exclamation-circle fa-lg"></i> <em>It is NOT ok for you to contact me to solicit your services.  I only team up with friends in the local Phoenix Arizona area.</em></p>
-						<input type="hidden" id="honey" name="honey">
-						<div id="message" class="success-message">
-							{% highlight ruby %}
-							Success: function(response) {
-								messageSent = "Thanks for the message, I'll reply to you shortly";
-							}
-							{% endhighlight %}
-						</div>
-						<button id="submitForm" type="submit">Send Message<svg class="icon"><use xlink:href="#envelope"></use></svg></button>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-</section>

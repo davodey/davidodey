@@ -1,0 +1,26 @@
+---
+layout: post
+title:  "O'Reilly Auto"
+date:   2016-04-26 00:00:58 -0700
+category:
+- projects
+- PHP
+- HTML 5
+- SCSS
+- Javascript
+- Oracle RightNow
+
+subtitle: 'css, mobile strategy'
+main-image: oreilly.jpg
+alt: oreilly
+---
+
+**When:** 2015 - 2016
+
+**Contribution:** UI Designer / Front End Developer
+
+**Description:** Our team was tasked to integrate a support forum with live chat features to an existing web application.  This support area would help customers find answers to some frequently asked questions, reducing phone calls to the call center.
+
+The platform that was chosen was Oracles RightNow service. We were given a clean off the shelf version to customize.  We needed the support area to match the current look and feel and also be responsive. Our biggest challenge was customizing the UI.  It wasn’t as easy as adding a new CSS sheet, modifications had to be done to the PHP
+
+First we needed to stop the dynamic injection of some `<style>` tags that were being loaded after all the CSS sheets.  Second we needed to remove all the inline styles that were attributes of HTML elements.  Third we noticed that all the CSS written in the stylesheets was targeting ids, which made it difficult to refuse.  We ended up removing these.  Finally we wrote all new CSS.  The new CSS was written with SCSS to make it more maintainable and modular.

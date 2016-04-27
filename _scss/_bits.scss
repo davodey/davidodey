@@ -431,6 +431,10 @@ a  {
   margin-top:25px;
 }
 
+.margin-top-50 {
+  margin-top:50px;
+}
+
 .margin-top-75 {
   margin-top:75px;
 }
@@ -478,10 +482,11 @@ a  {
   padding:0;
   p {
 	color:$grey;
-	margin-bottom:0;
+
   }
   a {
 	display:block;
+
 	&:last-child {
 	  border-bottom: 1px dotted $grey;
 	  margin-bottom:25px;
@@ -497,12 +502,16 @@ a  {
   text-align:left;
   padding-left:17%;
   li {
-	@media (max-width:768px) {
-	  padding:10px 0;
-	  font-size:1.2em;
+	&:last-child {
+	  border-bottom:1px dotted $grey;
 	}
+
 	a {
-	  text-decoration: underline;
+	  text-decoration: none;
+		//padding-left:30px;
+	  @media (max-width:640px) {
+		padding:10px 0;
+	  }
 	}
   }
 }
@@ -520,4 +529,56 @@ a  {
 	  padding:5px;
 	}
   }
+}
+
+.padding-left-0 {
+  padding-left:0;
+}
+
+.padding-right-0 {
+  padding-right:0;
+}
+
+.border-top {
+  border-top: 1px dotted $grey;
+}
+
+.padding-top-25 {
+  padding-top: 25px;
+}
+
+.row {
+  padding:0 10px;
+}
+
+.margin-bottom-50 {
+  margin-bottom:50px;
+}
+
+.blog-titles {
+  text-align:left;
+	font-family: $heading-font;
+
+  .post-date, .comment-count {
+	font-size:.875em;
+	font-weight:bold;
+	color:$color3;
+	margin-right:15px;
+  }
+  .icon {
+	width:15px;
+	fill:$black;
+  }
+}
+
+.padding-left-45 {
+  padding-left:45px;
+}
+
+.padding-right-45 {
+  padding-right:45px;
+}
+
+.scale {
+  transform: scale(1.1);
 }

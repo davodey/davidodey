@@ -243,14 +243,14 @@
       background-color:lighten($nav-hover, 5%);
     }
     a {
-      color:darken($nav-hover, 30%);
+      color:darken($nav-hover, 45%);
       @media (max-width:640px){
 
       }
     }
 
     svg {
-      fill:darken($nav-hover, 30%);
+      fill:darken($nav-hover, 45%);
     }
   }
 }

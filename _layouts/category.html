@@ -2,10 +2,30 @@
 <html lang="en">
 {% include meta/head.html %}
 {% include svg.html %}
-{% include mobile-bars.html %}
-{% include mobile-category-navigation.html %}
+<div id="open-left" class="bar-nav container-fluid">
+	<nav>
+		<ul>
+			<li class="mobile-show mobile-menu"><a href="#/"><svg class="icon bar"><use xlink:href="#bars"></use></svg><span class="menu-text">Menu</span></a></li>
+		</ul>
+	</nav>
+</div>
+<div class="snap-drawers">
+	<div class="snap-drawer snap-drawer-left">
+		<div>
+			<ul>
+				{% include navigation.html %}
+			</ul>
+		</div>
+	</div>
+</div>
 <div id="content" class="snap-content">
-{% include blog/category-navigation.html %}
+	<div id="navigation" class="container-fluid">
+		<nav>
+			<ul>
+				{% include navigation.html %}
+			</ul>
+		</nav>
+	</div>
 <div id="mobile" class="container-fluid ">
 	<div class="line clear-fix">
 		<header class="resource">
@@ -19,26 +39,7 @@
 				<div class="col-lg-12 items">
 					{{content}}
 				</div>
-				<div class="col-lg-6 items border-right">
-					<h2>Discussion Topics</h2>
-					<ul class="topics">
-						{% for tags in site.tags %}
-						<li>
-							<svg class="icon color small"><use xlink:href="#folder-open"></use></svg> <a href="{{ site.baseurl }}/categories/{{ tags | first }}" name="{{ tags | first }}"> {{ tags| first }} </a>
-						</li>
-						{% endfor %}
-					</ul>
-				</div>
-				<div class="col-lg-6 items">
-					<h2>Recent Blog Posts</h2>
-					<ul class="recent">
-						{% for post in site.categories['blog']%}
-						<li>
-							<svg class="icon color small"><use xlink:href="#star"></use></svg> <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-						</li>
-						{% endfor %}
-					</ul>
-				</div>
+				{% include blog/topic-post-links.html %}
 			</div>
 		</section>
 	</div>

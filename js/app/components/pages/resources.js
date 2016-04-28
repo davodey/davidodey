@@ -1,7 +1,6 @@
 require([
 	//libs
-	'jquery',
-	'typescript'
+	'jquery'
 ], function($) {
 	'use strict';
 

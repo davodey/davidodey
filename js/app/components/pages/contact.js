@@ -39,8 +39,9 @@ require([
 					console.log(formData);
 					$.ajax({
 						type: 'POST',
-						url: 'contact_form/contact.php',
+						url: 'https://formspree.io/dodey@icloud.com',
 						data: formData,
+						dataType: 'json',
 						success: function(response) {
 							if (response === 'OK') {
 								$('#submitForm').hide();

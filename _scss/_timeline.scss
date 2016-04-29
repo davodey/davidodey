@@ -1,4 +1,9 @@
 .bio-timeline {
+  span {
+	font-size: $unit * 1.7; /* 16px */
+	line-height: $unit * 2.34;
+	font-family: $paragraph-font;
+  }
   div.row {
 	  margin-bottom:0;
 	@media(max-width:640px) {

@@ -8319,7 +8319,7 @@ body {
 }
 
 /* line 18, ../_elements.scss */
-body, p, span, em, a {
+body, p, em, a {
   font-size: 1.16734em;
   /* 16px */
   line-height: 1.60681em;
@@ -9626,9 +9626,9 @@ html.no-flexbox nav {
 
 /* line 126, ../_navigation.scss */
 .menu-text {
-  font-size: .42em;
+  font-size: .43em;
   display: block;
-  top: -8px;
+  top: -17px;
   position: relative;
   left: -1px;
 }
@@ -10847,21 +10847,28 @@ code span {
 }
 
 /* line 2, ../_timeline.scss */
+.bio-timeline span {
+  font-size: 1.16734em;
+  /* 16px */
+  line-height: 1.60681em;
+  font-family: "kepler-std", serif;
+}
+/* line 7, ../_timeline.scss */
 .bio-timeline div.row {
   margin-bottom: 0;
 }
 @media (max-width: 640px) {
-  /* line 2, ../_timeline.scss */
+  /* line 7, ../_timeline.scss */
   .bio-timeline div.row {
     margin-bottom: 25px;
   }
 }
-/* line 7, ../_timeline.scss */
+/* line 12, ../_timeline.scss */
 .bio-timeline div.row ul {
   margin-bottom: 0;
 }
 
-/* line 13, ../_timeline.scss */
+/* line 18, ../_timeline.scss */
 .flex {
   display: -webkit-box;
   display: -webkit-flex;
@@ -10891,7 +10898,7 @@ code span {
           flex-direction: row;
 }
 @media (max-width: 640px) {
-  /* line 13, ../_timeline.scss */
+  /* line 18, ../_timeline.scss */
   .flex {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -10902,13 +10909,13 @@ code span {
             flex-direction: column;
   }
 }
-/* line 24, ../_timeline.scss */
+/* line 29, ../_timeline.scss */
 .flex:hover .flex-item.year {
   -webkit-animation: bounce 1.5s;
           animation: bounce 1.5s;
 }
 
-/* line 30, ../_timeline.scss */
+/* line 35, ../_timeline.scss */
 .flex-item {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -10917,13 +10924,13 @@ code span {
           flex: 1;
 }
 
-/* line 35, ../_timeline.scss */
+/* line 40, ../_timeline.scss */
 .year span {
   font-weight: bold;
   font-family: "tablet-gothic-narrow", sans-serif;
   display: block;
 }
-/* line 40, ../_timeline.scss */
+/* line 45, ../_timeline.scss */
 .year.left {
   text-align: right;
   -webkit-box-ordinal-group: 2;
@@ -10933,7 +10940,7 @@ code span {
           order: 1;
   padding-right: 15px;
 }
-/* line 45, ../_timeline.scss */
+/* line 50, ../_timeline.scss */
 .year.right {
   text-align: left;
   -webkit-box-ordinal-group: 3;
@@ -10943,29 +10950,29 @@ code span {
           order: 2;
 }
 
-/* line 51, ../_timeline.scss */
+/* line 56, ../_timeline.scss */
 .event {
   background-color: #ebebeb;
   -webkit-transition: all .2s ease-in-out;
           transition: all .2s ease-in-out;
 }
-/* line 55, ../_timeline.scss */
+/* line 60, ../_timeline.scss */
 .event:hover {
   -webkit-perspective: 600px;
           perspective: 600px;
 }
-/* line 59, ../_timeline.scss */
+/* line 64, ../_timeline.scss */
 .event span {
   display: block;
   padding: 10px;
 }
 @media (max-width: 640px) {
-  /* line 59, ../_timeline.scss */
+  /* line 64, ../_timeline.scss */
   .event span {
     text-align: center;
   }
 }
-/* line 67, ../_timeline.scss */
+/* line 72, ../_timeline.scss */
 .event.left {
   text-align: right;
   -webkit-box-ordinal-group: 2;
@@ -10979,7 +10986,7 @@ code span {
   border-radius: 10px 0px 0px 10px;
 }
 @media (max-width: 640px) {
-  /* line 67, ../_timeline.scss */
+  /* line 72, ../_timeline.scss */
   .event.left {
     border: 0;
     -webkit-box-ordinal-group: 3;
@@ -10990,7 +10997,7 @@ code span {
     border-radius: 10px;
   }
 }
-/* line 81, ../_timeline.scss */
+/* line 86, ../_timeline.scss */
 .event.right {
   text-align: left;
   -webkit-box-ordinal-group: 3;
@@ -11003,7 +11010,7 @@ code span {
   border-radius: 0px 10px 10px 0px;
 }
 @media (max-width: 640px) {
-  /* line 81, ../_timeline.scss */
+  /* line 86, ../_timeline.scss */
   .event.right {
     border: 0;
     -webkit-box-ordinal-group: 2;
@@ -11015,7 +11022,7 @@ code span {
   }
 }
 
-/* line 95, ../_timeline.scss */
+/* line 100, ../_timeline.scss */
 .arrow {
   margin: 0;
   position: absolute;
@@ -11025,20 +11032,20 @@ code span {
   top: 0;
 }
 @media (max-width: 640px) {
-  /* line 95, ../_timeline.scss */
+  /* line 100, ../_timeline.scss */
   .arrow {
     display: none;
   }
 }
-/* line 107, ../_timeline.scss */
+/* line 112, ../_timeline.scss */
 .arrow.left {
   right: -9px;
 }
-/* line 110, ../_timeline.scss */
+/* line 115, ../_timeline.scss */
 .arrow.right {
   left: -9px;
 }
-/* line 114, ../_timeline.scss */
+/* line 119, ../_timeline.scss */
 .arrow:hover {
   background: none;
   -webkit-transform: none;

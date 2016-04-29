@@ -10,7 +10,7 @@
 <script src="{{ site.baseurl }}/js/app-built/lib/require.js"></script>
 
 <script>
-    requirejs(['{{site.baseurl}}/js/app-built/common'], function(common)
+    requirejs(['{{site.baseurl}}/js/app-built/common.js'], function(common)
     {
         requirejs(['{{site.baseurl}}/js/app-built/components/pages/{{page.require}}']);
     });

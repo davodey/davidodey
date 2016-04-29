@@ -10456,6 +10456,11 @@ input.valid, textarea.valid {
   white-space: normal;
 }
 
+/* line 46, ../_validation.scss */
+code span {
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+}
+
 /* line 1, ../_syntax.scss */
 .c {
   color: #998;

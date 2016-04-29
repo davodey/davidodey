@@ -13,7 +13,6 @@
             include: [
             'feature-detection',
             'jquery',
-            'app/typescript',
             'app/mobile-snap',
             'app/ga',
                 

@@ -8,7 +8,6 @@ components/ie-placeholder.js
 lib/respond.js
 lib/selectivzr.js
 lib/feature-detection.js
-components/typescript.js
 lib/snap.js
 components/mobile-snap.js
 lib/autotrack.js

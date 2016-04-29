@@ -44,7 +44,7 @@ require([
 						dataType: 'json',
 						success: function(response) {
 							console.log(response);
-							if (response === 'OK') {
+							if (response.next === '/thanks') {
 								$('#submitForm').hide();
 								$('#message').fadeIn('fast');
 								$('input, textarea').removeClass('valid').val('');

@@ -43,6 +43,7 @@ require([
 						data: formData,
 						dataType: 'json',
 						success: function(response) {
+							console.log(response);
 							if (response === 'OK') {
 								$('#submitForm').hide();
 								$('#message').fadeIn('fast');

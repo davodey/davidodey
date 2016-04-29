@@ -57,6 +57,10 @@
   padding:0;
   clear:both;
 
+  strong {
+    font-family: $heading-font;
+  }
+
   img {
     float:left;
     margin-right:15px;

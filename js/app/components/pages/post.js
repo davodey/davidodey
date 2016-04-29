@@ -1,8 +1,7 @@
 require([
 	//libs
 	'jquery',
-	'disqus',
-	'typescript'
+	'disqus'
 ], function($) {
 	'use strict';
 	$(document).ready(function () {

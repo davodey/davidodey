@@ -25,7 +25,8 @@ requirejs.config({
         'bootstrap/transition': ['jquery'],
         'lib/selectivizr': ['jquery'],
         'respond':['jquery'],
-        'checkbox/icheck': ['jquery']
+        'checkbox/icheck': ['jquery'],
+        'autotrack': ['//www.google-analytics.com/analytics.js']
 
     }
 });

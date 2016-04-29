@@ -2,7 +2,7 @@
     appDir: '../app',
     mainConfigFile: '../app/common.js',
     dir: '../app-built',
-    modules: [
+    modules: [ 
         //First set up the common build layer.
         {
             //module names are relative to baseUrl
@@ -13,8 +13,10 @@
             include: [
             'feature-detection',
             'jquery',
+            'app/typescript',
             'app/mobile-snap',
-            'ga'
+            'app/ga',
+                
             ]
         },
         //Now set up a build layer for each main layer, but exclude

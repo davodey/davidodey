@@ -15,7 +15,7 @@ body {
 	  	padding-bottom:0;
 	}
 }
-body, p {
+body, p, span, em, a {
 	font-size: $unit * 1.7; /* 16px */
 	line-height: $unit * 2.34;
 	font-family: $paragraph-font;
@@ -27,6 +27,11 @@ p {
 	padding-top:$unit / 4;
 	text-align: left;
   	color:$grey;
+ &:last-child {
+   margin-bottom:0;
+   padding-bottom:0;
+ }
+
 }
 
 h1 {
@@ -250,25 +255,7 @@ nav {
 }
 
 section {
-	
-	> div {
-		margin-bottom:75px;
-
-	  @media(max-width:768px) {
-		margin-bottom:0;
-	  }
-		
-	  &.bottom-margin {
-		  @media(max-width:640px){
-			  margin-bottom:35px;
-		  }
-	  }
-	  &.project-adjust {
-		@media (max-width:1920px) {
-		  margin-bottom:100px;
-		}
-	  }
-	}
+	padding-bottom:50px;
 }
 
 ul {
@@ -284,7 +271,7 @@ input, textarea, button, a.button {
 	height:40px;
 	border-radius:5px;
 	padding-left:15px;
-	border:1px solid $light-grey;
+	border:1px solid darken($light-grey, 10%);
   	font-family: $heading-font;
 	-webkit-appearance:none;
 	

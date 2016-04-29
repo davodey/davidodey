@@ -1,1 +1,1 @@
-define("typescript",["//use.typekit.net/jag4iyt.js"],function(){try{Typekit.load()}catch(e){}}),require(["jquery","typescript"],function(e){"use strict";e(document).ready(function(){})}),define("app/pages/resources",function(){});
+require(["jquery"],function(e){"use strict";e(document).ready(function(){})}),define("app/pages/resources",function(){});

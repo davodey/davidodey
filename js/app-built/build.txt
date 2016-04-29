@@ -8,39 +8,35 @@ components/ie-placeholder.js
 lib/respond.js
 lib/selectivzr.js
 lib/feature-detection.js
+components/typescript.js
 lib/snap.js
 components/mobile-snap.js
-lib/ga.js
+lib/autotrack.js
+components/ga.js
 
 components/pages/main.js
 ----------------
-lib/typescript.js
 components/pages/main.js
 
 components/pages/contact.js
 ----------------
-lib/typescript.js
 lib/validate/jquery.validate.js
 lib/validate/validation_config.js
 components/pages/contact.js
 
 components/pages/blog.js
 ----------------
-lib/typescript.js
 components/pages/blog.js
 
 components/pages/portfolio.js
 ----------------
-lib/typescript.js
 components/pages/portfolio.js
 
 components/pages/post.js
 ----------------
 lib/disqus.js
-lib/typescript.js
 components/pages/post.js
 
 components/pages/resources.js
 ----------------
-lib/typescript.js
 components/pages/resources.js

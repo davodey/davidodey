@@ -5,7 +5,7 @@ date:   2016-04-21 10:28:30 -0700
 categories:
 - timeline
 year: 2013
-description: Won several more awards for best email design, and best website design.
+description: Won several more awards for best email design and best website design.
 
 year-direction: right
 year-duplicate: true

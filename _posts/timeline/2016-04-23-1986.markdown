@@ -5,7 +5,7 @@ date:   2016-04-21 10:28:30 -0700
 categories:
 - timeline
 year: 1986
-description: Graduated from the Atari 2600 to my first NES.  I love me some Super Mario & Castlevania.
+description: Graduated from the Atari 2600 to my first NES.  I loved me some Super Mario & Castlevania.
 
 year-direction: left
 year-duplicate: false

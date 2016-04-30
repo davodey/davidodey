@@ -5,7 +5,7 @@ date:   2016-04-21 10:28:30 -0700
 categories:
 - timeline
 year: 1995
-description: Convinced my parents to invest in a Leading Edge brand computer, running Windows 95.  It had a 0486 Intel processor, 20mb of ram, and 3.5 and 5.25 dual floppy drives.  It was at this point, I found my calling.
+description: Convinced my parents to invest in a Leading Edge brand computer running Windows 95.  It had a 0486 Intel processor, 20mb of ram and 3.5 and 5.25 dual floppy drives.  It was at then I knew, that I found my calling.
 
 year-direction: right
 year-duplicate: false

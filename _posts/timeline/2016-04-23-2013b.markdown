@@ -5,7 +5,7 @@ date:   2016-04-21 10:28:30 -0700
 categories:
 - timeline
 year: 2013
-description: Won my first W3 award for an iPhone application I designed for a company convention.
+description: Won my first W3 award, for an iPhone application I designed for a company convention.
 
 year-direction: right
 year-duplicate: false

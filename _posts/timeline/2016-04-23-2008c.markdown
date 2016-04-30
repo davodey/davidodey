@@ -5,7 +5,7 @@ date:   2016-04-21 10:28:30 -0700
 categories:
 - timeline
 year: 2008
-description: Opened a digital agency, A Visual Identity, to help small businesses build there online presence in Phoenix Arizona.
+description: Opened a digital agency A Visual Identity in Phoenix Arizona, to help small businesses build their online presence.
 
 year-direction: right
 year-duplicate: false

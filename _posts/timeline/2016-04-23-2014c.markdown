@@ -5,7 +5,7 @@ date:   2016-04-21 10:28:30 -0700
 categories:
 - timeline
 year: 2014
-description: Worked with a design agency in Phoenix Arizona, and lead the design of Better Homes & Gardens Real Estate and Century 21's Fine Homes & Estates website.
+description: Worked for a design agency in Phoenix Arizona and lead the design of Better Homes & Gardens Real Estate and Century 21's Fine Homes & Estates website.
 
 year-direction: left
 year-duplicate: false

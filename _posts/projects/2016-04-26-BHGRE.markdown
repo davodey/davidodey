@@ -18,9 +18,9 @@ alt: better homes & gardens
 
 **Contribution:** Creative Director, Designer
 
-**Description:** Better Homes & Gardens - Real Estate brings the core values from the popular magazine to the real estate market
+**Description:** Better Homes & Gardens - Real Estate brings the core values from the popular magazine to the real estate market.
 
-One of the most innovative features to this UI, is the way we handled our property search filtering.  We designed an icon-driven system that was the first in the industry; to let users select there must haves, before finding a home.   We knew that when users searched for real estate, they glance at content quick, so when providing the users neighborhood statistics, school information, etc. we served up info graphics.   These would clearly show the information they were looking for.  It is truly a unique experience.
+One of the most innovative features to this UI, is the way we handled our property search filtering.  We designed an icon-driven system that was the first in the industry; to let users select their must haves, before finding a home.   We knew that when users searched for real estate, they glance at content quick. So when providing the users neighborhood statistics, school information, etc. we served up infographics.   These would clearly show the information they were looking for.  It is truly a unique experience.
 
 The design process started with stakeholder interviews.  We learned everything we could about the brand, the vision and the users.  We really wanted all ideas on the table, so after our discovery phase, every designer on the team was tasked to come up with at least two different ‘blue sky’ concepts, followed by presentations from the designers.  We made some revisions to what we felt were the best and narrowed the selection. I would present three of these to our stakeholders.
 

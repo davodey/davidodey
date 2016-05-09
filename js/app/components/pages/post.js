@@ -4,7 +4,8 @@ require([
 	'disqus'
 ], function($) {
 	'use strict';
-	$(document).ready(function () {
+
+	$(function () {
 		var socialCounts,
 			$thisUrl = $(location).attr('href'),
 			settings = {
@@ -94,13 +95,12 @@ require([
 				}
 			}
 		};
+
+		socialCounts.execute();
 		
-		$(function () {
-			socialCounts.execute();
-			$('.share-links li').on('click', 'a.popup', function () {
-				window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');
-				return false;
-			});
+		$('.share-links li').on('click', 'a.popup', function () {
+			window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');
+			return false;
 		});
 	});
 });

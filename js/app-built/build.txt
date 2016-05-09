@@ -39,3 +39,8 @@ components/pages/post.js
 components/pages/resources.js
 ----------------
 components/pages/resources.js
+
+components/pages/share.js
+----------------
+lib/customShareCounts.js
+components/pages/share.js

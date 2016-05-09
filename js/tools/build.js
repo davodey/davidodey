@@ -58,6 +58,11 @@
         name: 'app/pages/resources',
         include:[],
         exclude: ['../common']
+    },
+    {
+        name: 'app/pages/share',
+        include:[],
+        exclude: ['../common']
     }
 
     ],

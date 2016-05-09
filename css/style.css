@@ -9489,6 +9489,17 @@ a:hover span.viewlink {
           transform: none;
 }
 
+/* line 610, ../_bits.scss */
+.margin-right-5 {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+/* line 615, ../_bits.scss */
+.margin-right-25 {
+  margin-right: 25px;
+}
+
 /* line 1, ../_navigation.scss */
 #navigation {
   padding: 0;
@@ -10220,6 +10231,11 @@ a h3 {
   float: left;
   margin-right: 15px;
 }
+/* line 70, ../_portfolio.scss */
+.portfolio-content .more-info {
+  display: inline-block;
+  border-bottom: 0 !important;
+}
 
 /* line 1, ../_share.scss */
 .share {
@@ -10291,6 +10307,22 @@ a h3 {
           box-shadow: 0px 0px 24px -5px rgba(0, 0, 0, 0.75);
 }
 /* line 34, ../_share.scss */
+.share-links li.total {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/* line 36, ../_share.scss */
+.share-links li.total:hover {
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+  -webkit-box-shadow: 0;
+          box-shadow: 0;
+}
+/* line 42, ../_share.scss */
 .share-links li a {
   font-family: "tablet-gothic-narrow", sans-serif;
   font-style: normal;
@@ -10303,8 +10335,9 @@ a h3 {
   color: #fff;
   padding: 10px 0;
   text-decoration: none;
+  margin-bottom: 0 !important;
 }
-/* line 49, ../_share.scss */
+/* line 58, ../_share.scss */
 .share-links li a svg {
   margin: 0;
   background-color: transparent;
@@ -10317,12 +10350,18 @@ a h3 {
           transform: none;
 }
 
-/* line 63, ../_share.scss */
+/* line 72, ../_share.scss */
 .share-items {
-  margin-bottom: 60px;
+  border-bottom: 1px dotted gray;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+}
+/* line 77, ../_share.scss */
+.share-items:last-child {
+  border-bottom: 0;
 }
 
-/* line 66, ../_share.scss */
+/* line 81, ../_share.scss */
 .twitter {
   background-color: #4099FF;
 }
@@ -10331,12 +10370,12 @@ a h3 {
   background-color: #5aa7ff;
   text-decoration: none;
 }
-/* line 68, ../_share.scss */
+/* line 83, ../_share.scss */
 .twitter svg {
   top: 4px;
 }
 
-/* line 73, ../_share.scss */
+/* line 88, ../_share.scss */
 .comment {
   background-color: #FFB540;
 }
@@ -10345,12 +10384,12 @@ a h3 {
   background-color: #ffbf5a;
   text-decoration: none;
 }
-/* line 75, ../_share.scss */
+/* line 90, ../_share.scss */
 .comment svg {
   top: 4px;
 }
 
-/* line 80, ../_share.scss */
+/* line 95, ../_share.scss */
 .facebook {
   background-color: #335795;
 }
@@ -10359,12 +10398,12 @@ a h3 {
   background-color: #3a62a8;
   text-decoration: none;
 }
-/* line 82, ../_share.scss */
+/* line 97, ../_share.scss */
 .facebook svg {
   top: 4px;
 }
 
-/* line 87, ../_share.scss */
+/* line 102, ../_share.scss */
 .google {
   background-color: #DD4B39;
 }
@@ -10373,13 +10412,13 @@ a h3 {
   background-color: #e15f4f;
   text-decoration: none;
 }
-/* line 89, ../_share.scss */
+/* line 104, ../_share.scss */
 .google svg {
   top: 4px;
   margin-right: 4px;
 }
 
-/* line 95, ../_share.scss */
+/* line 110, ../_share.scss */
 .email {
   background-color: #FA6900;
 }
@@ -10388,12 +10427,12 @@ a h3 {
   background-color: #ff7715;
   text-decoration: none;
 }
-/* line 97, ../_share.scss */
+/* line 112, ../_share.scss */
 .email svg {
   top: 4px;
 }
 
-/* line 102, ../_share.scss */
+/* line 117, ../_share.scss */
 .linkedin {
   background-color: #0078B5;
 }
@@ -10402,14 +10441,14 @@ a h3 {
   background-color: #0089cf;
   text-decoration: none;
 }
-/* line 104, ../_share.scss */
+/* line 119, ../_share.scss */
 .linkedin svg {
   top: 2px;
   margin-right: 3px;
 }
 
 @media (max-width: 640px) {
-  /* line 110, ../_share.scss */
+  /* line 125, ../_share.scss */
   .social-text {
     display: none;
   }

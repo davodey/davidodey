@@ -30,6 +30,7 @@ requirejs.config({
         'checkbox/icheck': ['jquery'],
         'share/jquery.sharrre': ['jquery'],
         'share/platform/platform': ['jquery','share/jquery.sharrre'],
+        'customShareCounts': ['jquery']
     },
 
 

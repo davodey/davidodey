@@ -59,7 +59,6 @@
 
   strong {
     font-family: $heading-font;
-    text-transform: uppercase;
     font-size:.875em;
   }
 
@@ -70,5 +69,6 @@
   .more-info {
     display:inline-block;
     border-bottom:0 !important;
+    text-decoration: underline;
   }
 }

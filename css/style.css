@@ -10223,18 +10223,18 @@ a h3 {
 /* line 60, ../_portfolio.scss */
 .portfolio-content strong {
   font-family: "tablet-gothic-narrow", sans-serif;
-  text-transform: uppercase;
   font-size: .875em;
 }
-/* line 66, ../_portfolio.scss */
+/* line 65, ../_portfolio.scss */
 .portfolio-content img {
   float: left;
   margin-right: 15px;
 }
-/* line 70, ../_portfolio.scss */
+/* line 69, ../_portfolio.scss */
 .portfolio-content .more-info {
   display: inline-block;
   border-bottom: 0 !important;
+  text-decoration: underline;
 }
 
 /* line 1, ../_share.scss */

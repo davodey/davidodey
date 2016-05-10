@@ -6,10 +6,10 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: David O'Dey | Web Designer & Front End Developer | Cave Creek Arizona
+title: David O'Dey | Web Designer & UI Developer | Phoenix Arizona
 email: dodey@icloud.com
-description: I have a strong passion for web standards, and creating uniquely awesome user experiences that can be accessed on all devices.
-baseurl: "http://10.0.1.78/~dodey/dev/jekyll/jekyll-davidodey/_site/"
+description: I specialize in UI Design, HTML5, Javascript / Jquery, SCSS / CSS, Wordpress and front end technologies.
+baseurl: "http://10.0.1.78/~dodey/dev/jekyll/jekyll-davidodey/_site"
 url: "" # the base hostname & protocol for your site
 twitter_username: davdey
 github_username:  davodey

@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title:  "Val Head"
 category: superheros
 alt-tag: "Val Head Profile Pic"

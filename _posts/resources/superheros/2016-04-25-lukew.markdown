@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title:  "Luke Wroblewski"
 category: superheros
 alt-tag: "Twitter Logo"

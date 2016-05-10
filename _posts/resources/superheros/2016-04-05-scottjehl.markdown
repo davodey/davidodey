@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title:  "Scott Jehl"
 category: superheros
 alt-tag: "Scott Jehl Profile Pic"

@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Responsive Web Design"
 category: podcasts
 thumb-image: rwd.png

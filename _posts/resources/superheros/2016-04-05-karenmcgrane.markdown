@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title:  "Karen McGrane"
 category: superheros
 alt-tag: "Karen McGrane Profile Pic"

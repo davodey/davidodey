@@ -10,7 +10,7 @@ title: David O'Dey | Web Designer & Front End Developer | Cave Creek Arizona
 email: dodey@icloud.com
 description: I have a strong passion for web standards, and creating uniquely awesome user experiences that can be accessed on all devices.
 baseurl: ""
-url: "" # the base hostname & protocol for your site
+url: "http://www.davidodey.com" # the base hostname & protocol for your site
 twitter_username: davdey
 github_username:  davodey
 permalink: /:categories/:title

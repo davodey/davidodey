@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title:  "Dave Rupert"
 category: superheros
 alt-tag: "Dave Rupert Profile Pic"

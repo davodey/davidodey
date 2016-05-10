@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title:  "Rachel Nabors"
 category: superheros
 alt-tag: "Rachel Nabors Profile Pic"

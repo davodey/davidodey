@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title:  "Shoptalk Show"
 category: podcasts
 thumb-image: shoptalkshow.png

@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title:  "Brad Frost"
 category: superheros
 alt-tag: "Brad Frost Profile Pic"

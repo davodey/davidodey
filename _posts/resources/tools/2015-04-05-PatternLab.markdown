@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title:  "Pattern Lab"
 date:   2016-03-10 10:28:31 -0700
 category: tools

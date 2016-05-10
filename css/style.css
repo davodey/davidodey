@@ -10454,6 +10454,109 @@ a h3 {
   }
 }
 
+/* line 133, ../_share.scss */
+.demo .items {
+  border-top: 1px dotted gray;
+}
+/* line 136, ../_share.scss */
+.demo .share-items {
+  text-align: left;
+}
+/* line 138, ../_share.scss */
+.demo .share-items .link-title {
+  display: inline-block;
+}
+/* line 141, ../_share.scss */
+.demo .share-items .total {
+  display: inline-block;
+  padding-left: 5px;
+  font-family: "tablet-gothic-narrow", sans-serif;
+  font-weight: bold;
+}
+@media (max-width: 640px) {
+  /* line 141, ../_share.scss */
+  .demo .share-items .total {
+    padding-left: 0;
+  }
+}
+/* line 150, ../_share.scss */
+.demo .share-items h3 {
+  margin: 0;
+}
+/* line 152, ../_share.scss */
+.demo .share-items h3 a {
+  font-family: "tablet-gothic-narrow", sans-serif;
+  font-weight: bold;
+  border: 0;
+  margin-bottom: 0;
+  line-height: inherit;
+}
+/* line 161, ../_share.scss */
+.demo .buttons {
+  text-align: left;
+  padding-left: 0;
+}
+/* line 164, ../_share.scss */
+.demo .buttons ul {
+  margin-left: 0;
+}
+/* line 167, ../_share.scss */
+.demo .buttons li {
+  display: inline;
+}
+/* line 170, ../_share.scss */
+.demo .buttons h3 a {
+  line-height: auto;
+}
+@media (max-width: 640px) {
+  /* line 174, ../_share.scss */
+  .demo .buttons a.bt {
+    width: 100%;
+  }
+}
+/* line 180, ../_share.scss */
+.demo .buttons .bt {
+  display: inline-block;
+  font-size: 16px;
+  font-family: "tablet-gothic-narrow", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  padding: 3px 10px;
+  color: #fff;
+}
+/* line 190, ../_share.scss */
+.demo .buttons .twt {
+  background-color: #4099FF;
+}
+/* line 193, ../_share.scss */
+.demo .buttons .fb {
+  background-color: #335795;
+}
+/* line 196, ../_share.scss */
+.demo .buttons .ld {
+  background-color: #0078B5;
+}
+/* line 199, ../_share.scss */
+.demo .buttons .gp {
+  background-color: #DD4B39;
+}
+
+/* line 205, ../_share.scss */
+.demo-post {
+  padding: 50px 50px;
+  border-bottom: 1px solid gray;
+}
+@media (max-width: 640px) {
+  /* line 205, ../_share.scss */
+  .demo-post {
+    padding: 25px 15px;
+  }
+}
+/* line 212, ../_share.scss */
+.demo-post:last-child {
+  border: 0;
+}
+
 /* line 1, ../_validation.scss */
 label.error {
   position: absolute;

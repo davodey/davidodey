@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title:  "Rachel Andrew"
 category: superheros
 alt-tag: "Rachel Andrew Profile Pic"

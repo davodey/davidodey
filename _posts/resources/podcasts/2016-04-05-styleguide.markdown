@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title:  "Style Guide Podcast"
 category: podcasts
 thumb-image: styleguide.png

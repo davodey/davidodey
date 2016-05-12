@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title:  "The Web Ahead"
 category: podcasts
 thumb-image: webahead.png

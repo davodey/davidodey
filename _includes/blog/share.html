@@ -1,21 +1,21 @@
-<div class="share-items">
-	<strong>SHARE THIS ARTICLE</strong>
+
+	<strong>SHARE THIS ARTICLE</strong><br>
+	<em>Please note it make take a minute for the API to update the count </em>
 	<ul class="share-links">
 		<li>
-			<a class="twitter popup" data-dir="left" href="http://twitter.com/intent/tweet?text={{page.twitterText}}%20%23{{page.twitterHash}}&amp;via=davodey" ><svg><use xlink:href="#twitter"></use></svg><span class="twitter-count">0</span></a>
+			<a class="twitter twitterBtn" data-dir="left" href="" ><svg><use xlink:href="#twitter"></use></svg><span class="twitter-count">0</span></a>
 		</li>
 		<li>
-			<a class="facebook popup" href="https://www.facebook.com/sharer/sharer.php?u=http%3A//10.0.1.78{{site.baseurl}}{{page.url}}&title={% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"><svg><use xlink:href="#facebook"></use></svg><span class="facebook-count">0</span></a>
+			<a class="facebook facebookBtn" href=""><svg><use xlink:href="#facebook"></use></svg><span class="facebook-count">0</span></a>
 		</li>
 		<li>
-			<a class="linkedin popup" href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A//10.0.1.78{{site.baseurl}}{{page.url}}&title={% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"><svg><use xlink:href="#linkedin"></use></svg><span class="linkedin-count">0</span></a>
+			<a class="linkedin linkedinBtn" href=""><svg><use xlink:href="#linkedin"></use></svg><span class="linkedin-count">0</span></a>
 		</li>
 		<li>
-			<a class="google popup" href="https://plus.google.com/share?url=http%3A//10.0.1.78{{site.baseurl}}{{page.url}}"><svg><use xlink:href="#google-plus"></use></svg><span class="google-count">0</span></a>
+			<a class="google googleBtn" href=""><svg><use xlink:href="#google-plus"></use></svg><span class="google-count">0</span></a>
 		</li>
-		<li>
-			<a class="email" href="mailto:?subject={% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}&amp;body=You%20should%20read%20this:%20http://10.0.1.78{{site.baseurl}}{{page.url}}" title="Email this article"><svg><use xlink:href="#plane"></use></svg><span class="social-text">Email</span></a>
+		<li class="total">
+			<span class="margin-right-5">Total</span>
+			<span class="total-count"></span>
 		</li>
 	</ul>
-	<div id="twitter" data-url="http://sharrre.com/" data-text="Make your sharing widget with Sharrre (jQuery Plugin)">
-</div>

@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title:  "Sara Soueidan"
 category: superheros
 alt-tag: "Sara Soueidan Profile Pic"

@@ -2,17 +2,21 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Cache-Control" content="max-age=864000">
         <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
         <meta name="author" content="">
         <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+{% include meta/open-graph.html %}
+
 
         <link rel="shortcut icon" href="{{ site.baseurl }}/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="{{ site.baseurl }}/img/favicon.ico" type="image/x-icon">
 
         <script src="//use.typekit.net/jag4iyt.js"></script>
-        <script>try{Typekit.load();}catch(e){}</script>
+        <script>try{Typekit.load({async:true});}catch(e){}</script>
 
-        <!-- Modernizr -->
+        <!-- Modernizr-->
         <script src="{{ site.baseurl }}/js/app-built/lib/modernizr.js"></script>
 
         <!-- Loading SCSS -->

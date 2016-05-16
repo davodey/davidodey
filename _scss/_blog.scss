@@ -1,0 +1,40 @@
+.post {
+	h2 {
+	  text-align: left;
+	  margin-bottom:0;
+	}
+
+  	li {
+	  @extend p;
+	  text-align: left;
+	  margin-bottom:15px;
+
+	}
+
+  a {
+	font-size: 1em;
+  }
+
+  .highlight {
+	overflow:scroll;
+  }
+
+  pre {
+	overflow:scroll;
+	min-width:620px;
+  }
+}
+.highlighter-rouge {
+  font-size:75%;
+
+  @media (max-width:640px) {
+	white-space:normal;
+	word-break: break-word;
+  }
+}
+
+.padding-0-768 {
+  @media (max-width:800px) and (min-width:767px) {
+	padding:0 !important;
+  }
+}

@@ -485,6 +485,9 @@ a  {
 
 .blog-snips {
   padding:0;
+  @media (max-width:640px) {
+	padding: 0 15px;
+  }
   p {
 	color:$grey;
 
@@ -614,4 +617,10 @@ a  {
 
 .margin-right-25 {
   margin-right:25px;
+}
+
+.post-date, .comment-count {
+  @media (max-width:428px) {
+	display:block;
+  }
 }

@@ -4,17 +4,23 @@ title: "Writing a basic jQuery Plugin"
 date:  2016-05-15 10:28:30 -0700
 category:
 - blog
-- tutorial
+- JavaScript
 tags:
-- tutorial
-- javascript
+- JavaScript
+
 author: David O'Dey
 main-image: <img src="http://placehold.it/600x300" alt="alt">
 thumb-image: patternlab.png
 active: blog
 require: post
+
 twitterText: How to write a jQuery Plugin.
-twitterHash: #jQuery
+hash: jQuery
+
+fbtype: Article
+fbtitle: Writing a basic jQuery Plugin
+fbdescription: Learn how to write a basic jQuery plugin using data from a weather API.
+fbimage: http://www.davidodey.com/img/dave-profile.jpg
 ---
 
 If you’re like me you may have wondered at some point, how to write a jQuery plugin.  Where do you start?  Is it difficult? When should I write one?  Can’t I just use one of the many plugins already written? These are all questions I had.  I will attempt to answer all these for you in this article, and walk you through a plugin I made for this tutorial.  I won’t be able to cover everything, but I will give you enough to get you started writing your own plugins,and

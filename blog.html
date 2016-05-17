@@ -30,6 +30,11 @@ exclude: "yes"
 							<svg class="icon"><use xlink:href="#comment-o"></use></svg>
 							<span class="disqus-comment-count" data-disqus-url="{{ site.baseurl }}{{ post.url }}"></span>
 						</span>
+						<span class="share-count" data-url="{{site.baseurl}}{{post.url}}">
+							<svg class="icon"><use xlink:href="#thumbs-o-up"></use></svg>
+							<span class="total-count">0</span>
+							<span class="total-share-text">Shares</span>
+						</span>
 					</div>
 					{{ post.excerpt }}
 				</div>

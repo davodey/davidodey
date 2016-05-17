@@ -1,7 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-   {% include meta/head.html %}
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="Cache-Control" content="max-age=864000">
+   <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+   <meta name="author" content="">
+   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+   <!-- Twitter OG -->
+   <meta name="twitter:card" content="summary" />
+   <meta name="twitter:site" content="@davodey" />
+   <meta name="twitter:creator" content="@davodey" />
+
+   <!-- FaceBook OG -->
+   <meta property="fb:app_id" content="787364798035664" />
+
+   <!-- OpenGraph -->
+   <meta property="og:url" content=" {% if post.url %}{{ site.baseurl }}{{ post.url }}{% else %}{{ site.baseurl }}{{ page.url }}{% endif %}" />
+   <meta property="og:type" content="{% if page.fbtype %}{{ page.fbtype }}{% else %}Website{% endif %}" />
+   <meta property="og:title" content="{% if page.fbtitle %}{{ page.fbtitle }}{% else %}{{ page.title }}{% endif %}" />
+   <meta property="og:description" content="{% if page.fbdescription %}{{ page.fbdescription }}{% else %}{{ page.description }}{% endif %}" />
+   <meta property="og:image" content="{% if page.fbimage %}{{ page.fbimage }}{% else %}http://www.davidodey.com/img/dave-profile.jpg{% endif %}" />
+
+
+   <link rel="shortcut icon" href="{{ site.baseurl }}/img/favicon.ico" type="image/x-icon">
+   <link rel="icon" href="{{ site.baseurl }}/img/favicon.ico" type="image/x-icon">
+
+   <script src="//use.typekit.net/jag4iyt.js"></script>
+   <script>try{Typekit.load({async:true});}catch(e){}</script>
+
+   <!-- Modernizr-->
+   <script src="{{ site.baseurl }}/js/app-built/lib/modernizr.js"></script>
+
+   <!-- Loading SCSS -->
+   <link href="{{ site.baseurl }}/css/style.css" rel="stylesheet">
+
+</head>
+<body id="home">
    {% include svg.html %}
+   {% include blog/share.html %}
    <div id="open-left" class="bar-nav container-fluid">
       <nav>
          <ul>
@@ -26,9 +65,10 @@
             </ul>
          </nav>
       </div>
+
       <div id="mobile" class="container-fluid ">
          <div class="line">
-            <header class="resource">
+            <header class="resource blog-header">
                <div class="col-lg-12">
                   <h1 class="title">{{ page.title }}</h1>
                   <em> Written {% if page.author %} by {{ page.author }} {% endif %} on {{ page.date | date: "%b %-d, %Y" }}</em>
@@ -36,17 +76,14 @@
             </header>
             <article class="post">
                <div class="col-lg-12 margin-top-25 padding-0-768">
-                  <div class="col-lg-2 col-md-2 padding-top-5">
+                  <div class="col-lg-2 col-md-2 padding-top-5 stick-contain">
 
                   </div>
-                  <div class="col-lg-8 col-md-8 article-copy padding-0-768">
+                  <div class="col-lg-8 col-md-8 article-copy">
                      {{content}}
                   </div>
                   <div class="col-lg-2 col-md-2 padding-top-5">
 
-                  </div>
-                  <div class="share">
-                     {% include blog/share.html %}
                   </div>
                   <div class="comments">
                      <div id="disqus_thread"></div>

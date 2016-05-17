@@ -1,21 +1,21 @@
-
-	<strong>SHARE THIS ARTICLE</strong><br>
-	<em>Please note it make take a minute for the API to update the count </em>
-	<ul class="share-links">
-		<li>
-			<a class="twitter twitterBtn" data-dir="left" href="" ><svg><use xlink:href="#twitter"></use></svg><span class="twitter-count">0</span></a>
-		</li>
-		<li>
-			<a class="facebook facebookBtn" href=""><svg><use xlink:href="#facebook"></use></svg><span class="facebook-count">0</span></a>
-		</li>
-		<li>
-			<a class="linkedin linkedinBtn" href=""><svg><use xlink:href="#linkedin"></use></svg><span class="linkedin-count">0</span></a>
-		</li>
-		<li>
-			<a class="google googleBtn" href=""><svg><use xlink:href="#google-plus"></use></svg><span class="google-count">0</span></a>
-		</li>
-		<li class="total">
-			<span class="margin-right-5">Total</span>
-			<span class="total-count"></span>
-		</li>
-	</ul>
+<ul class="share-links" data-title="{{page.fbtitle}}" data-hash="{{page.hash}}" data-url="{{site.baseurl}}{{page.url}}">
+	<li>
+		<a class="twitter twitterBtn" data-dir="left" href="" ><svg><use xlink:href="#twitter"></use></svg><span class="twitter-count"></span></a>
+	</li>
+	<li>
+		<a class="facebook facebookBtn" href=""><svg><use xlink:href="#facebook"></use></svg><span class="facebook-count"></span></a>
+	</li>
+	<li>
+		<a class="linkedin linkedinBtn" href=""><svg><use xlink:href="#linkedin"></use></svg><span class="linkedin-count"></span></a>
+	</li>
+	<li>
+		<a class="google googleBtn" href=""><svg><use xlink:href="#google-plus"></use></svg><span class="google-count"></span></a>
+	</li>
+	<li>
+		<a class="email" href="mailto:?subject={% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}&amp;body=You%20should%20read%20this:%20http://10.0.1.78/{{site.baseurl}}{{post.url}}" title="Email this article"><svg><use xlink:href="#envelope"></use></svg></a>
+	</li>
+	<li class="total">
+		<span class="margin-right-5 total-text">Total </span>
+		<span class="total-count">0</span>
+	</li>
+</ul>

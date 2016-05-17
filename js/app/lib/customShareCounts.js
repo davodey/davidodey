@@ -46,25 +46,28 @@
 					target.attr('href', url);
 				},
 				loadJson: function (url, jsonUrl, item, target, callback) {
-					if (settings.showCounts === true) {
+
 						$.ajax({
 							url: jsonUrl,
 							cache: true,
-							type: 'POST',
+							type: 'GET',
 							dataType: 'jsonp',
 							data: {
 								url: url
 							},
 							success: function (data){
-								if (data[item] === undefined) {
-									target.text(network.convertK(0));
-								} else {
-									target.text(network.convertK(data[item]));
+								if (settings.showCounts === true) {
+									if (data[item] === undefined) {
+										target.text(network.convertK(0));
+									} else {
+										target.text(network.convertK(data[item]));
+									}
 								}
 								callback(data);
+
 							}
 						});
-					}
+
 				},
 				total: function (){
 					if (settings.showTotal === true ){
@@ -124,7 +127,9 @@
 					load: function () {
 						network.placeHref(this.linkTarget, this.linkUrl);
 						network.loadJson($countUrl, this.jsonUrl, 'shares', $googleCount, function(data) {
-							$googleCount.text(network.convertK(data.shares.google));
+							if (settings.showCounts === true) {
+								$googleCount.text(network.convertK(data.shares.google));
+							}
 							gtotalCount = data.shares.google;
 							network.total();
 						});
@@ -155,7 +160,7 @@
 		google: true,
 		twitterUsername: '',
 		showCounts: false,
-		showTotal: true
+		showTotal: true,
 	};
 
 }(jQuery));

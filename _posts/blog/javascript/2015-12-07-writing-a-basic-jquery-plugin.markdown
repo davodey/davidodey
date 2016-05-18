@@ -319,5 +319,5 @@ Here is a link to the [working demo] of the plugin along with all the [files on 
 [method]: https://developer.mozilla.org/en-US/docs/Glossary/Method
 [Open Weather Map]: http://openweathermap.org/api
 [files on github]: https://github.com/davodey/Termperature-With-Avg
-[working demo]: #
+[working demo]: http://www.davidodey.com/projects/jquery-weather-plugin.html
 [learn.jquery.com]: https://learn.jquery.com/plugins/basic-plugin-creation/

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Writing a basic jQuery Plugin"
+title: "How to write a basic jQuery Plugin"
 date:  2016-05-17 10:28:30 -0700
 category:
 - blog

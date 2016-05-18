@@ -170,6 +170,10 @@ nav {
 				z-index: 1000;
 				box-shadow: 0px 0px 24px -5px rgba(0,0,0,0.75);
 
+			  @media(max-width:768px){
+				transform: scale(1);
+			  }
+
 			}
 			&:first-child {
 				background:$nav-menu;

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Writing a basic jQuery Plugin"
-date:  2016-05-15 10:28:30 -0700
+date:  2016-05-17 10:28:30 -0700
 category:
 - blog
 - JavaScript
@@ -9,8 +9,8 @@ tags:
 - JavaScript
 
 author: David O'Dey
-main-image: <img src="http://placehold.it/600x300" alt="alt">
-thumb-image: patternlab.png
+main-image:
+thumb-image: jquery-logo.png
 active: blog
 require: post
 
@@ -23,16 +23,15 @@ fbdescription: Learn how to write a basic jQuery plugin using data from a weathe
 fbimage: http://www.davidodey.com/img/dave-profile.jpg
 ---
 
-If you’re like me you may have wondered at some point, how to write a jQuery plugin.  Where do you start?  Is it difficult? When should I write one?  Can’t I just use one of the many plugins already written? These are all questions I had.  I will attempt to answer all these for you in this article, and walk you through a plugin I made for this tutorial.  I won’t be able to cover everything, but I will give you enough to get you started writing your own plugins,and
+If you’re like me you may have wanted to write a jQuery plugin, but wasn't sure how or where to start? I will attempt to show you in this article, how to write a simple jQuery plugin that uses a weather API to display current temperatures based on a zip code.<!--more--> Lets get started.
 
 ## What is a plugin?
-Before I could write a jQuery plugin, I really needed to know what it was and its purpose.  Think of a plugin as a new [method] that performs a series of actions on a selection.  It’s available to call on and use or re-use throughout your code.  This method is created extending the jQuery prototype object.  Doing so inherits this new method on all core jQuery objects.  If your really new to jQuery its easy to be intimidated by the terminology, don’t be.  A method is a function.
+Before you can write a jQuery plugin, its good to know what a plugin is and how they work.  A plugin as a new [method] that performs a series of actions on a selection.  It’s available to call on and re-use throughout your code.  You create this method by extending the jQuery prototype object.  Doing so inherits this new method on all core jQuery objects.  If your really new to jQuery its easy to be intimidated by the terminology, don’t be.  A method is a function, that's all it is.
 
 ## Where do you start?
-Now that we understand what a plugin is and does, lets go ahead and write one.  For this article I’ve created a plugin that will display the current temperature to selected cities based off zip code.  Well add an icon to display the current weather and well also display the average temperature between all the selected cities.  Lets get started.
+Now that we understand what a plugin is and does, lets go ahead and write one.  For this article I’ve created a plugin that will display the current temperature to selected cities based off zip code.  Well add an icon to display the current weather and well also display the average temperature between all the selected cities.
 
-Extend the jQuery prototype object and add scope.
-The first thing we need to do is start the script with the following code:
+Extend the jQuery prototype object and add scope. The first thing we need to do is start the script with the following code:
 
 
 {: data-snap-ignore="true"}{% highlight javascript %}
@@ -43,7 +42,7 @@ The first thing we need to do is start the script with the following code:
 {% endhighlight %}
 
 
-We start with this for two reasons.  It allows your plugin to play nice with other js libraries and avoid conflicts.  This will also allow us to store private variables that can be used throughout your plugin.  Our next step is to create the new method named I used the name avgWeather.
+We start with this for two reasons.  It allows your plugin to play nice with other js libraries and avoid possible conflicts.  This will also allow us to store private variables that can be used throughout your plugin.  Our next step is to create the new method, for this example I used the name avgWeather.
 
 {: data-snap-ignore="true"}{% highlight javascript %}
 (function ( $ ) {
@@ -53,9 +52,9 @@ We start with this for two reasons.  It allows your plugin to play nice with oth
 }( jQuery ));
 {% endhighlight %}
 
-JQuery provides an easy way of doing this by using <code class="highlighter-rouge">$.fn</code> or <code class="highlighter-rouge">jQuery.fn</code>.  This is what allows us to call <code class="highlighter-rouge">$(‘.someClass’).avgWeather();</code>  Which will run the avgWeather function on the selection ‘someClass’.
+JQuery provides an easy way of doing this by using <code class="highlighter-rouge">$.fn</code> or <code class="highlighter-rouge">jQuery.fn</code>.  This is what allows us to call <code class="highlighter-rouge">$(‘.someClass’).avgWeather();</code>  w will run the avgWeather function on the selection ‘someClass’.
 
-We’re going to want to add some customizable settings so lets add support for accepting options by adding an object literal, this will allow us to add as many options as we need to our plugin.
+We’re going to want to add some customizable settings. Lets add support for accepting options by adding an object literal.  Doing so will allow us to add as many options as we need to our plugin.
 
 {: data-snap-ignore="true"}{% highlight javascript %}
 (function ( $ ) {
@@ -71,7 +70,7 @@ $.fn.avgWeather.defaults = {
 }( jQuery ));
 {% endhighlight %}
 
-Now whenever we need to refer to the unit of measurement in our code we can use: <code class="highlighter-rouge">settings.tempUnits</code>, which will return the value passed into <code class="highlighter-rouge">$.fn.avgWeather.defaults</code>.  We will also be able to pass the options when calling the method in our markup, making it even more flexible.
+Now, whenever we need to refer to the unit of measurement in our code we can use: <code class="highlighter-rouge">settings.tempUnits</code>, which will return the value passed into <code class="highlighter-rouge">$.fn.avgWeather.defaults</code>.  We will also be able to pass the options when calling the method in our markup, making it even more flexible.
 
 {: data-snap-ignore="true"}{% highlight javascript %}
 $(".getTemp").avgWeather({
@@ -81,7 +80,7 @@ $(".getTemp").avgWeather({
 
 {% endhighlight %}
 
-Passing the options like this in the markup, overwrite any of the default values in the script.
+Passing the options like this in the markup, overwrite any of the default values we added to the script.
 
 We’ve now created the basic foundation for our plugin.   The plugin can accept private variables and should play nice with other libraries.  We’ve created a new method that will be called when we want to run the script and we have the ability to pass multiple options, AWESOME.
 

@@ -569,7 +569,14 @@ a  {
 .margin-bottom-50 {
   margin-bottom:50px;
 }
-
+.blog-snips p.read-more {
+  font-size:.875em;
+  font-weight:bold;
+  font-family: $heading-font;
+  color:$color3;
+  margin-right:15px;
+  text-align: right;
+}
 .blog-titles {
   text-align:left;
 	font-family: $heading-font;

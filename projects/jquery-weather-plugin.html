@@ -1,0 +1,63 @@
+---
+layout: default
+group: "navigation"
+active: blog
+require: projects/weather
+title: jQuery Averge Weather Plugin Demo
+description: This jQuery plugin cycles through a list of zip codes and returns the weather.
+
+fbtype: Article
+fbtitle: jQuery Averge Weather Plugin Demo
+fbdescription: This jQuery plugin cycles through a list of zip codes and returns the weather.
+fbimage:
+---
+<style>
+	.temp {
+		margin:10px;
+	}
+	.cities .icon {
+		width:60px;
+		height:60px;
+	}
+	.getTemp {
+		margin-bottom:50px;
+	}
+	.cities li:last-child {
+		background-color:#efefef;
+
+	}
+</style>
+<header class="resource">
+	<div class="col-lg-12">
+		<h1 class="title">jQuery Weather Plugin Demo</h1>
+		<em>This is a demo of the average weather plugin</em><br>
+		<a href="https://github.com/davodey/Termperature-With-Avg">Download on Github</a>
+		<a href="https://github.com/davodey/Termperature-With-Avg" style="margin-left:25px;">View Tutorial on how to Create this.</a>
+	</div>
+</header>
+
+<section class="margin-top-25 demo">
+	<div class="row">
+		<div class="col-lg-12 items blog-snips">
+			<div class="col-lg-12 demo-post">
+				<div class="getTemp">
+					<ul class="cities">
+						<li data-zip="60602">Chicago <span class="temp">0</span><img class="icon" src=""></li>
+						<li data-zip="10007">New York City <span class="temp">0</span><img class="icon" src=""></li>
+						<li data-zip="90012">Los Angeles <span class="temp">0</span><img class="icon" src=""></li>
+						<li data-zip="78701">Austin <span class="temp">0</span><img class="icon" src=""></li>
+						<li data-zip="85003">Phoenix <span class="temp">0</span><img class="icon" src=""></li>
+						<li>Average Temperature <span class="total-temp">0</span></li>
+					</ul>
+				</div>
+
+				<div class="getTemp">
+					<ul class="cities">
+						<li data-zip="60559">Westmont <span class="temp">0</span><img class="icon" src=""></li>
+						<li data-zip="90210">Beverly Hills <span class="temp">0</span><img class="icon" src=""></li>
+						<li>Average Temperature <span class="total-temp">0</span></li>
+					</ul>
+				</div>
+		</div>
+	</div>
+</section>

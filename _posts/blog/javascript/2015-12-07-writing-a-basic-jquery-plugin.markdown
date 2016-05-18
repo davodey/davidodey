@@ -13,6 +13,7 @@ main-image:
 thumb-image: jquery-logo.png
 active: blog
 require: post
+exclude: "yes"
 
 twitterText: How to write a jQuery Plugin.
 hash: jQuery

@@ -17,7 +17,7 @@ require: blog
 		<div class="col-lg-12 items blog-snips">
 			{% for post in site.categories['blog']%}
 			<a href="{{ site.baseurl }}{{ post.url }}">
-				<div class="col-lg-12 resource-row clear-fix">
+				<div class="col-lg-12 resource-row clear-fix share-count" data-url="{{ site.baseurl }}{{ post.url }}">
 					<img src="{{ site.baseurl }}/img/{{post.thumb-image}}">
 					<div class="blog-titles">
 						<h3>{{ post.title }}</h3>

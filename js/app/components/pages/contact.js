@@ -33,8 +33,7 @@ require([
 				}
 			},
 			submitHandler: function(form) {
-				var txtValue = $('textarea').val();
-				if (~txtValue.indexOf('@') && ~txtValue.indexOf('sir')) {
+				if (message.indexOf("sir") != -1) {
 
 				} else if ( $honey.length !== 0) {
 

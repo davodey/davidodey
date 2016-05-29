@@ -33,7 +33,11 @@ require([
 				}
 			},
 			submitHandler: function(form) {
-				if ( $honey.length !== 0) {
+				var txtValue = $('textarea').val();
+				if (~txtValue.indexOf('@') && ~txtValue.indexOf('sir')) {
+
+				} else if ( $honey.length !== 0) {
+
 				} else {
 					var formData = $('#contactForm').serialize();
 					console.log(formData);

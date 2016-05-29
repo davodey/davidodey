@@ -26,7 +26,7 @@ fbimage: http://www.davidodey.com/img/dave-profile.jpg
 
 Web Components may soon change the way we build websites and web applications.  It’s an HTML specification that has been in the works since 2013 and is finally making its way to select browsers. <!--more--> It’s not completely ready to use in your production site, but it is ready for experimentation and learning on chrome browsers.  Chrome version 45 supports the four parts that make up web components at 100%. You can see browser support by checking [Can I Use]{:target="_blank"}.
 
-##What are web components?
+## What are web components?
 Web components are reusable HTML elements that are fully encapsulated and self-contained, so each component hides their complexity from one another.  They have their own HTML / CSS / JS and they can be loaded simply by adding an import statement into an HTML page.  Since web components are part of the browser, they do not depend on external libraries like jQuery or dojo. They are made up of four key specifications:
 <ol>
     <li>Custom Elements</li>
@@ -36,16 +36,16 @@ Web components are reusable HTML elements that are fully encapsulated and self-c
 </ol>
 We will be taking a deeper look into each of these specs in a later post, but for now, I’ll give you a general idea of what each one does and they roles they play.
 
-##Custom Elements
+## Custom Elements
 Custom Elements allow developers to create new types of HTML elements with logic and functionality baked into it.  Aside from being used in Web Components custom elements can also be used on their own.
 
-##HTML Templates
+## HTML Templates
 Templating is nothing new in web development and you can use JS libraries such as Handlebars.js or Mustache.js to accomplish this.  Now we have a DOM-based approach.  If you’re unfamiliar with templating its pretty cool.  Using the template tag, you’ll be able to add snippets of HTML and load them in the DOM at a later time.  You can also have the snippets instantiated on page load, but the power comes being able to load them when you need them.
 
-##Shadow Dom
+## Shadow DOM
 Have you ever used the HTML5 video tag and noticed that the browser adds video and audio controls?  If you inspect the controls you will notice that they are hidden from the element inspector.  This is shadow DOM.  You can truly separate content from presentation.
 
-##HTML Imports
+## HTML Imports
 Using HTML Imports you’ll be able to load other HTML pages into your document.  If your import location is CORS-enabled you’ll even be able to import HTML from other domains.  What’s great about HTML Imports is that it de-dupes multiple scripts.  For example, if you are loading the same script on two imported files, HTML Imports will skip over the previously loaded script and only executed once.
 
 ## Lets Build A Web Component

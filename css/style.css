@@ -10329,26 +10329,34 @@ a h3 {
 .post li {
   text-align: left;
 }
-/* line 12, ../_blog.scss */
+/* line 13, ../_blog.scss */
+.post ol li, .post ul li {
+  margin-bottom: 0;
+}
+/* line 15, ../_blog.scss */
+.post ol li:last-child, .post ul li:last-child {
+  margin-bottom: 1.37334em;
+}
+/* line 21, ../_blog.scss */
 .post a {
   font-size: 1em;
 }
-/* line 16, ../_blog.scss */
+/* line 25, ../_blog.scss */
 .post .highlight {
   overflow: scroll;
 }
-/* line 20, ../_blog.scss */
+/* line 29, ../_blog.scss */
 .post pre {
   overflow: scroll;
   min-width: 620px;
 }
 
-/* line 25, ../_blog.scss */
+/* line 34, ../_blog.scss */
 .highlighter-rouge {
   font-size: 75%;
 }
 @media (max-width: 640px) {
-  /* line 25, ../_blog.scss */
+  /* line 34, ../_blog.scss */
   .highlighter-rouge {
     white-space: normal;
     word-break: break-word;
@@ -10356,7 +10364,7 @@ a h3 {
 }
 
 @media (max-width: 800px) and (min-width: 767px) {
-  /* line 34, ../_blog.scss */
+  /* line 43, ../_blog.scss */
   .padding-0-768 {
     padding: 0 !important;
   }

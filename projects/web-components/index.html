@@ -1,0 +1,34 @@
+---
+layout: default
+group: "navigation"
+active: blog
+require:
+title: Web Component Example
+description: This Web Component uses custom elements, templates, shadow down, and HTML imports to render a facebook share button.
+
+fbtype: Article
+fbtitle: Web Component Example
+fbdescription: This Web Component uses custom elements, templates, shadow down, and HTML imports to render a facebook share button.
+fbimage:
+---
+<link rel="import" href="facebook.html">
+
+<header class="resource">
+	<div class="col-lg-12">
+		<h1 class="title">Web Component Example</h1>
+		<em>This Web Component uses custom elements, templates, shadow down, and HTML imports to render a facebook share button.</em><br>
+		<a href="https://github.com/davodey/web-component">Download on Github</a>
+		<a href="http://davidodey.com/blog/html5/lets-build-a-web-component" style="margin-left:25px;">View Tutorial on how to Create this.</a>
+	</div>
+</header>
+
+<section class="margin-top-25 demo">
+	<div class="row">
+		<div class="col-lg-12 items blog-snips">
+			<div class="col-lg-12 demo-post">
+				<p>If you cant see the facebook share button below, your browser doesnt support Web Components.  Please use the latest version of Chrome to view.</p>
+				<!-- The name must contain a dash -->
+				<facebook-share class="share" data-url="http://google.com"> </facebook-share>
+			</div>
+		</div>
+</section>

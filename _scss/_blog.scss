@@ -9,6 +9,15 @@
 	  text-align: left;
 	}
 
+  	ol, ul {
+	  li {
+		margin-bottom:0;
+		&:last-child {
+		  margin-bottom:1.37334em;
+		}
+	  }
+	}
+
   a {
 	font-size: 1em;
   }

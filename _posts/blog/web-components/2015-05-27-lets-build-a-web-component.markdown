@@ -34,7 +34,7 @@ Web components are reusable HTML elements that are fully encapsulated and self-c
     <li>Shadow Dom</li>
     <li>HTML Imports</li>
 </ol>
-We will be taking a deeper look into each of these specs in a later post, but for now, I’ll give you a general idea of what each one does and they roles they play.
+We will be taking a deeper look into each of these specs in a later post, but for now, I’ll give you a general idea of what each one does and the roles they play.
 
 ## Custom Elements
 Custom Elements allow developers to create new types of HTML elements with logic and functionality baked into it.  Aside from being used in Web Components custom elements can also be used on their own.
@@ -48,7 +48,7 @@ Have you ever used the HTML5 video tag and noticed that the browser adds video a
 ## HTML Imports
 Using HTML Imports you’ll be able to load other HTML pages into your document.  If your import location is CORS-enabled you’ll even be able to import HTML from other domains.  What’s great about HTML Imports is that it de-dupes multiple scripts.  For example, if you are loading the same script on two imported files, HTML Imports will skip over the previously loaded script and only executed once.
 
-## Lets Build A Web Component
+## Building A Web Component
 Let's create a basic Web Component.  This component will be a facebook share button that will display share counts.  We'll start by outlining the structure of the component.
 <ul>
     <li> - index.html</li>
@@ -128,9 +128,6 @@ Now that the custom element is created and registered, let's create a template t
     </a>
 
     <!-- JS -->
-    <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
-    <script src="customShareCounts.js"></script>
-
     <script>
         $('.share').append(
         	'<span class="facebook-count">0</span>'
@@ -138,6 +135,9 @@ Now that the custom element is created and registered, let's create a template t
     </script>
 
 </template>
+
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+    <script src="customShareCounts.js"></script>
 
 <!-- Register Custom Element Code Below -->
 {% endhighlight %}
@@ -205,7 +205,7 @@ Importing HTML files into other HTML files is easy.  It's done by using the link
 Web Components can be difficult to understand at first and the syntax has changed quite a bit since its introduction.  However, I have found them to be fun to learn and I love the modular / component approach.  If you want to use web components in some of your projects, you'll want to use [Polymer]{:target="_blank"}, or [Web-Components.js]{:target="_blank"}.  These polyfills will help you get better browser support and come loaded with examples and documentation.  
 
 
-Here is a link to the [working demo]{:target="_blank"} of the plugin along with all the [files on GitHub]{:target="_blank"}.
+Here is a link to the [working demo]{:target="_blank"} of the web component along with all the [files on GitHub]{:target="_blank"}.
 
 If you would like to learn more about Web Components, you can do so by visiting any of the following sites:
 

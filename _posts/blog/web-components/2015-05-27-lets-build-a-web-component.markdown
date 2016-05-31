@@ -34,7 +34,7 @@ Web components are reusable HTML elements that are fully encapsulated and self-c
     <li>Shadow Dom</li>
     <li>HTML Imports</li>
 </ol>
-We will be taking a deeper look into each of these specs in a later post, but for now, I’ll give you a general idea of what each one does and the roles they play.
+We will be taking a deeper look into each of these specs in a later post, but for now I’ll give you a general idea of what each one does and the roles they play.
 
 ## Custom Elements
 Custom Elements allow developers to create new types of HTML elements with logic and functionality baked into it.  Aside from being used in Web Components custom elements can also be used on their own.
@@ -46,7 +46,7 @@ Templating is nothing new in web development and you can use JS libraries such a
 Have you ever used the HTML5 video tag and noticed that the browser adds video and audio controls?  If you inspect the controls you will notice that they are hidden from the element inspector.  This is shadow DOM.  You can truly separate content from presentation.
 
 ## HTML Imports
-Using HTML Imports you’ll be able to load other HTML pages into your document.  If your import location is CORS-enabled you’ll even be able to import HTML from other domains.  What’s great about HTML Imports is that it de-dupes multiple scripts.  For example, if you are loading the same script on two imported files, HTML Imports will skip over the previously loaded script and only executed once.
+Using HTML Imports you’ll be able to load other HTML pages into your document.  If your import location is CORS-enabled you’ll even be able to import HTML from other domains.  What’s great about HTML Imports is that it de-dupes multiple scripts.  For example, if you are loading jQuery on two imported files, HTML Imports will only load one instance of jQuery.
 
 ## Building A Web Component
 Let's create a basic Web Component.  This component will be a facebook share button that will display share counts.  We'll start by outlining the structure of the component.
@@ -74,7 +74,7 @@ The index.html file will be the main document and component.html will hold the t
 
 You can use any name you want for the custom element as long as there is a dash in it.  The dash is how the browser differentiates between custom elements and regular elements.
 
-Now let's open up component.html and register our custom element with the browser.  Every custom element you create will need some javaScript to power it.
+Every custom element you create will need some javaScript to register it with the browser, lets open up component.html and add the registration code.
 
 {: data-snap-ignore="true"}{% highlight html %}
 // component.html
@@ -96,7 +96,7 @@ Now let's open up component.html and register our custom element with the browse
 
 We register the custom element with <code class="highlighter-rouge">document.registerElement('facebook-share');</code>  One of the most powerful aspects of custom elements is that you define special methods called lifecycle callbacks.  We won't go into detail about them in this post, but if you would like to read more about them you can do so at [MDN]{:target="_blank"}.
 
-Lifecycle callbacks allow you to attach behavior to the custom element when the element becomes registered, when it is inserted into to the DOM, when it is removed from the DOM, or when an attribute of the element is changed, added or removed.  Powerful stuff.
+Lifecycle callbacks allow you to attach behavior to the custom element, during key phases of the elements lifecycle.  1. When the element becomes registered. 2. When it is inserted into to the DOM.  3. When it is removed from the DOM. 4. When an attribute of the element is changed, added or removed.  Powerful stuff.
 
 Now that the custom element is created and registered, let's create a template that will hold the markup.  We'll do this in the component.html file.
 
@@ -199,10 +199,10 @@ The last thing we will do is import the component.html file into the index.html 
 </html>
 {% endhighlight %}
 
-Importing HTML files into other HTML files is easy.  It's done by using the link tag.  So what happens if you import three separate template / component files and they all link to jQuery because the scripts depend on it?  Well, dont worry, if the browser detects multiple instances of a file it will only import it into the document once, not three times.  
+Importing HTML files into other HTML files is easy.  It's done by using the link tag.  So what happens if you import three separate template / component files and they all link to jQuery because the scripts depend on it?  Like I mentioned earlier, dont worry, if the browser detects multiple instances of a file it will only import it into the document once, not three times.  
 
 
-Web Components can be difficult to understand at first and the syntax has changed quite a bit since its introduction.  However, I have found them to be fun to learn and I love the modular / component approach.  If you want to use web components in some of your projects, you'll want to use [Polymer]{:target="_blank"}, or [Web-Components.js]{:target="_blank"}.  These polyfills will help you get better browser support and come loaded with examples and documentation.  
+Thats it, we just created a basic Web Component.  Web Components can be difficult to understand at first and the syntax has changed quite a bit since its introduction.  However, I have found them to be fun to learn and I love the modular / component approach.  If you want to use web components in some of your projects, you'll want to use [Polymer]{:target="_blank"}, or [Web-Components.js]{:target="_blank"}.  These polyfills will help you get better browser support and come loaded with examples and documentation.  
 
 
 Here is a link to the [working demo]{:target="_blank"} of the web component along with all the [files on GitHub]{:target="_blank"}.

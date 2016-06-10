@@ -22,14 +22,14 @@ require: blog
 					<div class="blog-titles">
 						<h3>{{ post.title }}</h3>
 						<span class="post-date">
-							<svg class="icon"><use xlink:href="#calendar-o"></use></svg>
+							<svg class="icon"><use xlink:href="#calendar-o"></use></svg> 
 							{{ post.date | date: "%-m/%-d/%Y" }}
 						</span>
 						<span class="comment-count">
 							<svg class="icon"><use xlink:href="#comment-o"></use></svg>
-							<span class="disqus-comment-count" data-disqus-url="{{ site.baseurl }}{{ post.url }}"></span>
+							<span class="disqus-comment-count" data-disqus-url="http://www.davidodey.com{{ post.url }}"></span>
 						</span>
-						<span class="share-count" data-url="{{site.baseurl}}{{post.url}}">
+						<span class="share-count" data-url="http://www.davidodey.com{{post.url}}"> 
 							<svg class="icon"><use xlink:href="#thumbs-o-up"></use></svg>
 							<span class="total-count">0</span>
 							<span class="total-share-text">Shares</span>

@@ -9,8 +9,6 @@
 title: David O'Dey | Web Designer & UI Developer | Phoenix Arizona
 email: dodey@icloud.com
 description: I have a strong passion for web standards, and creating uniquely awesome user experiences that can be accessed on all devices.
-baseurl: "http://10.0.1.34/personal-site/"
-url: "http://10.0.1.34/personal-site/" # the base hostname & protocol for your site
 twitter_username: davdey
 github_username:  davodey
 permalink: /:categories/:title
@@ -18,6 +16,6 @@ excerpt_separator: "<!--more-->"
 # Build settings
 markdown: kramdown
 
-blog_name:         Leveling up with David O'Dey UI / UX Designer & Front End Developer.
+blog_name:         Leveling up with David O\'Dey UI / UX Designer & Front End Developer.
 blog_description:  A UI / UX blog sharing tips, best practice, tutorials and more...
 blog_url:          http://www.davidodey.com/blog.html

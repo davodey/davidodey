@@ -35,7 +35,7 @@ require: blog
 							<span class="total-share-text">Shares</span>
 						</span>
 					</div>
-					{{ post.excerpt }}
+					{{ post.excerpt | strip_html }}
 					<p class="read-more">Read Article...</p>
 				</div>
 			</a>

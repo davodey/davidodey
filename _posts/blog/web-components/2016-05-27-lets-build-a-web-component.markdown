@@ -7,6 +7,7 @@ category:
 - HTML5
 tags:
 - HTML5
+- JavaScript
 
 author: David O'Dey
 main-image:

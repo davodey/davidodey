@@ -1,0 +1,1 @@
+require(["jquery"],function(e){"use strict";e(document).ready(function(){e.getScript("http://opensharecount.com/bubble.js").done(function(){e("style").remove()})})});

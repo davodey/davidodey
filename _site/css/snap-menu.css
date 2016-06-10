@@ -1,0 +1,54 @@
+/*
+Error: Invalid CSS after "  color": expected ";", was ": #eee;"
+        on line 169 of ./snap-menu.scss
+
+164:   background: $color1;
+165: }
+166: 
+167: .snap-drawer {
+168:   background: $color1
+169:   color: #eee;
+170: }
+171: 
+172: .snap-drawer h3 {
+173:   font-size: 36px;
+174:   font-weight: normal;
+
+Backtrace:
+./snap-menu.scss:169
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:1162:in `expected'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:1098:in `expected'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:1093:in `tok!'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:758:in `block in try_declaration'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:1138:in `call'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:1138:in `rethrow'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:763:in `try_declaration'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:693:in `declaration_or_ruleset'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:658:in `block_child'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:647:in `block_contents'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:639:in `block'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:632:in `ruleset'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:657:in `block_child'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:650:in `block_contents'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:117:in `stylesheet'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:42:in `parse'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/engine.rb:403:in `_to_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/engine.rb:378:in `_render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/engine.rb:295:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:209:in `each'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/plugin.rb:82:in `update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/exec/sass_scss.rb:364:in `watch_or_update'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/exec/base.rb:52:in `parse'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/exec/base.rb:19:in `parse!'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/bin/sass:13:in `<top (required)>'
+/usr/local/bin/sass:23:in `load'
+/usr/local/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"  color\": expected \";\", was \": #eee;\"\A         on line 169 of ./snap-menu.scss\A \A 164:   background: $color1;\A 165: }\A 166: \A 167: .snap-drawer {\A 168:   background: $color1\A 169:   color: #eee;\A 170: }\A 171: \A 172: .snap-drawer h3 {\A 173:   font-size: 36px;\A 174:   font-weight: normal;"; }

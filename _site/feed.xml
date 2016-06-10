@@ -4,7 +4,7 @@
         <title>Leveling up with David O&#39;Dey UI / UX Designer &amp; Front End Developer.</title>
         <description>A UI / UX blog sharing tips, best practice, tutorials and more...</description>
         <link>http://www.davidodey.com/blog.html</link>
-        <atom:link href="http://10.0.1.34/davidodey/_site/feed.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
         
         <item>
             <title>Performing a UI Inventory</title>
@@ -37,8 +37,8 @@ One of the most useful exercises you can do is perform a UI inventory.  A UI inv
 
 </description>
             <pubDate>Thu, 09 Jun 2016 10:28:30 -0700</pubDate>
-            <link>http://10.0.1.34/davidodey/_site//blog/design/performing-a-ui-inventory</link>
-            <guid isPermaLink="true">http://10.0.1.34/davidodey/_site//blog/design/performing-a-ui-inventory</guid>
+            <link>//blog/design/performing-a-ui-inventory</link>
+            <guid isPermaLink="true">//blog/design/performing-a-ui-inventory</guid>
         </item>
         
         <item>
@@ -221,8 +221,8 @@ One of the most useful exercises you can do is perform a UI inventory.  A UI inv
 
 </description>
             <pubDate>Fri, 27 May 2016 10:28:30 -0700</pubDate>
-            <link>http://10.0.1.34/davidodey/_site//blog/html5/lets-build-a-web-component</link>
-            <guid isPermaLink="true">http://10.0.1.34/davidodey/_site//blog/html5/lets-build-a-web-component</guid>
+            <link>//blog/html5/lets-build-a-web-component</link>
+            <guid isPermaLink="true">//blog/html5/lets-build-a-web-component</guid>
         </item>
         
         <item>
@@ -494,8 +494,8 @@ One of the most useful exercises you can do is perform a UI inventory.  A UI inv
 
 </description>
             <pubDate>Tue, 17 May 2016 10:28:30 -0700</pubDate>
-            <link>http://10.0.1.34/davidodey/_site//blog/javascript/writing-a-basic-jquery-plugin</link>
-            <guid isPermaLink="true">http://10.0.1.34/davidodey/_site//blog/javascript/writing-a-basic-jquery-plugin</guid>
+            <link>//blog/javascript/writing-a-basic-jquery-plugin</link>
+            <guid isPermaLink="true">//blog/javascript/writing-a-basic-jquery-plugin</guid>
         </item>
         
     </channel>

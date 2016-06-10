@@ -2,21 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
-        <loc>http://10.0.1.34/davidodey/_site/blog/design/performing-a-ui-inventory</loc>
+        <loc>/blog/design/performing-a-ui-inventory</loc>
         <lastmod>2016-06-09T10:28:30-07:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     
     <url>
-        <loc>http://10.0.1.34/davidodey/_site/blog/html5/lets-build-a-web-component</loc>
+        <loc>/blog/html5/lets-build-a-web-component</loc>
         <lastmod>2016-05-27T10:28:30-07:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     
     <url>
-        <loc>http://10.0.1.34/davidodey/_site/blog/javascript/writing-a-basic-jquery-plugin</loc>
+        <loc>/blog/javascript/writing-a-basic-jquery-plugin</loc>
         <lastmod>2016-05-17T10:28:30-07:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
@@ -25,24 +25,9 @@
     
         
         <url>
-            <loc>http://10.0.1.34/davidodey/_site/categories/Design</loc>
+            <loc>/categories/Design</loc>
             
-            <lastmod>2016-06-10T09:11:18-07:00</lastmod>
-            
-            
-            <changefreq>weekly</changefreq>
-            
-            
-            <priority>0.3</priority>
-            
-        </url>
-        
-    
-        
-        <url>
-            <loc>http://10.0.1.34/davidodey/_site/categories/HTML5</loc>
-            
-            <lastmod>2016-06-10T09:11:18-07:00</lastmod>
+            <lastmod>2016-06-10T11:16:06-07:00</lastmod>
             
             
             <changefreq>weekly</changefreq>
@@ -55,24 +40,9 @@
     
         
         <url>
-            <loc>http://10.0.1.34/davidodey/_site/categories/JavaScript</loc>
+            <loc>/categories/HTML5</loc>
             
-            <lastmod>2016-06-10T09:11:18-07:00</lastmod>
-            
-            
-            <changefreq>weekly</changefreq>
-            
-            
-            <priority>0.3</priority>
-            
-        </url>
-        
-    
-        
-        <url>
-            <loc>http://10.0.1.34/davidodey/_site/blog</loc>
-            
-            <lastmod>2016-06-10T09:11:18-07:00</lastmod>
+            <lastmod>2016-06-10T11:16:06-07:00</lastmod>
             
             
             <changefreq>weekly</changefreq>
@@ -85,24 +55,9 @@
     
         
         <url>
-            <loc>http://10.0.1.34/davidodey/_site/contact</loc>
+            <loc>/categories/JavaScript</loc>
             
-            <lastmod>2016-06-10T09:11:18-07:00</lastmod>
-            
-            
-            <changefreq>weekly</changefreq>
-            
-            
-            <priority>0.3</priority>
-            
-        </url>
-        
-    
-        
-        <url>
-            <loc>http://10.0.1.34/davidodey/_site/feed.xml</loc>
-            
-            <lastmod>2016-06-10T09:11:18-07:00</lastmod>
+            <lastmod>2016-06-10T11:16:06-07:00</lastmod>
             
             
             <changefreq>weekly</changefreq>
@@ -115,24 +70,9 @@
     
         
         <url>
-            <loc>http://10.0.1.34/davidodey/_site/</loc>
+            <loc>/blog</loc>
             
-            <lastmod>2016-06-10T09:11:18-07:00</lastmod>
-            
-            
-            <changefreq>weekly</changefreq>
-            
-            
-            <priority>0.3</priority>
-            
-        </url>
-        
-    
-        
-        <url>
-            <loc>http://10.0.1.34/davidodey/_site/projects/web-components/</loc>
-            
-            <lastmod>2016-06-10T09:11:18-07:00</lastmod>
+            <lastmod>2016-06-10T11:16:06-07:00</lastmod>
             
             
             <changefreq>weekly</changefreq>
@@ -145,24 +85,9 @@
     
         
         <url>
-            <loc>http://10.0.1.34/davidodey/_site/projects/jquery-weather-plugin</loc>
+            <loc>/contact</loc>
             
-            <lastmod>2016-06-10T09:11:18-07:00</lastmod>
-            
-            
-            <changefreq>weekly</changefreq>
-            
-            
-            <priority>0.3</priority>
-            
-        </url>
-        
-    
-        
-        <url>
-            <loc>http://10.0.1.34/davidodey/_site/portfolio</loc>
-            
-            <lastmod>2016-06-10T09:11:18-07:00</lastmod>
+            <lastmod>2016-06-10T11:16:06-07:00</lastmod>
             
             
             <changefreq>weekly</changefreq>
@@ -175,9 +100,9 @@
     
         
         <url>
-            <loc>http://10.0.1.34/davidodey/_site/resources</loc>
+            <loc>/feed.xml</loc>
             
-            <lastmod>2016-06-10T09:11:18-07:00</lastmod>
+            <lastmod>2016-06-10T11:16:06-07:00</lastmod>
             
             
             <changefreq>weekly</changefreq>
@@ -190,9 +115,84 @@
     
         
         <url>
-            <loc>http://10.0.1.34/davidodey/_site/projects/share</loc>
+            <loc>/</loc>
             
-            <lastmod>2016-06-10T09:11:18-07:00</lastmod>
+            <lastmod>2016-06-10T11:16:06-07:00</lastmod>
+            
+            
+            <changefreq>weekly</changefreq>
+            
+            
+            <priority>0.3</priority>
+            
+        </url>
+        
+    
+        
+        <url>
+            <loc>/projects/web-components/</loc>
+            
+            <lastmod>2016-06-10T11:16:06-07:00</lastmod>
+            
+            
+            <changefreq>weekly</changefreq>
+            
+            
+            <priority>0.3</priority>
+            
+        </url>
+        
+    
+        
+        <url>
+            <loc>/projects/jquery-weather-plugin</loc>
+            
+            <lastmod>2016-06-10T11:16:06-07:00</lastmod>
+            
+            
+            <changefreq>weekly</changefreq>
+            
+            
+            <priority>0.3</priority>
+            
+        </url>
+        
+    
+        
+        <url>
+            <loc>/portfolio</loc>
+            
+            <lastmod>2016-06-10T11:16:06-07:00</lastmod>
+            
+            
+            <changefreq>weekly</changefreq>
+            
+            
+            <priority>0.3</priority>
+            
+        </url>
+        
+    
+        
+        <url>
+            <loc>/resources</loc>
+            
+            <lastmod>2016-06-10T11:16:06-07:00</lastmod>
+            
+            
+            <changefreq>weekly</changefreq>
+            
+            
+            <priority>0.3</priority>
+            
+        </url>
+        
+    
+        
+        <url>
+            <loc>/projects/share</loc>
+            
+            <lastmod>2016-06-10T11:16:06-07:00</lastmod>
             
             
             <changefreq>weekly</changefreq>

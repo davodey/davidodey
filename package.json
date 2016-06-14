@@ -25,5 +25,5 @@
     "gulp-svgstore": "^6.0.0",
     "gulp.spritesmith": "^6.2.1",
     "require-dir": "^0.3.0"
-  }
+  } 
 }

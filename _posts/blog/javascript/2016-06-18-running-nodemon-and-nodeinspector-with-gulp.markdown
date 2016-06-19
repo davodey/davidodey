@@ -10,7 +10,7 @@ tags:
 
 author: David O'Dey
 main-image:
-thumb-image: jquery-logo.png
+thumb-image: nodemon.jpg
 active: blog
 require: post
 exclude: "yes"
@@ -21,7 +21,7 @@ hash: nodeJs
 fbtype: Article
 fbtitle: Running Nodemon and Node Inspector with Gulp
 fbdescription: Learn how to use gulp to run nodemon and node inpsector.
-fbimage: http://www.davidodey.com/img/dave-profile.jpg
+fbimage: http://www.davidodey.com/img/nodemon.jpg
 ---
 
 Nodemon and node-inspector are two must-have tools if you’re using node.js.  You can manually start nodemon or node-inspector using two separate console windows, or you can do it a more efficiently using gulp.js.  It took me some time to get everything setup the way I wanted it so I’m hoping this post will save you some effort. <!--more-->

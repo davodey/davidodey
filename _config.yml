@@ -16,6 +16,6 @@ excerpt_separator: "<!--more-->"
 # Build settings
 markdown: kramdown
 
-blog_name:         Leveling up with David O'Dey UI / UX Designer & Front End Developer.
+blog_name:         Leveling up with David ODey UI / UX Designer & Front End Developer.
 blog_description:  A UI / UX blog sharing tips, best practice, tutorials and more...
 blog_url:          http://www.davidodey.com/blog.html

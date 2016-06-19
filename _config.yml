@@ -9,7 +9,6 @@
 title: David ODey | Web Designer & UI Developer | Phoenix Arizona
 email: dodey@icloud.com
 description: I have a strong passion for web standards, and creating uniquely awesome user experiences that can be accessed on all devices.
-baseurl: 'http://davidodey.com'
 twitter_username: davdey
 github_username:  davodey
 permalink: /:categories/:title

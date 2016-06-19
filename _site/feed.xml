@@ -7,6 +7,72 @@
         <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
         
         <item>
+            <title>Running Nodemon and Node Inspector with Gulp</title>
+            <description>&lt;p&gt;Nodemon and node-inspector are two must-have tools if you’re using node.js.  You can manually start nodemon or node-inspector using two separate console windows, or you can do it a more efficiently using gulp.js.  It took me some time to get everything setup the way I wanted it so I’m hoping this post will save you some effort. &lt;!--more--&gt;&lt;/p&gt;
+
+&lt;p&gt;Assuming your using gulp.js as your build system, lets install both &lt;a href=&quot;https://www.npmjs.com/package/gulp-nodemon&quot; target=&quot;_blank&quot;&gt;gulp-nodemon&lt;/a&gt; and &lt;a href=&quot;https://www.npmjs.com/package/gulp-node-inspector&quot; target=&quot;_blank&quot;&gt;gulp-node-inspector&lt;/a&gt; using npm.  I prefer to install the files locally to the project, but if you like you can install them globally using the &lt;code class=&quot;highlighter-rouge&quot;&gt;-g&lt;/code&gt; flag.  Use your console to navigate to your project folder, and run the following commands:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;$ npm install gulp-nodemon --save-dev&lt;/code&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;$ npm install gulp-node-inspector --save-dev&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;After your plugins are installed we need to setup your gulpfile.js.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot; data-snap-ignore=&quot;true&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// require plugins&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;gulp&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;nodeInspector&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;gulp-node-inspector&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;nodemon&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;gulp-nodemon&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;nodemon&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;nodemon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+      
+    &lt;span class=&quot;c1&quot;&gt;// location of webserver module&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;./src/app&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  
+    &lt;span class=&quot;na&quot;&gt;ext&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;js&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    
+    &lt;span class=&quot;c1&quot;&gt;// enter any tasks you want to run before refreshing the server&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;tasks&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;jshint&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;  
+    
+    &lt;span class=&quot;c1&quot;&gt;//important must pass the debug flag to work&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;nodeArgs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;--debug&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;  
+  &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;node-inspector&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;nodemon&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([])&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;nodeInspector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;debugPort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5858&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;webHost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;0.0.0.0&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;webPort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8080&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;saveLiveEdit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;preload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;inject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;hidden&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[],&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;stackTraceLimit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;sslKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;sslCert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;&#39;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}));&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;default&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+     &lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;node-inspector&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;You’re all set, just type &lt;code class=&quot;highlighter-rouge&quot;&gt;$ gulp&lt;/code&gt; in your console.  If you use the same settings in this gulpfile.js, and your app is running on port 3000 you can open &lt;code class=&quot;highlighter-rouge&quot;&gt;http://127.0.0.1:3000/&lt;/code&gt; to access your webserver and &lt;code class=&quot;highlighter-rouge&quot;&gt;http://127.0.0.1:8080/?port=5858&lt;/code&gt; to access your node debugger.&lt;/p&gt;
+
+&lt;p&gt;To download the example used in this project you can checkout the &lt;a href=&quot;https://github.com/davodey/gulp-nodemon-inspector-example&quot; target=&quot;_blank&quot;&gt;files on Github&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;For more information:&lt;br /&gt;
+&lt;a href=&quot;http://nodemon.io/&quot; target=&quot;_blank&quot;&gt;Nodemon&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/node-inspector/node-inspector&quot; target=&quot;_blank&quot;&gt;Node-inspector&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://nodejs.org/en/&quot; target=&quot;_blank&quot;&gt;Node.js&lt;/a&gt;&lt;/p&gt;
+
+</description>
+            <pubDate>Sat, 18 Jun 2016 10:28:30 -0700</pubDate>
+            <link>//blog/javascript/running-nodemon-and-nodeinspector-with-gulp</link>
+            <guid isPermaLink="true">//blog/javascript/running-nodemon-and-nodeinspector-with-gulp</guid>
+        </item>
+        
+        <item>
             <title>Performing a UI Inventory</title>
             <description>&lt;p&gt;&lt;img src=&quot;../../img/blog-imgs/ui-inventory-buttons.jpg&quot; alt=&quot;UI inventory buttons&quot; /&gt;
 One of the most useful exercises you can do is perform a UI inventory.  A UI inventory, or audit, will help you easily identify problems and uncover information you may not know existed. &lt;!--more--&gt; I recently did a UI inventory for a large fortune 500 company on one of their most used applications.  What we found was eye opening, especially for the stakeholders.  We found over eight variations of one button, each button just a little off from the other. Four of those buttons had slightly different variations of down arrows, to signify a dropdown menu. Two of the buttons used different fonts with separate weights.  The other two buttons had slightly different font sizes and styles.  There were also four different paragraph styles, again each one just slightly different from the other.  I could ramble on with the other findings, but it would be irrelevant.  The point is, nobody really knew how many problems there really were until we did the UI inventory.  These kinds of problems cause visual disharmony, unneeded markup, and bloated CSS sheets.&lt;/p&gt;

@@ -7,7 +7,7 @@
 	<meta property="fb:app_id" content="787364798035664" />
 
 	<!-- OpenGraph -->
-	<meta property="og:url" content=" {% if post.url %}{{ site.baseurl }}{{ post.url }}{% else %}{{ site.baseurl }}{{ page.url }}{% endif %}" />
+	<meta property="og:url" content="{% if post.url %}{{ site.baseurl }}{{ post.url }}{% else %}{{ site.baseurl }}{{ page.url }}{% endif %}" />
 	<meta property="og:type" content="{% if page.fbtype %}{{ page.fbtype }}{% else %}Website{% endif %}" />
 	<meta property="og:title" content="{% if page.fbtitle %}{{ page.fbtitle }}{% else %}{{ page.title }}{% endif %}" />
 	<meta property="og:description" content="{% if page.fbdescription %}{{ page.fbdescription }}{% else %}{{ page.description }}{% endif %}" />

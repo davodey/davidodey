@@ -20,7 +20,7 @@ hash: nodeJs
 
 fbtype: Article
 fbtitle: Running Nodemon and Node Inspector with Gulp
-fbdescription: Learn how to use gulp to run nodemon and node inpsector.
+fbdescription: Learn how to use gulp to run nodemon and node inspector.
 fbimage: http://www.davidodey.com/img/nodemon.jpg
 ---
 
@@ -82,6 +82,7 @@ You’re all set, just type ```$ gulp``` in your console.  If you use the same s
 To download the example used in this project you can checkout the [files on Github]{:target="_blank"}.
 
 For more information:<br>
+
 [Nodemon]{:target="_blank"}<br>
 [Node-inspector]{:target="_blank"}<br>
 [Node.js]{:target="_blank"}

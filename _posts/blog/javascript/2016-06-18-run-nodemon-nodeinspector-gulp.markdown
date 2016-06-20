@@ -28,7 +28,7 @@ Nodemon and node-inspector are two must-have tools if you’re using node.js.  Y
 
 Assuming your using gulp.js as your build system, lets install both [gulp-nodemon]{:target="_blank"} and [gulp-node-inspector]{:target="_blank"} using npm.  I prefer to install the files locally to the project, but if you like you can install them globally using the ``` -g ``` flag.  Use your console to navigate to your project folder, and run the following commands:
 
-```$ npm install gulp-nodemon --save-dev```
+```$ npm install gulp-nodemon --save-dev```<br>
 ```$ npm install gulp-node-inspector --save-dev```
 
 After your plugins are installed we need to setup your gulpfile.js.

@@ -11,8 +11,8 @@
 	<li>
 		<a class="google googleBtn" href=""><svg><use xlink:href="#google-plus"></use></svg><span class="google-count"></span></a>
 	</li>
-	<li>
-		<a class="email" href="mailto:?subject={% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}&amp;body=You%20should%20read%20this:%20http://10.0.1.78/{{site.baseurl}}{{post.url}}" title="Email this article"><svg><use xlink:href="#envelope"></use></svg></a>
+	<li class="mobile-email">
+		<a class="email" href="mailto:?subject={% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}&amp;body=You%20should%20read%20this:%20http://www.davidodey.com{{page.url}}{{post.url}}" title="Email this article"><svg><use xlink:href="#envelope"></use></svg></a>
 	</li>
 	<li class="total">
 		<span class="margin-right-5 total-text">Total </span>

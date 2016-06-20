@@ -27,7 +27,7 @@
 	border-top:1px dotted $grey;
 	padding:25px;
 	text-align: left;
-  transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
 
   &:hover {
 	transform: scale(1.1);
@@ -42,6 +42,7 @@
 	  a & {
 		margin-bottom:0;
 		border-bottom:0;
+		color:$grey;
 	  }
 	}
 	

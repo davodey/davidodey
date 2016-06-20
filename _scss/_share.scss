@@ -56,6 +56,12 @@
 		  box-shadow:0;
 		}
 	  }
+	  
+	  &.mobile-email {
+    	  @media (max-width:640px) {
+        	  display:none;
+    	  }
+	  }
 
 	  a {
 		font-family:$heading-font;

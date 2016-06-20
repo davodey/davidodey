@@ -582,10 +582,11 @@ a  {
 	font-family: $heading-font;
 
   .post-date, .comment-count, .share-count {
-	font-size:.875em;
+	font-size:.775em;
 	font-weight:bold;
 	color:$color3;
 	margin-right:15px;
+	font-family: $heading-font;
   }
   .icon {
 	width:15px;

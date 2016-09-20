@@ -1,0 +1,12 @@
+---
+
+title:  "2016 - Pearson"
+date:   2016-09-20 10:28:30 -0700
+categories:
+- timeline
+year: 2016
+description: Started a new adventure with Pearson Education as a UX Prototyper.  Our awesome team builds out production ready prototypes and re-usable web components with React.Js.
+
+year-direction: left
+year-duplicate: false
+---

@@ -6,18 +6,16 @@ category:
 - projects
 - HTML5
 - SCSS
-- JQuery
-- Require JS
-- Gulp
+- React.js
 - GIT
-- Jekyll
+- Pattern Lab
 
 subtitle: 'wordpress, html, css, javascript, mobile strategy'
 main-image: orenda.jpg
 alt: orenda force
 ---
 
-**When:** 2015 - 2016
+**When:** 2016
 
 **Contribution:** UX Consultant, Architect, Designer, Developer.
 

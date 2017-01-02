@@ -44,7 +44,8 @@ require([
 						data: formData,
 						dataType: 'json',
 						success: function(response) {
-							if (response.next === '/thanks') {
+							console.log(response);
+							if (response.hasOwnProperty("success")) {
 								$('#submitForm').hide();
 								$('#message').fadeIn('fast');
 								$('input, textarea').removeClass('valid').val('');

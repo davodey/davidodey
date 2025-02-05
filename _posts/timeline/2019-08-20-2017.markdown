@@ -1,0 +1,12 @@
+---
+
+title:  "2019 - Pearson"
+date:   2019-08-21 10:28:30 -0700
+categories:
+- timeline
+year: 2019
+description: 
+   On the side, helped the local Goddard School in Cave Creek, Arizona by building a system to organize legal and state documents, making compliance and record keeping more efficient.
+year-direction: right
+year-duplicate: true
+---

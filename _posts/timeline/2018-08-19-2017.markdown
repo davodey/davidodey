@@ -1,0 +1,12 @@
+---
+
+title:  "2018 - Pearson"
+date:   2018-08-21 10:28:30 -0700
+categories:
+- timeline
+year: 2018
+description: Proud to deliver the Gravity Web Components design system and publish it to NPM, making it accessible for developers to build consistent and scalable user interfaces.
+
+year-direction: left
+year-duplicate: false
+---

@@ -1,0 +1,12 @@
+---
+
+title:  "2019 - Pearson"
+date:   2019-08-21 10:28:30 -0700
+categories:
+- timeline
+year: 2019
+description: 
+    Built a Node powered EPUB to API conversion service that streamlined usertesting for Pearson+, making it faster and easier to validate eTextbook workflows.
+year-direction: right
+year-duplicate: true
+---

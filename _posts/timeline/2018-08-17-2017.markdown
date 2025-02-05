@@ -1,0 +1,12 @@
+---
+
+title:  "2018 - Pearson"
+date:   2018-08-21 10:28:30 -0700
+categories:
+- timeline
+year: 2018
+description: Attended my first Boston Red Sox game at Fenway Park, an unforgettable experience in one of baseball’s most iconic stadiums.
+
+year-direction: left
+year-duplicate: true
+---

@@ -1,0 +1,12 @@
+---
+title: "2016 - Pearson"
+date: 2016-09-21 10:28:30 -0700
+categories:
+- timeline
+year: 2016
+description: >
+  Was honored to represent Pearson in the W3C CSS working group, where i participated in calls and gained valuable insights in to CSS development.
+
+year-direction: left
+year-duplicate: false
+---

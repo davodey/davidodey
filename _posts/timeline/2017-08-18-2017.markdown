@@ -1,0 +1,12 @@
+---
+
+title:  "2016 - OReilly"
+date:   2017-08-21 10:28:30 -0700
+categories:
+- timeline
+year: 2017
+description: Learned Node.js, RESTful APIs, MongoDB, and Express to build scalable backend systems and connect dynamic web applications with efficient data handling.
+
+year-direction: right
+year-duplicate: false
+---

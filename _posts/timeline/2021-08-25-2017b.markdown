@@ -1,0 +1,12 @@
+---
+
+title:  "2019 - Pearson"
+date:   2019-08-21 10:28:30 -0700
+categories:
+- timeline
+year: 2021
+description: 
+  Expanded my expertise by learning Astro.js, Next.js, Firebase, and Firestore, gaining deeper insights into modern web development and serverless technologies.
+year-direction: right
+year-duplicate: true
+---

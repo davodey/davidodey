@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/davodey/davidodey#readme",
   "devDependencies": {
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-notify": "^2.2.0",
     "gulp-prettify": "^0.4.0",
@@ -25,5 +26,5 @@
     "gulp-svgstore": "^6.0.0",
     "gulp.spritesmith": "^6.2.1",
     "require-dir": "^0.3.0"
-  } 
+  }
 }

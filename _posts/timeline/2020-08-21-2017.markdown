@@ -1,0 +1,12 @@
+---
+
+title:  "2019 - Pearson"
+date:   2019-08-21 10:28:30 -0700
+categories:
+- timeline
+year: 2020
+description: 
+  Extremely proud to have been promoted to Lead Creative Technologis at Pearson Education.
+year-direction: left
+year-duplicate: true
+---

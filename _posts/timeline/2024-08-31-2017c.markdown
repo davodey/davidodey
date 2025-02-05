@@ -1,0 +1,13 @@
+---
+
+title:  "2019 - Pearson"
+date:   2019-08-21 10:28:30 -0700
+categories:
+- timeline
+year: 2024
+description: 
+  Developed an AI chatbot application integrated with the Pearson Virtual Schools platform, enabling real time communication with the backend to recommend courses and learning pathways for students.
+year-direction: left
+year-duplicate: true
+---
+

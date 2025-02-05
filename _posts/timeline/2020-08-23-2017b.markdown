@@ -1,0 +1,12 @@
+---
+
+title:  "2019 - Pearson"
+date:   2019-08-21 10:28:30 -0700
+categories:
+- timeline
+year: 2020
+description: 
+  Implemented OAuth2 authentication in Node with JWT on Endeavor, ensuring secure user signups and authorization.
+year-direction: left
+year-duplicate: false
+---

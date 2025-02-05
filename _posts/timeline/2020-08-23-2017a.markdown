@@ -1,0 +1,12 @@
+---
+
+title:  "2019 - Pearson"
+date:   2019-08-21 10:28:30 -0700
+categories:
+- timeline
+year: 2020
+description: 
+  Started a 5 year journey leading the design and development of the Endeavor Devops / Project platform.
+year-direction: left
+year-duplicate: true
+---

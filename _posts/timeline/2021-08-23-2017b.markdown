@@ -1,0 +1,12 @@
+---
+
+title:  "2019 - Pearson"
+date:   2019-08-21 10:28:30 -0700
+categories:
+- timeline
+year: 2021
+description: 
+  Worked closely with Pearson management to develop an internal user testing platform, reducing our reliance on Usertesting.com and cutting costs while streamlining the testing process.
+year-direction: right
+year-duplicate: true
+---

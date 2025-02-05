@@ -1,0 +1,12 @@
+---
+
+title:  "2019 - Pearson"
+date:   2019-08-21 10:28:30 -0700
+categories:
+- timeline
+year: 2023
+description: 
+  Developed a Slack application using Azure services and Credly, enabling company wide shout outs with achievements and recognition directly in Slack.
+year-direction: right
+year-duplicate: true
+---

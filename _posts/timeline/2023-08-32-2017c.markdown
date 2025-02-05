@@ -1,0 +1,13 @@
+---
+
+title:  "2019 - Pearson"
+date:   2019-08-21 10:28:30 -0700
+categories:
+- timeline
+year: 2023
+description: 
+  Continued leading the Endeavor project, adding key features such as AI powered reporting based on GitLab and DigitalOcean activity, along with enhanced project management capabilities.
+year-direction: right
+year-duplicate: false
+---
+

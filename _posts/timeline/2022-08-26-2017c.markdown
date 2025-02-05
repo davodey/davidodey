@@ -1,0 +1,12 @@
+---
+
+title:  "2019 - Pearson"
+date:   2019-08-21 10:28:30 -0700
+categories:
+- timeline
+year: 2022
+description: 
+  Designed and developed a classroom test system that enabled product validation in a real classroom environment, using actual students and real grades to gather meaningful insights.
+year-direction: left
+year-duplicate: true
+---

@@ -1,0 +1,12 @@
+---
+
+title:  "2018 - Pearson"
+date:   2018-08-21 10:28:30 -0700
+categories:
+- timeline
+year: 2018
+description: Was honorod that our Wayfinder project was selected to be pitched to Pearson CEO Andy Bird and the Board of Directors, showcasing the impact and potential of our work.
+
+year-direction: left
+year-duplicate: true
+---

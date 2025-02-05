@@ -1,0 +1,12 @@
+---
+
+title:  "2019 - Pearson"
+date:   2019-08-21 10:28:30 -0700
+categories:
+- timeline
+year: 2020
+description: 
+  COVID reshaped the world, disrupting initiatives and business units, forcing us to pivot and rethink education to adapt to a rapidly changing landscape.
+year-direction: left
+year-duplicate: true
+---

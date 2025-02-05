@@ -1,0 +1,12 @@
+---
+
+title:  "2019 - Pearson"
+date:   2019-08-21 10:28:30 -0700
+categories:
+- timeline
+year: 2019
+description: 
+  Crossed off another bucket list item and went to my first WWE Royal Rumble at Chase Field and got to see some of my favorite superstars live in an unforgettable night of action.
+year-direction: right
+year-duplicate: false
+---

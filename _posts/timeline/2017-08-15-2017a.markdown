@@ -1,0 +1,12 @@
+---
+
+title:  "2016 - OReilly"
+date:   2017-08-21 10:28:30 -0700
+categories:
+- timeline
+year: 2017
+description: Developed and published several production ready React components to our NPM library, making them accessible for public use and streamlining development across projects.
+
+year-direction: right
+year-duplicate: true
+---

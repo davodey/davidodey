@@ -1,0 +1,12 @@
+---
+
+title:  "2019 - Pearson"
+date:   2019-08-21 10:28:30 -0700
+categories:
+- timeline
+year: 2023
+description: 
+  Started my journey into AI and machine learning, experimenting with Python packages, TensorFlow, and vector databases to explore data processing and model training.
+year-direction: right
+year-duplicate: true
+---

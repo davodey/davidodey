@@ -1,0 +1,12 @@
+---
+title: "2016 - Pearson"
+date: 2016-09-21 10:28:30 -0700
+categories:
+- timeline
+year: 2016
+description: >
+  Built an accessibility checker application for Pearson that scanned URLs and flagged non WCAG compliant issues, helping teams create more inclusive digital experiences.
+
+year-direction: left
+year-duplicate: true
+---

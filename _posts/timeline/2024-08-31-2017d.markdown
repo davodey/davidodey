@@ -1,0 +1,13 @@
+---
+
+title:  "2019 - Pearson"
+date:   2019-08-21 10:28:30 -0700
+categories:
+- timeline
+year: 2024
+description: 
+  Designed, and developed Homework Pilot, an AI powered iOS application that helps parents assist their kids with physical homework, now available on the App Store.
+year-direction: left
+year-duplicate: false
+---
+

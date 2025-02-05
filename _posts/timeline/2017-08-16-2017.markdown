@@ -1,0 +1,12 @@
+---
+
+title:  "2016 - OReilly"
+date:   2017-08-21 10:28:30 -0700
+categories:
+- timeline
+year: 2017
+description: Was assigned to be a lead, with 3 resources to build a pure vanilla javascript web component library, containing over 20 components that could be used in our React, Angular, and Vue applications.
+
+year-direction: right
+year-duplicate: true
+---

@@ -1,0 +1,12 @@
+---
+
+title:  "2019 - Pearson"
+date:   2019-08-21 10:28:30 -0700
+categories:
+- timeline
+year: 2019
+description: 
+   Started mentoring teammates to sharpen their front end development skills, sharing best practices and helping them grow into stronger engineers.
+year-direction: right
+year-duplicate: true
+---

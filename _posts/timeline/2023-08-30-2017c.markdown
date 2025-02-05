@@ -1,0 +1,13 @@
+---
+
+title:  "2019 - Pearson"
+date:   2019-08-21 10:28:30 -0700
+categories:
+- timeline
+year: 2023
+description: 
+  Got introduced to design tokens and explored their impact on CSS, using them to standardize colors, typography, and spacing.
+year-direction: right
+year-duplicate: true
+---
+

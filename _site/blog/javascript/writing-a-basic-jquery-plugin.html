@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="Cache-Control" content="max-age=864000">
+   <meta name="description" content="I have a strong passion for web standards, and creating uniquely awesome user experiences that can be accessed on all devices.">
+   <meta name="author" content="">
+   <title>How to write a basic jQuery Plugin</title>
+
+   <!-- Twitter OG -->
+   <meta name="twitter:card" content="summary" />
+   <meta name="twitter:site" content="@davodey" />
+   <meta name="twitter:creator" content="@davodey" />
+
+   <!-- FaceBook OG -->
+   <meta property="fb:app_id" content="787364798035664" />
+
+   <!-- OpenGraph -->
+   <meta property="og:url" content=" /blog/javascript/writing-a-basic-jquery-plugin" />
+   <meta property="og:type" content="Article" />
+   <meta property="og:title" content="Writing a basic jQuery Plugin" />
+   <meta property="og:description" content="Learn how to write a basic jQuery plugin using data from a weather API." />
+   <meta property="og:image" content="http://www.davidodey.com/img/dave-profile.jpg" />
+
+
+   <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+   <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+
+   <script src="//use.typekit.net/jag4iyt.js"></script>
+   <script>try{Typekit.load({async:true});}catch(e){}</script>
+
+   <!-- Modernizr-->
+   <script src="/js/app-built/lib/modernizr.js"></script>
+
+   <!-- Loading SCSS -->
+   <link href="/css/style.css" rel="stylesheet">
+
+</head>
+<body id="home">
+   <svg xmlns="http://www.w3.org/2000/svg" class="sprite-sheet">
+    <symbol id="bars" viewBox="0 0 1792 1792">
+        <path d="M1664 1344v128q0 26-19 45t-45 19H192q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19H192q-26 0-45-19t-19-45V832q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19H192q-26 0-45-19t-19-45V320q0-26 19-45t45-19h1408q26 0 45 19t19 45z"
+        />
+    </symbol>
+    <symbol id="book" viewBox="0 0 1792 1792">
+        <path d="M1703 478q40 57 18 129l-275 906q-19 64-76.5 107.5T1247 1664H324q-77 0-148.5-53.5T76 1479q-24-67-2-127 0-4 3-27t4-37q1-8-3-21.5t-3-19.5q2-11 8-21t16.5-23.5T116 1179q23-38 45-91.5t30-91.5q3-10 .5-30t-.5-28q3-11 17-28t17-23q21-36 42-92t25-90q1-9-2.5-32t.5-28q4-13 22-30.5t22-22.5q19-26 42.5-84.5T404 411q1-8-3-25.5t-2-26.5q2-8 9-18t18-23 17-21q8-12 16.5-30.5t15-35 16-36 19.5-32 26.5-23.5 36-11.5T620 134l-1 3q38-9 51-9h761q74 0 114 56t18 130l-274 906q-36 119-71.5 153.5T1089 1408H220q-27 0-38 15-11 16-1 43 24 70 144 70h923q29 0 56-15.5t35-41.5l300-987q7-22 5-57 38 15 59 43zm-1064 2q-4 13 2 22.5t20 9.5h608q13 0 25.5-9.5T1311 480l21-64q4-13-2-22.5t-20-9.5H702q-13 0-25.5 9.5T660 416zm-83 256q-4 13 2 22.5t20 9.5h608q13 0 25.5-9.5T1228 736l21-64q4-13-2-22.5t-20-9.5H619q-13 0-25.5 9.5T577 672z"
+        />
+    </symbol>
+    <symbol id="calendar-o" viewBox="0 0 1792 1792">
+        <path d="M192 1664h1408V640H192v1024zM576 448V160q0-14-9-23t-23-9h-64q-14 0-23 9t-9 23v288q0 14 9 23t23 9h64q14 0 23-9t9-23zm768 0V160q0-14-9-23t-23-9h-64q-14 0-23 9t-9 23v288q0 14 9 23t23 9h64q14 0 23-9t9-23zm384-64v1280q0 52-38 90t-90 38H192q-52 0-90-38t-38-90V384q0-52 38-90t90-38h128v-96q0-66 47-113T480 0h64q66 0 113 47t47 113v96h384v-96q0-66 47-113t113-47h64q66 0 113 47t47 113v96h128q52 0 90 38t38 90z"
+        />
+    </symbol>
+    <symbol id="caret-left" viewBox="0 0 1792 1792">
+        <path d="M1216 448v896q0 26-19 45t-45 19-45-19L659 941q-19-19-19-45t19-45l448-448q19-19 45-19t45 19 19 45z" />
+    </symbol>
+    <symbol id="caret-right" viewBox="0 0 1792 1792">
+        <path d="M1152 896q0 26-19 45l-448 448q-19 19-45 19t-45-19-19-45V448q0-26 19-45t45-19 45 19l448 448q19 19 19 45z" />
+    </symbol>
+    <symbol id="child" viewBox="0 0 1792 1792">
+        <path d="M1444 548l-292 292v824q0 46-33 79t-79 33-79-33-33-79v-384h-64v384q0 46-33 79t-79 33-79-33-33-79V840L348 548q-28-28-28-68t28-68 68-28 68 28l228 228h368l228-228q28-28 68-28t68 28 28 68-28 68zm-324-164q0 93-65.5 158.5T896 608t-158.5-65.5T672 384t65.5-158.5T896 160t158.5 65.5T1120 384z"
+        />
+    </symbol>
+    <symbol id="comment" viewBox="0 0 1792 1792">
+        <path d="M1792 896q0 174-120 321.5t-326 233-450 85.5q-70 0-145-8-198 175-460 242-49 14-114 22-17 2-30.5-9t-17.5-29v-1q-3-4-.5-12t2-10 4.5-9.5l6-9 7-8.5 8-9q7-8 31-34.5t34.5-38 31-39.5 32.5-51 27-59 26-76q-157-89-247.5-220T0 896q0-130 71-248.5T262 443t286-136.5T896 256q244 0 450 85.5t326 233T1792 896z"
+        />
+    </symbol>
+    <symbol id="comment-o" viewBox="0 0 1792 1792">
+        <path d="M896 384q-204 0-381.5 69.5T232.5 641 128 896q0 112 71.5 213.5T401 1285l87 50-27 96q-24 91-70 172 152-63 275-171l43-38 57 6q69 8 130 8 204 0 381.5-69.5t282-187.5T1664 896t-104.5-255-282-187.5T896 384zm896 512q0 174-120 321.5t-326 233-450 85.5q-70 0-145-8-198 175-460 242-49 14-114 22h-5q-15 0-27-10.5t-16-27.5v-1q-3-4-.5-12t2-10 4.5-9.5l6-9 7-8.5 8-9q7-8 31-34.5t34.5-38 31-39.5 32.5-51 27-59 26-76q-157-89-247.5-220T0 896q0-174 120-321.5t326-233T896 256t450 85.5 326 233T1792 896z"
+        />
+    </symbol>
+    <symbol id="envelope" viewBox="0 0 1792 1792">
+        <path d="M1792 710v794q0 66-47 113t-113 47H160q-66 0-113-47T0 1504V710q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38T639 1015q-91-64-262-182.5T172 690q-62-42-117-115.5T0 438q0-78 41.5-130T160 256h1472q65 0 112.5 47t47.5 113z"
+        />
+    </symbol>
+    <symbol id="facebook" viewBox="0 0 1792 1792">
+        <path d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759H734V905H479V609h255V391q0-186 104-288.5T1115 0q147 0 228 12z" />
+    </symbol>
+    <symbol id="folder-open" viewBox="0 0 1792 1792">
+        <path d="M1815 952q0 31-31 66l-336 396q-43 51-120.5 86.5T1184 1536H96q-34 0-60.5-13T9 1480q0-31 31-66l336-396q43-51 120.5-86.5T640 896h1088q34 0 60.5 13t26.5 43zm-343-344v160H640q-94 0-197 47.5T279 935l-337 396-5 6q0-4-.5-12.5t-.5-12.5V352q0-92 66-158t158-66h320q92 0 158 66t66 158v32h544q92 0 158 66t66 158z"
+        />
+    </symbol>
+    <symbol id="github" viewBox="0 0 1792 1792">
+        <path d="M1664 896q0 251-146.5 451.5T1139 1625q-27 5-39.5-7t-12.5-30v-211q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105T1386 856q0-121-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27T578 459.5 492 446q-44 113-7 204-79 85-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-40 36-49 103-21 10-45 15t-57 5-65.5-21.5T484 1274q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 89t.5 54q0 18-13 30t-40 7q-232-77-378.5-277.5T128 896q0-209 103-385.5T510.5 231 896 128t385.5 103T1561 510.5 1664 896z"
+        />
+    </symbol>
+    <symbol id="google-plus" viewBox="0 0 1792 1792">
+        <path d="M1181 913q0 208-87 370.5t-248 254-369 91.5q-149 0-285-58t-234-156-156-234-58-285 58-285 156-234 234-156 285-58q286 0 491 192L769 546Q652 433 477 433q-123 0-227.5 62T84 663.5 23 896t61 232.5T249.5 1297t227.5 62q83 0 152.5-23t114.5-57.5 78.5-78.5 49-83 21.5-74H477V791h692q12 63 12 122zm867-122v210h-209v209h-210v-209h-209V791h209V582h210v209h209z"
+        />
+    </symbol>
+    <symbol id="home-alt" viewBox="0 0 1792 1792">
+        <path d="M1472 992v480q0 26-19 45t-45 19h-384v-384H768v384H384q-26 0-45-19t-19-45V992q0-1 .5-3t.5-3l575-474 575 474q1 2 1 6zm223-69l-62 74q-8 9-21 11h-3q-13 0-21-7L896 424l-692 577q-12 8-24 7-13-2-21-11l-62-74q-8-10-7-23.5t11-21.5l719-599q32-26 76-26t76 26l244 204V288q0-14 9-23t23-9h192q14 0 23 9t9 23v408l219 182q10 8 11 21.5t-7 23.5z"
+        />
+    </symbol>
+    <symbol id="linkedin" viewBox="0 0 1792 1792">
+        <path d="M477 625v991H147V625h330zm21-306q1 73-50.5 122T312 490h-2q-82 0-132-49t-50-122q0-74 51.5-122.5T314 148t133 48.5T498 319zm1166 729v568h-329v-530q0-105-40.5-164.5T1168 862q-63 0-105.5 34.5T999 982q-11 30-11 81v553H659q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5T1285 602q171 0 275 113.5t104 332.5z"
+        />
+    </symbol>
+    <symbol id="paperclip" viewBox="0 0 1792 1792">
+        <path d="M1596 1385q0 117-79 196t-196 79q-135 0-235-100L309 784Q196 669 196 513q0-159 110-270t269-111q158 0 273 113l605 606q10 10 10 22 0 16-30.5 46.5T1386 950q-13 0-23-10L757 333q-79-77-181-77-106 0-179 75t-73 181q0 105 76 181l776 777q63 63 145 63 64 0 106-42t42-106q0-82-63-145L825 659q-26-24-60-24-29 0-48 19t-19 48q0 32 25 59l410 410q10 10 10 22 0 16-31 47t-47 31q-12 0-22-10L633 851q-63-61-63-149 0-82 57-139t139-57q88 0 149 63l581 581q100 98 100 235z"
+        />
+    </symbol>
+    <symbol id="picture-o" viewBox="0 0 1792 1792">
+        <path d="M576 576q0 80-56 136t-136 56-136-56-56-136 56-136 136-56 136 56 56 136zm1024 384v448H192v-192l320-320 160 160 512-512zm96-704H96q-13 0-22.5 9.5T64 288v1216q0 13 9.5 22.5T96 1536h1600q13 0 22.5-9.5t9.5-22.5V288q0-13-9.5-22.5T1696 256zm160 32v1216q0 66-47 113t-113 47H96q-66 0-113-47t-47-113V288q0-66 47-113t113-47h1600q66 0 113 47t47 113z"
+        />
+    </symbol>
+    <symbol id="plane" viewBox="0 0 1792 1792">
+        <path d="M1568 160q44 52 12 148t-108 172l-161 161 160 696q5 19-12 33l-128 96q-7 6-19 6-4 0-7-1-15-3-21-16l-279-508-259 259 53 194q5 17-8 31l-96 96q-9 9-23 9h-2q-15-2-24-13l-189-252-252-189q-11-7-13-23-1-13 9-25l96-97q9-9 23-9 6 0 8 1l194 53 259-259-508-279q-14-8-17-24-2-16 9-27l128-128q14-13 30-8l665 159 160-160q76-76 172-108t148 12z"
+        />
+    </symbol>
+    <symbol id="star" viewBox="0 0 1792 1792">
+        <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5T1385 1619q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5T365 1569q0-6 2-20l86-500L89 695q-25-27-25-48 0-37 56-46l502-73L847 73q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"
+        />
+    </symbol>
+    <symbol id="thumbs-o-up" viewBox="0 0 1792 1792">
+        <path d="M384 1344q0-26-19-45t-45-19-45 19-19 45 19 45 45 19 45-19 19-45zm1152-576q0-51-39-89.5t-89-38.5h-352q0-58 48-159.5t48-160.5q0-98-32-145t-128-47q-26 26-38 85t-30.5 125.5T864 448q-22 23-77 91-4 5-23 30t-31.5 41-34.5 42.5-40 44-38.5 35.5-40 27-35.5 9h-32v640h32q13 0 31.5 3t33 6.5 38 11 35 11.5 35.5 12.5 29 10.5q211 73 342 73h121q192 0 192-167 0-26-5-56 30-16 47.5-52.5t17.5-73.5-18-69q53-50 53-119 0-25-10-55.5t-25-47.5q32-1 53.5-47t21.5-81zm128-1q0 89-49 163 9 33 9 69 0 77-38 144 3 21 3 43 0 101-60 178 1 139-85 219.5t-227 80.5h-129q-96 0-189.5-22.5T682 1576q-116-40-138-40H256q-53 0-90.5-37.5T128 1408V768q0-53 37.5-90.5T256 640h274q36-24 137-155 58-75 107-128 24-25 35.5-85.5T840 145t62-108q39-37 90-37 84 0 151 32.5T1245 134t35 186q0 93-48 192h176q104 0 180 76t76 179z"
+        />
+    </symbol>
+    <symbol id="twitter" viewBox="0 0 1792 1792">
+        <path d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5T1369.5 1125 1185 1335.5t-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5T285 1033q33 5 61 5 43 0 85-11-112-23-185.5-111.5T172 710v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5T884 653q-8-38-8-74 0-134 94.5-228.5T1199 256q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z"
+        />
+    </symbol>
+    <symbol id="dave-profile" viewBox="0 0 124.7 180.3">
+        <style>
+            .st0 {
+                fill: #E6B787;
+            }
+
+            .st1 {
+                fill: #A57B22;
+            }
+
+            .st2 {
+                fill: #352517;
+            }
+
+            .st3 {
+                fill: #B9926C;
+            }
+
+            .st4 {
+                fill: #0C133A;
+            }
+
+            .st5 {
+                fill: #FFFFFF;
+            }
+
+            .st6 {
+                fill: #CC3E00;
+            }
+        </style>
+        <path class="st0" d="M35 34.5h53.3v48.1H35z" />
+        <path class="st1" d="M25.7 19h71.7v25H25.7z" />
+        <path class="st0" d="M35 29.9h53.3v14.6H35z" />
+        <path class="st2" d="M46.5 48.5h6.4v10.4h-6.4z" />
+        <path class="st3" d="M46.5 70h30.3v4.9H46.5z" />
+        <path class="st4" d="M23.1 84.7h76.3v22.9H23.1z" />
+        <path class="st4" d="M7.6 89.8h107.6v83.1H7.6z" />
+        <path class="st1" d="M35 9h53.3v22.2H35z" />
+        <path class="st0" d="M87 44h6.4v22.2H87zM30 44h6.4v22.2H30zM6.6 116.9h15.5v56H6.6zM100.6 116.9h15.6v56h-15.6z" />
+        <path class="st5" d="M6.4 116.8h17.7v2.4H6.4zM98.9 116.8h17.3v2.4H98.9z" />
+        <path class="st2" d="M70.4 48.5h6.4v10.4h-6.4z" />
+        <path class="st0" d="M35 35.5h15.8v9H35z" />
+        <path class="st1" d="M48 5.9h26.7v28.4H48z" />
+        <path class="st3" d="M44.2 70h34.5v3.3H44.2z" />
+        <path class="st5" d="M49.5 111.2h28.2v37.9H49.5z" />
+        <path class="st3" d="M49 72h25.3v4.8H49z" />
+        <path class="st5" d="M49 69.5h25.3v2.3H49zM51.5 75.8h20.3v1H51.5z" />
+        <path class="st6" d="M75.2 120.3l.5-5.7h-26L51 132h18l-.6 7.4-5.8 1.7-5.8-1.7-.4-4.6h-5.1l.6 9.1 10.6 3.3h.1l10.6-3.2 1.5-17.7H55.8l-.4-5.9h19.8zM41.9 105h41.4l-3.8 46.9-17 5.3-16.9-5.3-3.7-46.9z" />
+    </symbol>
+</svg>
+   <ul class="share-links" data-title="Writing a basic jQuery Plugin" data-hash="jQuery" data-url="http://www.davidodey.com/blog/javascript/writing-a-basic-jquery-plugin">
+	<li>
+		<a class="twitter twitterBtn" data-dir="left" href="" ><svg><use xlink:href="#twitter"></use></svg><span class="twitter-count"></span></a>
+	</li>
+	<li>
+		<a class="facebook facebookBtn" href=""><svg><use xlink:href="#facebook"></use></svg><span class="facebook-count"></span></a>
+	</li>
+	<li>
+		<a class="linkedin linkedinBtn" href=""><svg><use xlink:href="#linkedin"></use></svg><span class="linkedin-count"></span></a>
+	</li>
+	<li>
+		<a class="google googleBtn" href=""><svg><use xlink:href="#google-plus"></use></svg><span class="google-count"></span></a>
+	</li>
+	<li>
+		<a class="email" href="mailto:?subject=How to write a basic jQuery Plugin&amp;body=You%20should%20read%20this:%20http://10.0.1.78/" title="Email this article"><svg><use xlink:href="#envelope"></use></svg></a>
+	</li>
+	<li class="total">
+		<span class="margin-right-5 total-text">Total </span>
+		<span class="total-count">0</span>
+	</li>
+</ul>
+   <div id="open-left" class="bar-nav container-fluid">
+      <nav>
+         <ul>
+            <li class="mobile-show mobile-menu"><a href="#/"><svg class="icon bar"><use xlink:href="#bars"></use></svg><span class="menu-text">Menu</span></a></li>
+         </ul>
+      </nav>
+   </div>
+   <div class="snap-drawers">
+      <div class="snap-drawer snap-drawer-left">
+         <div>
+            <ul>
+               
+<li><a href="/index.html"><svg class="icon"><use xlink:href="#home-alt"></use></svg> Home</a></li>
+
+
+
+<li><a href="/portfolio.html"><svg class="icon book"><use xlink:href="#picture-o"></use></svg>Portfolio</a></li>
+
+
+
+<li class="active"><a href="/blog.html"><svg class="icon book"><use xlink:href="#book"></use></svg>Blog</a></li>
+
+
+
+<li><a href="/resources.html"><svg class="icon"><use xlink:href="#paperclip"></use></svg> Resources</a></li>
+
+
+
+<li><a href="/contact.html"><svg class="icon"><use xlink:href="#child"></use></svg> Contact</a></li>
+
+
+            </ul>
+         </div>
+      </div>
+   </div>
+   <div id="content" class="snap-content">
+      <div id="navigation" class="container-fluid">
+         <nav>
+            <ul>
+               
+<li><a href="/index.html"><svg class="icon"><use xlink:href="#home-alt"></use></svg> Home</a></li>
+
+
+
+<li><a href="/portfolio.html"><svg class="icon book"><use xlink:href="#picture-o"></use></svg>Portfolio</a></li>
+
+
+
+<li class="active"><a href="/blog.html"><svg class="icon book"><use xlink:href="#book"></use></svg>Blog</a></li>
+
+
+
+<li><a href="/resources.html"><svg class="icon"><use xlink:href="#paperclip"></use></svg> Resources</a></li>
+
+
+
+<li><a href="/contact.html"><svg class="icon"><use xlink:href="#child"></use></svg> Contact</a></li>
+
+
+            </ul>
+         </nav>
+      </div>
+
+      <div id="mobile" class="container-fluid ">
+         <div class="line">
+            <header class="resource blog-header">
+               <div class="col-lg-12">
+                  <h1 class="title">How to write a basic jQuery Plugin</h1>
+                  <em> Written  by David O'Dey  on May 17, 2016</em>
+               </div>
+            </header>
+            <article class="post">
+               <div class="col-lg-12 margin-top-25 padding-0-768">
+                  <div class="col-lg-2 col-md-2 padding-top-5 stick-contain">
+
+                  </div>
+                  <div class="col-lg-8 col-md-8 article-copy">
+                     <p>If you’re like me you may have wanted to write a jQuery plugin, but wasn’t sure how or where to start? I will attempt to show you in this article, how to write a simple jQuery plugin that uses a weather API to display current temperatures based on a zip code.<!--more--> Lets get started.</p>
+
+<h2 id="what-is-a-plugin">What is a plugin?</h2>
+<p>Before you can write a jQuery plugin, its good to know what a plugin is and how they work.  A plugin as a new <a href="https://developer.mozilla.org/en-US/docs/Glossary/Method">method</a> that performs a series of actions on a selection.  It’s available to call on and re-use throughout your code.  You create this method by extending the jQuery prototype object.  Doing so inherits this new method on all core jQuery objects.  If your really new to jQuery its easy to be intimidated by the terminology, don’t be.  A method is a function, that’s all it is.</p>
+
+<h2 id="where-do-you-start">Where do you start?</h2>
+<p>Now that we understand what a plugin is and does, lets go ahead and write one.  For this article I’ve created a plugin that will display the current temperature to selected cities based off zip code.  Well add an icon to display the current weather and well also display the average temperature between all the selected cities.</p>
+
+<p>Extend the jQuery prototype object and add scope. The first thing we need to do is start the script with the following code:</p>
+
+<figure class="highlight" data-snap-ignore="true"><pre><code class="language-javascript" data-lang="javascript"><span class="p">(</span><span class="kd">function</span> <span class="p">(</span> <span class="nx">$</span> <span class="p">)</span> <span class="p">{</span>
+
+<span class="p">}(</span> <span class="nx">jQuery</span> <span class="p">));</span></code></pre></figure>
+
+<p>We start with this for two reasons.  It allows your plugin to play nice with other js libraries and avoid possible conflicts.  This will also allow us to store private variables that can be used throughout your plugin.  Our next step is to create the new method, for this example I used the name avgWeather.</p>
+
+<figure class="highlight" data-snap-ignore="true"><pre><code class="language-javascript" data-lang="javascript"><span class="p">(</span><span class="kd">function</span> <span class="p">(</span> <span class="nx">$</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">avgWeather</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+
+  <span class="p">};</span>
+<span class="p">}(</span> <span class="nx">jQuery</span> <span class="p">));</span></code></pre></figure>
+
+<p>JQuery provides an easy way of doing this by using <code class="highlighter-rouge">$.fn</code> or <code class="highlighter-rouge">jQuery.fn</code>.  This is what allows us to call <code class="highlighter-rouge">$(‘.someClass’).avgWeather();</code>  w will run the avgWeather function on the selection ‘someClass’.</p>
+
+<p>We’re going to want to add some customizable settings. Lets add support for accepting options by adding an object literal.  Doing so will allow us to add as many options as we need to our plugin.</p>
+
+<figure class="highlight" data-snap-ignore="true"><pre><code class="language-javascript" data-lang="javascript"><span class="p">(</span><span class="kd">function</span> <span class="p">(</span> <span class="nx">$</span> <span class="p">)</span> <span class="p">{</span>
+<span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">avgWeather</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">options</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">settings</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">extend</span><span class="p">({},</span> <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">avgWeather</span><span class="p">.</span><span class="nx">defaults</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">avgWeather</span><span class="p">.</span><span class="nx">defaults</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">tempUnits</span><span class="p">:</span> <span class="dl">"</span><span class="s2">imperial</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">apiKey</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Enter Api Key</span><span class="dl">"</span>
+<span class="p">};</span>
+
+<span class="p">}(</span> <span class="nx">jQuery</span> <span class="p">));</span></code></pre></figure>
+
+<p>Now, whenever we need to refer to the unit of measurement in our code we can use: <code class="highlighter-rouge">settings.tempUnits</code>, which will return the value passed into <code class="highlighter-rouge">$.fn.avgWeather.defaults</code>.  We will also be able to pass the options when calling the method in our markup, making it even more flexible.</p>
+
+<figure class="highlight" data-snap-ignore="true"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">.getTemp</span><span class="dl">"</span><span class="p">).</span><span class="nx">avgWeather</span><span class="p">({</span>
+    <span class="na">tempUnits</span><span class="p">:</span> <span class="dl">"</span><span class="s2">imperial</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">apiKey</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Enter Api Key</span><span class="dl">"</span>
+<span class="p">});</span></code></pre></figure>
+
+<p>Passing the options like this in the markup, overwrite any of the default values we added to the script.</p>
+
+<p>We’ve now created the basic foundation for our plugin.   The plugin can accept private variables and should play nice with other libraries.  We’ve created a new method that will be called when we want to run the script and we have the ability to pass multiple options, AWESOME.</p>
+
+<h2 id="the-markup">The markup</h2>
+<p>Before we begin scripting the plugin lets take a look at the markup.</p>
+
+<figure class="highlight" data-snap-ignore="true"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"getTemp"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"cities"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">data-zip=</span><span class="s">"60559"</span><span class="nt">&gt;</span>Westmont
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"temp"</span><span class="nt">&gt;</span>0<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"icon"</span> <span class="na">src=</span><span class="s">""</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">data-zip=</span><span class="s">"90210"</span><span class="nt">&gt;</span>Beverly Hills
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"temp"</span><span class="nt">&gt;</span>0<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"icon"</span> <span class="na">src=</span><span class="s">""</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span>Average Temperature
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"total-temp"</span><span class="nt">&gt;</span>0<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"icon"</span> <span class="na">src=</span><span class="s">""</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p>What were going to do is run <code class="highlighter-rouge">$(‘.getTemp’).avgWeather();</code> This will run the script on the div with getTemp.  The script will do the following:</p>
+
+<ol>
+  <li>Iterate through the <code class="highlighter-rouge">&lt;li&gt;</code> tags nested in <code class="highlighter-rouge">&lt;div class="getTemp"&gt;</code>.</li>
+  <li>If an <code class="highlighter-rouge">&lt;li&gt;</code> tag has a data attribute of data-zip then we well send off a request to the weather API and return the information for that zipcode.</li>
+  <li>With the returned information we will display the temperature to the span tag with the class of temp, nested inside the <code class="highlighter-rouge">&lt;li&gt;</code> tag.</li>
+  <li>We will also display the icon that is returned from the API and display that in img tag also nested inside the <code class="highlighter-rouge">&lt;li&gt;</code>.</li>
+  <li>If the <code class="highlighter-rouge">&lt;li&gt;</code> tag does not have the data attribute associated with it, the script simply skips over it.</li>
+  <li>Finally we will take all the temperatures, do some basic math and return the avg temperature, displaying that inside the class ‘total-temp’.</li>
+</ol>
+
+<h2 id="the-script">The script</h2>
+<p>Now that we have the basic structure complete, lets start the script.  The first thing well want to do, is run a basic loop using <code class="highlighter-rouge">$(‘this’)</code> as the selector.  This, refers to the selector that you will run the method avgWeather on.  Based on the example markup above THIS would have the context of <code class="highlighter-rouge">&lt;div class=”getTemp”&gt; ... &lt;/div&gt;</code>.</p>
+
+<figure class="highlight" data-snap-ignore="true"><pre><code class="language-javascript" data-lang="javascript"><span class="p">(</span><span class="kd">function</span> <span class="p">(</span> <span class="nx">$</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">avgWeather</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">options</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">settings</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">extend</span><span class="p">({},</span> <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">avgWeather</span><span class="p">.</span><span class="nx">defaults</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
+
+        <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+
+        <span class="p">};</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">;</span>
+    <span class="p">};</span>
+
+<span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">avgWeather</span><span class="p">.</span><span class="nx">defaults</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">tempUnits</span><span class="p">:</span> <span class="dl">"</span><span class="s2">imperial</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">apiKey</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Enter Api Key</span><span class="dl">"</span>
+<span class="p">};</span>
+
+<span class="p">}(</span> <span class="nx">jQuery</span> <span class="p">));</span></code></pre></figure>
+
+<p>You see that we added the line <code class="highlighter-rouge">return this;</code>.  By returning this, we are returning the object back to jQuery so it can be chained to another jQuery object, if needed.  Im sure you are familiar with chaining.  Its when you string several jQuery methods together.  For example : <code class="highlighter-rouge">$(‘.getTemp).avgWeather().css(‘color’,’blue’);</code>  This would run the method .avgWeather() on the selection <code class="highlighter-rouge">$(‘.getTemp’)</code> and also change the color of all the output text to blue.</p>
+
+<p>Next well want to iterate through the list items we presented in the markup.</p>
+
+<figure class="highlight" data-snap-ignore="true"><pre><code class="language-javascript" data-lang="javascript"><span class="p">(</span><span class="kd">function</span> <span class="p">(</span> <span class="nx">$</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">avgWeather</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">options</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">settings</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">extend</span><span class="p">({},</span> <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">avgWeather</span><span class="p">.</span><span class="nx">defaults</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
+
+        <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+            <span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">li[data-zip]</span><span class="dl">"</span><span class="p">,</span> <span class="k">this</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+
+            <span class="p">}</span>
+        <span class="p">};</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">;</span>
+    <span class="p">};</span>
+
+<span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">avgWeather</span><span class="p">.</span><span class="nx">defaults</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">tempUnits</span><span class="p">:</span> <span class="dl">"</span><span class="s2">imperial</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">apiKey</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Enter Api Key</span><span class="dl">"</span>
+<span class="p">};</span>
+
+<span class="p">}(</span> <span class="nx">jQuery</span> <span class="p">));</span></code></pre></figure>
+
+<p>This will look for all the <code class="highlighter-rouge">&lt;li&gt;</code> tags with the data attribute of ‘data-zip’ and perform actions on each one.  Before we handle that lets assign some variables.</p>
+
+<figure class="highlight" data-snap-ignore="true"><pre><code class="language-javascript" data-lang="javascript"><span class="p">(</span><span class="kd">function</span> <span class="p">(</span> <span class="nx">$</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">avgWeather</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">options</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">settings</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">extend</span><span class="p">({},</span> <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">avgWeather</span><span class="p">.</span><span class="nx">defaults</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
+        <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+
+       <span class="c1">// output the total avg temp in this div</span>
+       <span class="kd">var</span> <span class="nx">$targetTotal</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">.total-temp</span><span class="dl">'</span><span class="p">,</span><span class="k">this</span><span class="p">),</span>
+
+        <span class="c1">// counts the number of cities</span>
+        <span class="nx">$count</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">.cities li[data-zip]</span><span class="dl">'</span><span class="p">,</span> <span class="k">this</span><span class="p">).</span><span class="nx">length</span><span class="p">,</span>
+
+        <span class="c1">// location of the icon url in the returned data</span>
+        <span class="nx">iconUrl</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">http://openweathermap.org/img/w/</span><span class="dl">'</span><span class="p">,</span>
+
+        <span class="c1">// starts the total counter</span>
+        <span class="nx">total</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+        <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">li[data-zip]</span><span class="dl">'</span><span class="p">,</span> <span class="k">this</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+
+            <span class="kd">var</span> <span class="c1">// output the current temp</span>
+            <span class="nx">$target</span><span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">.temp</span><span class="dl">'</span><span class="p">,</span> <span class="k">this</span><span class="p">),</span>
+
+            <span class="c1">// selects this element with class of icon</span>
+            <span class="nx">$targetIcon</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">.icon</span><span class="dl">'</span><span class="p">,</span> <span class="k">this</span><span class="p">),</span>
+
+            <span class="c1">// finds the zipcode</span>
+            <span class="nx">$zipCode</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="dl">'</span><span class="s1">data-zip</span><span class="dl">'</span><span class="p">),</span>
+
+            <span class="c1">// json url that the data is sent to</span>
+            <span class="nx">jsonUrl</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">http://api.openweathermap.org/data/2.5/weather</span><span class="dl">'</span><span class="p">,</span>
+            <span class="nx">temp</span><span class="p">,</span>  <span class="c1">// future data assignment</span>
+            <span class="nx">icon</span><span class="p">;</span>  <span class="c1">// future data assignment</span>
+        <span class="p">});</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">avgWeather</span><span class="p">.</span><span class="nx">defaults</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">tempUnits</span><span class="p">:</span> <span class="dl">"</span><span class="s2">imperial</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">apiKey</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Enter Api Key</span><span class="dl">"</span>
+<span class="p">};</span>
+
+<span class="p">}(</span> <span class="nx">jQuery</span> <span class="p">));</span></code></pre></figure>
+
+<h2 id="getting-and-using-the-data">Getting and using the data</h2>
+<p>We are almost done, the last thing we will want to do is run the api call on the data and do something with the response.  In this case, well want to output the temperature, load the icon and compute the average temperature.  Lets make that API call to the server using ajax.  For this example we used a free service called <a href="http://openweathermap.org/api">Open Weather Map</a>.</p>
+
+<figure class="highlight" data-snap-ignore="true"><pre><code class="language-javascript" data-lang="javascript"><span class="p">(</span><span class="kd">function</span> <span class="p">(</span> <span class="nx">$</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">avgWeather</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">options</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">settings</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">extend</span><span class="p">({},</span> <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">avgWeather</span><span class="p">.</span><span class="nx">defaults</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
+        <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+
+       <span class="kd">var</span> <span class="nx">$targetTotal</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">.total-temp</span><span class="dl">'</span><span class="p">,</span><span class="k">this</span><span class="p">),</span>
+        <span class="nx">$count</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">.cities li[data-zip]</span><span class="dl">'</span><span class="p">,</span> <span class="k">this</span><span class="p">).</span><span class="nx">length</span><span class="p">,</span>
+        <span class="nx">iconUrl</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">http://openweathermap.org/img/w/</span><span class="dl">'</span><span class="p">,</span>
+        <span class="nx">total</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+        <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">li[data-zip]</span><span class="dl">'</span><span class="p">,</span> <span class="k">this</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nx">$target</span><span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">.temp</span><span class="dl">'</span><span class="p">,</span> <span class="k">this</span><span class="p">),</span>
+            <span class="nx">$targetIcon</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">.icon</span><span class="dl">'</span><span class="p">,</span> <span class="k">this</span><span class="p">),</span>
+            <span class="nx">$zipCode</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="dl">'</span><span class="s1">data-zip</span><span class="dl">'</span><span class="p">),</span>
+            <span class="nx">jsonUrl</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">http://api.openweathermap.org/data/2.5/weather</span><span class="dl">'</span><span class="p">,</span>
+            <span class="nx">temp</span><span class="p">,</span>
+            <span class="nx">icon</span><span class="p">;</span>
+
+             <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+            	<span class="na">url</span><span class="p">:</span> <span class="nx">jsonUrl</span><span class="p">,</span>
+            	<span class="na">cache</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            	<span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">GET</span><span class="dl">'</span><span class="p">,</span>
+            	<span class="na">dataType</span><span class="p">:</span> <span class="dl">'</span><span class="s1">jsonp</span><span class="dl">'</span><span class="p">,</span>
+            	<span class="na">data</span><span class="p">:</span> <span class="p">{</span>
+            		<span class="na">zip</span><span class="p">:</span> <span class="nx">$zipCode</span><span class="p">,</span>
+            		<span class="na">units</span><span class="p">:</span> <span class="nx">settings</span><span class="p">.</span><span class="nx">tempUnits</span><span class="p">,</span>
+            		<span class="na">country</span><span class="p">:</span> <span class="dl">'</span><span class="s1">US</span><span class="dl">'</span><span class="p">,</span>
+            		<span class="na">appid</span><span class="p">:</span> <span class="nx">settings</span><span class="p">.</span><span class="nx">apiKey</span>
+            	<span class="p">},</span>
+            	<span class="na">success</span><span class="p">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+            		<span class="nx">temp</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">main</span><span class="p">.</span><span class="nx">temp</span><span class="p">);</span>
+            		<span class="nx">icon</span> <span class="o">=</span> <span class="nx">iconUrl</span> <span class="o">+</span> <span class="nx">data</span><span class="p">.</span><span class="nx">weather</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">icon</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">.png</span><span class="dl">'</span><span class="p">;</span>
+            		<span class="nx">$target</span><span class="p">.</span><span class="nx">text</span><span class="p">(</span><span class="nx">temp</span><span class="p">);</span>
+            		<span class="nx">total</span> <span class="o">+=</span> <span class="nx">temp</span><span class="p">;</span>
+            		<span class="nx">$targetTotal</span><span class="p">.</span><span class="nx">text</span><span class="p">(</span><span class="nx">total</span> <span class="o">/</span> <span class="nx">$count</span><span class="p">);</span>
+            		<span class="nx">$targetIcon</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="dl">'</span><span class="s1">src</span><span class="dl">'</span><span class="p">,</span> <span class="nx">icon</span><span class="p">);</span>
+            	<span class="p">}</span>
+            <span class="p">});</span>
+
+        <span class="p">});</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">avgWeather</span><span class="p">.</span><span class="nx">defaults</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">tempUnits</span><span class="p">:</span> <span class="dl">"</span><span class="s2">imperial</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">apiKey</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Enter Api Key</span><span class="dl">"</span>
+<span class="p">};</span>
+
+<span class="p">}(</span> <span class="nx">jQuery</span> <span class="p">));</span></code></pre></figure>
+
+<p>Notice in the data we are sending to the API, we’re using the option we created below settings.tempUnits?</p>
+
+<p>The script is now complete, the only thing left is to fire the script in the markup and pass any options you want.  What if you want to cycle through another set of select cities, do you need to alter the code?  You wont have to change the js, but you will want to add the markup and change the zipcodes.</p>
+
+<figure class="highlight" data-snap-ignore="true"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"getTemp"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"cities"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">data-zip=</span><span class="s">"60559"</span><span class="nt">&gt;</span>Westmont
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"temp"</span><span class="nt">&gt;</span>0<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"icon"</span> <span class="na">src=</span><span class="s">""</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">data-zip=</span><span class="s">"90210"</span><span class="nt">&gt;</span>Beverly Hills
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"temp"</span><span class="nt">&gt;</span>0<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"icon"</span> <span class="na">src=</span><span class="s">""</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span>Average Temperature
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"total-temp"</span><span class="nt">&gt;</span>0<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"icon"</span> <span class="na">src=</span><span class="s">""</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"getTemp"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"cities"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">data-zip=</span><span class="s">"85260"</span><span class="nt">&gt;</span>Scottsdale
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"temp"</span><span class="nt">&gt;</span>0<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"icon"</span> <span class="na">src=</span><span class="s">""</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">data-zip=</span><span class="s">"85331"</span><span class="nt">&gt;</span>Cave Creek
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"temp"</span><span class="nt">&gt;</span>0<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"icon"</span> <span class="na">src=</span><span class="s">""</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span>Average Temperature
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"total-temp"</span><span class="nt">&gt;</span>0<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"icon"</span> <span class="na">src=</span><span class="s">""</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p>By adding a second set of <code class="highlighter-rouge">&lt;div class=”getTemp”&gt; … &lt;/div&gt;</code> elements, the plugin will read it as a separate instance of this, running the script a second time returning those values.  All you need to do is change the zip codes of the cities you want the data for and your all set.</p>
+
+<p>Here is a link to the <a href="http://www.davidodey.com/projects/jquery-weather-plugin.html">working demo</a> of the plugin along with all the <a href="https://github.com/davodey/Termperature-With-Avg">files on GitHub</a>.  I hope this article has gotten you a little bit more familiar with how plugins work.  For more examples and to learn more go to <a href="https://learn.jquery.com/plugins/basic-plugin-creation/">learn.jquery.com</a>.</p>
+
+
+                  </div>
+                  <div class="col-lg-2 col-md-2 padding-top-5">
+
+                  </div>
+                  <div class="comments">
+                     <div id="disqus_thread"></div>
+                  </div>
+               </div>
+            </article>
+
+         </div>
+      <footer>
+    <div id="message" class="footer">
+    
+<figure class="highlight"><pre><code class="language-html" data-lang="html">        Copyright © 2016 www.davidodey.com. All Rights Reserved.
+    </code></pre></figure>
+
+</div>
+</footer>
+
+<!-- load page scripts -->
+<script src="/js/app-built/lib/require.js"></script>
+
+<script>
+    requirejs(['/js/app-built/common.js'], function(common)
+    {
+        requirejs(['/js/app-built/components/pages/post.js']);
+    });
+</script>
+
+
+
+
+      </div>
+   </body>
+</html>

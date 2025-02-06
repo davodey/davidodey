@@ -2,28 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
-        <loc>/blog/javascript/run-nodemon-nodeinspector-gulp</loc>
+        <loc>http://localhost:4000/blog/javascript/run-nodemon-nodeinspector-gulp</loc>
         <lastmod>2016-06-18T10:28:30-07:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     
     <url>
-        <loc>/blog/design/performing-a-ui-inventory</loc>
+        <loc>http://localhost:4000/blog/design/performing-a-ui-inventory</loc>
         <lastmod>2016-06-09T10:28:30-07:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     
     <url>
-        <loc>/blog/html5/lets-build-a-web-component</loc>
+        <loc>http://localhost:4000/blog/html5/lets-build-a-web-component</loc>
         <lastmod>2016-05-27T10:28:30-07:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     
     <url>
-        <loc>/blog/javascript/writing-a-basic-jquery-plugin</loc>
+        <loc>http://localhost:4000/blog/javascript/writing-a-basic-jquery-plugin</loc>
         <lastmod>2016-05-17T10:28:30-07:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
@@ -32,24 +32,9 @@
     
         
         <url>
-            <loc>/categories/Design</loc>
+            <loc>http://localhost:4000/categories/Design</loc>
             
-            <lastmod>2025-02-06T09:53:55-07:00</lastmod>
-            
-            
-            <changefreq>weekly</changefreq>
-            
-            
-            <priority>0.3</priority>
-            
-        </url>
-        
-    
-        
-        <url>
-            <loc>/categories/HTML5</loc>
-            
-            <lastmod>2025-02-06T09:53:55-07:00</lastmod>
+            <lastmod>2025-02-06T10:25:39-07:00</lastmod>
             
             
             <changefreq>weekly</changefreq>
@@ -62,24 +47,9 @@
     
         
         <url>
-            <loc>/categories/JavaScript</loc>
+            <loc>http://localhost:4000/categories/HTML5</loc>
             
-            <lastmod>2025-02-06T09:53:55-07:00</lastmod>
-            
-            
-            <changefreq>weekly</changefreq>
-            
-            
-            <priority>0.3</priority>
-            
-        </url>
-        
-    
-        
-        <url>
-            <loc>/blog</loc>
-            
-            <lastmod>2025-02-06T09:53:55-07:00</lastmod>
+            <lastmod>2025-02-06T10:25:39-07:00</lastmod>
             
             
             <changefreq>weekly</changefreq>
@@ -92,24 +62,9 @@
     
         
         <url>
-            <loc>/contact</loc>
+            <loc>http://localhost:4000/categories/JavaScript</loc>
             
-            <lastmod>2025-02-06T09:53:55-07:00</lastmod>
-            
-            
-            <changefreq>weekly</changefreq>
-            
-            
-            <priority>0.3</priority>
-            
-        </url>
-        
-    
-        
-        <url>
-            <loc>/feed.xml</loc>
-            
-            <lastmod>2025-02-06T09:53:55-07:00</lastmod>
+            <lastmod>2025-02-06T10:25:39-07:00</lastmod>
             
             
             <changefreq>weekly</changefreq>
@@ -122,24 +77,9 @@
     
         
         <url>
-            <loc>/projects/web-components/</loc>
+            <loc>http://localhost:4000/blog</loc>
             
-            <lastmod>2025-02-06T09:53:55-07:00</lastmod>
-            
-            
-            <changefreq>weekly</changefreq>
-            
-            
-            <priority>0.3</priority>
-            
-        </url>
-        
-    
-        
-        <url>
-            <loc>/</loc>
-            
-            <lastmod>2025-02-06T09:53:55-07:00</lastmod>
+            <lastmod>2025-02-06T10:25:39-07:00</lastmod>
             
             
             <changefreq>weekly</changefreq>
@@ -152,24 +92,9 @@
     
         
         <url>
-            <loc>/projects/jquery-weather-plugin</loc>
+            <loc>http://localhost:4000/contact</loc>
             
-            <lastmod>2025-02-06T09:53:55-07:00</lastmod>
-            
-            
-            <changefreq>weekly</changefreq>
-            
-            
-            <priority>0.3</priority>
-            
-        </url>
-        
-    
-        
-        <url>
-            <loc>/portfolio</loc>
-            
-            <lastmod>2025-02-06T09:53:55-07:00</lastmod>
+            <lastmod>2025-02-06T10:25:39-07:00</lastmod>
             
             
             <changefreq>weekly</changefreq>
@@ -182,9 +107,9 @@
     
         
         <url>
-            <loc>/resources</loc>
+            <loc>http://localhost:4000/feed.xml</loc>
             
-            <lastmod>2025-02-06T09:53:55-07:00</lastmod>
+            <lastmod>2025-02-06T10:25:39-07:00</lastmod>
             
             
             <changefreq>weekly</changefreq>
@@ -197,9 +122,84 @@
     
         
         <url>
-            <loc>/projects/share</loc>
+            <loc>http://localhost:4000/projects/web-components/</loc>
             
-            <lastmod>2025-02-06T09:53:55-07:00</lastmod>
+            <lastmod>2025-02-06T10:25:39-07:00</lastmod>
+            
+            
+            <changefreq>weekly</changefreq>
+            
+            
+            <priority>0.3</priority>
+            
+        </url>
+        
+    
+        
+        <url>
+            <loc>http://localhost:4000/</loc>
+            
+            <lastmod>2025-02-06T10:25:39-07:00</lastmod>
+            
+            
+            <changefreq>weekly</changefreq>
+            
+            
+            <priority>0.3</priority>
+            
+        </url>
+        
+    
+        
+        <url>
+            <loc>http://localhost:4000/projects/jquery-weather-plugin</loc>
+            
+            <lastmod>2025-02-06T10:25:39-07:00</lastmod>
+            
+            
+            <changefreq>weekly</changefreq>
+            
+            
+            <priority>0.3</priority>
+            
+        </url>
+        
+    
+        
+        <url>
+            <loc>http://localhost:4000/portfolio</loc>
+            
+            <lastmod>2025-02-06T10:25:39-07:00</lastmod>
+            
+            
+            <changefreq>weekly</changefreq>
+            
+            
+            <priority>0.3</priority>
+            
+        </url>
+        
+    
+        
+        <url>
+            <loc>http://localhost:4000/resources</loc>
+            
+            <lastmod>2025-02-06T10:25:39-07:00</lastmod>
+            
+            
+            <changefreq>weekly</changefreq>
+            
+            
+            <priority>0.3</priority>
+            
+        </url>
+        
+    
+        
+        <url>
+            <loc>http://localhost:4000/projects/share</loc>
+            
+            <lastmod>2025-02-06T10:25:39-07:00</lastmod>
             
             
             <changefreq>weekly</changefreq>

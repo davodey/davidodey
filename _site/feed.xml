@@ -4,7 +4,7 @@
         <title>Leveling up with David ODey UI / UX Designer &amp; Front End Developer.</title>
         <description>A UI / UX blog sharing tips, best practice, tutorials and more...</description>
         <link>http://www.davidodey.com/blog.html</link>
-        <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
         
         <item>
             <title>Running Nodemon and Node Inspector with Gulp</title>
@@ -69,8 +69,8 @@
 
 </description>
             <pubDate>Sat, 18 Jun 2016 10:28:30 -0700</pubDate>
-            <link>//blog/javascript/run-nodemon-nodeinspector-gulp</link>
-            <guid isPermaLink="true">//blog/javascript/run-nodemon-nodeinspector-gulp</guid>
+            <link>http://localhost:4000//blog/javascript/run-nodemon-nodeinspector-gulp</link>
+            <guid isPermaLink="true">http://localhost:4000//blog/javascript/run-nodemon-nodeinspector-gulp</guid>
         </item>
         
         <item>
@@ -114,8 +114,8 @@ One of the most useful exercises you can do is perform a UI inventory.  A UI inv
 
 </description>
             <pubDate>Thu, 09 Jun 2016 10:28:30 -0700</pubDate>
-            <link>//blog/design/performing-a-ui-inventory</link>
-            <guid isPermaLink="true">//blog/design/performing-a-ui-inventory</guid>
+            <link>http://localhost:4000//blog/design/performing-a-ui-inventory</link>
+            <guid isPermaLink="true">http://localhost:4000//blog/design/performing-a-ui-inventory</guid>
         </item>
         
         <item>
@@ -298,8 +298,8 @@ One of the most useful exercises you can do is perform a UI inventory.  A UI inv
 
 </description>
             <pubDate>Fri, 27 May 2016 10:28:30 -0700</pubDate>
-            <link>//blog/html5/lets-build-a-web-component</link>
-            <guid isPermaLink="true">//blog/html5/lets-build-a-web-component</guid>
+            <link>http://localhost:4000//blog/html5/lets-build-a-web-component</link>
+            <guid isPermaLink="true">http://localhost:4000//blog/html5/lets-build-a-web-component</guid>
         </item>
         
         <item>
@@ -571,8 +571,8 @@ One of the most useful exercises you can do is perform a UI inventory.  A UI inv
 
 </description>
             <pubDate>Tue, 17 May 2016 10:28:30 -0700</pubDate>
-            <link>//blog/javascript/writing-a-basic-jquery-plugin</link>
-            <guid isPermaLink="true">//blog/javascript/writing-a-basic-jquery-plugin</guid>
+            <link>http://localhost:4000//blog/javascript/writing-a-basic-jquery-plugin</link>
+            <guid isPermaLink="true">http://localhost:4000//blog/javascript/writing-a-basic-jquery-plugin</guid>
         </item>
         
     </channel>

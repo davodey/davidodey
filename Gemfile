@@ -1,3 +1,7 @@
+source "https://rubygems.org"  # <--- This is your global remote source for all gems
+
+# Specify your Ruby version:
+ruby "3.4.1"  # or whichever exact version you want to deploy
 gem 'jekyll', '~> 4.2.2'
 gem 'jekyll-sass-converter', '2.2.0'
 

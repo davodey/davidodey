@@ -1,0 +1,33 @@
+---
+layout: post
+title:  "Pearson Virtual Schools"
+date:   2024-01-01 00:00:00
+category:
+  - projects
+  - Node.JS
+  - MongoDB
+  - Express.JS
+  - REST API
+  - OpenAI Assistants
+
+subtitle: "AI-driven chatbot and backend services for virtual student support"
+main-image: share.jpg
+alt: "Pearson Virtual Schools platform preview"
+---
+
+**When:** 2024
+
+**Contribution:** Backend Developer, Architect
+
+**Description:**  
+I played a key role in developing the backend infrastructure and AI-powered chatbot for Pearson Virtual Schools, a platform designed to enhance student engagement and career exploration through intelligent virtual assistance.
+
+The platform integrates OpenAI Assistants to provide students with real-time career coaching, skill assessments, and personalized learning pathways. The AI chatbot acts as an interactive guide, helping students navigate their academic interests, discover career clusters, and gain insights into future opportunities.
+
+The backend architecture was built using Node.js and Express.js, leveraging a REST API to facilitate seamless communication between the chatbot, user profiles, and real-time student interactions.
+
+**[Learn More]**
+
+[Learn More]: https://pearsonvirtualschools.com/
+{: .more-info}
+{:target="_blank"}

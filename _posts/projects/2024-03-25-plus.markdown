@@ -24,8 +24,3 @@ To support these efforts, I developed a custom microservice architecture using N
 
 In addition to backend infrastructure, I architected and implemented a custom microservice for eText conversion, responsible for parsing EPUB format books and storing their content in the database. This service functioned as a test harness for evaluating eText prototypes, allowing teams to rapidly iterate on digital textbook experiences.
 
-**[Learn More]**
-
-[Learn More]: https://www.pearson.com/en-us/pearsonplus.html
-{: .more-info}
-{:target="_blank"}

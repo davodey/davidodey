@@ -27,9 +27,3 @@ I engineered the UI and backend for the AI powered chatbot in Pearson Virtual Sc
 For the UI, I built a React based chat experience designed for clarity, responsiveness, and ease of use. The chatbot allows students to ask career related questions and receive real time AI generated responses. It also intelligently suggests relevant resources within the platform, guiding users to career pathways, skill assessments, and educational content based on their interests.
 
 On the backend, I developed a Node.js and Express API that connects to OpenAI Assistants, enabling real time AI communications. The backend processes user queries, generates tailored responses, and links students to the most relevant sections of the app. By leveraging AI driven recommendations, the chatbot helps students make informed decisions about their academic and career paths.
-
-**[Learn More]**
-
-[Learn More]: https://pearsonvirtualschools.com/
-{: .more-info}
-{:target="_blank"}

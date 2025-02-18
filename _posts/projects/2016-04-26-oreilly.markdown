@@ -17,7 +17,7 @@ alt: oreilly
 
 **When:** 2015 - 2016
 
-**Contribution:** UI Designer / Front End Developer
+**Contribution:** UI Designer / Frontend Developer
 
 **Description:** Our team was tasked to integrate a support forum with live chat features, to an existing web application.  This support area would help customers find answers to some frequently asked questions, ultimately reducing phone calls to the call center.
 

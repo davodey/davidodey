@@ -1,0 +1,38 @@
+---
+layout: post
+title:  "Pearson Endeavor"
+date:   2016-04-26 00:00:59 -0700
+category:
+  - projects
+  - Node.JS
+  - Express.JS
+  - MongoDB
+  - SAML / SSO
+  - React.JS
+  - REST API
+  - Redis
+
+subtitle: "AI-powered personalized learning and expert-driven IT training"
+main-image: endeavor.png
+alt: "Pearson Advantage platform preview"
+---
+
+**When:** 2019-2025
+
+**Contribution:** Manager, Lead Front & Backend Developer, Architect
+
+**Description:**  
+As the team lead, I spearheaded the development of Endeavor, a project management and DevOps platform designed to centralize resources, streamline workflows, and enhance collaboration for over 150 team members across the UX business unit.
+
+With a team of four engineers, we built Endeavor from the ground up, starting with a comprehensive architecture map to ensure scalability and efficiency. The platform was developed using React for the front end, with an Express backend and MongoDB to handle authentication, asset management, and team collaboration.
+
+Endeavor served as a one stop hub for project assets, design files, development tools, and hosting management, eliminating silos and improving cross team communication. The system integrated with DevOps pipelines, provided resource tracking, and ensured that all project stakeholders had real time access to critical information.
+
+Leading this project required technical vision, architecture planning, and hands on development, while also collaborating closely with stakeholders to ensure the platform met the evolving needs of the team. Endeavor became an essential tool, driving efficiency and unifying processes across departments.
+
+
+**[Learn More]**
+
+[Learn More]: https://pearsonadvantage.com/
+{: .more-info}
+{:target="_blank"}

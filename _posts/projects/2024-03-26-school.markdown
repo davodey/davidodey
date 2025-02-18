@@ -5,26 +5,28 @@ date:   2024-01-01 00:00:00
 category:
   - projects
   - Node.JS
+  - HTML5
+  - CSS
   - MongoDB
   - Express.JS
   - REST API
   - OpenAI Assistants
 
 subtitle: "AI-driven chatbot and backend services for virtual student support"
-main-image: share.jpg
+main-image: schools.png
 alt: "Pearson Virtual Schools platform preview"
 ---
 
 **When:** 2024
 
-**Contribution:** Backend Developer, Architect
+**Contribution:** Front & Backend Developer, Architect
 
 **Description:**  
-I played a key role in developing the backend infrastructure and AI-powered chatbot for Pearson Virtual Schools, a platform designed to enhance student engagement and career exploration through intelligent virtual assistance.
+I engineered the UI and backend for the AI powered chatbot in Pearson Virtual Schools, creating an interactive assistant that helps students explore careers, assess their skills, and navigate learning opportunities within the platform.
 
-The platform integrates OpenAI Assistants to provide students with real-time career coaching, skill assessments, and personalized learning pathways. The AI chatbot acts as an interactive guide, helping students navigate their academic interests, discover career clusters, and gain insights into future opportunities.
+For the UI, I built a React based chat experience designed for clarity, responsiveness, and ease of use. The chatbot allows students to ask career related questions and receive real time AI generated responses. It also intelligently suggests relevant resources within the platform, guiding users to career pathways, skill assessments, and educational content based on their interests.
 
-The backend architecture was built using Node.js and Express.js, leveraging a REST API to facilitate seamless communication between the chatbot, user profiles, and real-time student interactions.
+On the backend, I developed a Node.js and Express API that connects to OpenAI Assistants, enabling real time AI communications. The backend processes user queries, generates tailored responses, and links students to the most relevant sections of the app. By leveraging AI driven recommendations, the chatbot helps students make informed decisions about their academic and career paths.
 
 **[Learn More]**
 

@@ -18,7 +18,7 @@ alt: motive energy
 
 **When:** 2014-2015
 
-**Contribution:** UX Designer / Front End Developer, Wordpress Theme Developer
+**Contribution:** UX Designer / Frontend Developer, Wordpress Theme Developer
 
 **Description:** Motive Energy specializes in batteries and equipment for construction vehicles.  Originally they had an overseas agency build a website for them.  They liked the overall design of the site but there were some big problems with development.  The site was not responsive, so it was not optimized for phones or tablets, it was built entirely with images so it had no SEO value and there was no way for their team to edit the content.
 

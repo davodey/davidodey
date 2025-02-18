@@ -6,25 +6,23 @@ category:
   - projects
   - Node.JS
   - REST API
-  - Microservices
+  - Express.JS
 
 subtitle: "Custom backend infrastructure enabling data-driven decision-making and eText conversion"
-main-image: share.jpg
+main-image: plus.png
 alt: "Pearson Plus platform preview"
 ---
 
-**When:** 2024
+**When:** 2020 - 2021
 
 **Contribution:** Backend Developer, Architect
 
 **Description:**  
-I designed and built the backend infrastructure for Pearson Plus, facilitating user testing and validation processes that enabled executives to make data-driven decisions based on real user feedback. The system was designed to streamline prototype testing, ensuring that feature development aligned with actual user needs.
+I designed and built the backend infrastructure for our Pearson Plus MVP, facilitating user testing and validation processes that enabled executives to make data-driven decisions based on real user feedback. The system was designed to streamline prototype testing, ensuring that feature development aligned with actual user needs.
 
 To support these efforts, I developed a custom microservice architecture using Node.js and REST APIs, allowing seamless data collection, analysis, and feedback loops from user interactions. This infrastructure enabled the validation of key product features before full-scale deployment.
 
 In addition to backend infrastructure, I architected and implemented a custom microservice for eText conversion, responsible for parsing EPUB format books and storing their content in the database. This service functioned as a test harness for evaluating eText prototypes, allowing teams to rapidly iterate on digital textbook experiences.
-
-By leveraging microservices, I ensured scalability, modularity, and maintainability, making it easier for the engineering team to integrate new features and expand the platform. The system's architecture played a crucial role in accelerating product validation cycles, allowing Pearson to refine and optimize the Pearson Plus experience with confidence.
 
 **[Learn More]**
 

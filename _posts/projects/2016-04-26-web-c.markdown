@@ -1,0 +1,31 @@
+---
+layout: post
+title:  "Pearson Web Components Library"
+date:   2016-04-26 00:00:59 -0700
+category:
+- projects
+- HTML5
+- SCSS
+- JavaScript
+- Pattern Lab
+- Web Components
+
+
+subtitle: 'wordpress, html, css, javascript, mobile strategy'
+main-image: web-components.png
+alt: orenda force
+---
+
+**When:** 2016 - 2018
+
+**Contribution:** Designer, Frontend Developer, Team Lead.
+
+**Description:** 
+
+As the team lead, I led a team of three engineers in building Pearson’s Web Component Library, a scalable and accessible collection of reusable UI components designed to standardize development across teams.
+
+We started by crafting each component with HTML and CSS, ensuring accessibility and usability were prioritized from the ground up. Once the designs were refined and documented, we converted them into fully functional Web Components, making them framework agnostic and highly reusable across Pearson’s digital ecosystem.
+
+The library includes a wide range of essential UI elements, such as accordions, dropdowns, date pickers, modals, pagination, search bars, and more. Every component was meticulously designed to support ARIA standards, keyboard navigation, and WCAG compliance, ensuring a seamless experience for all users.
+
+Beyond the components themselves, we also spearheaded the CSS architecture, establishing base styles, utilities, and foundational design tokens to maintain consistency and flexibility. Once finalized, we published the library on NPM, enabling teams across Pearson to easily consume and integrate the components into their applications.

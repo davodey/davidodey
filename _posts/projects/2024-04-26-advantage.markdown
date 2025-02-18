@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Pearson Advantage: Desktop Application"
+title:  "Pearson Advantage"
 date:   2024-01-01 00:00:00
 category:
   - projects
@@ -9,26 +9,25 @@ category:
   - Firebase
   - Basic Auth
   - React.JS
+  - CSS
+  - HTML5
   - REST API
   - OpenAI
 
 subtitle: "AI-powered personalized learning and expert-driven IT training"
-main-image: share.jpg
+main-image: advantage.png
 alt: "Pearson Advantage platform preview"
 ---
 
 **When:** 2024
 
-**Contribution:** Designer, Architect, Developer
+**Contribution:** Designer, Architect, Front & Backend Developer
 
 **Description:**  
-I designed and developed Pearson Advantage, an AI-powered adaptive learning platform that delivers personalized education experiences tailored to individual learners. By leveraging adaptive learning technology, the platform dynamically adjusts course content based on user competence and confidence, allowing students to master subjects up to 2x faster than traditional learning methods.
+I worked closely with product owners to build the UI and backend for Pearson Advantage, an AI powered learning platform. My role focused on creating a seamless and scalable front end experience using React and Web Components, while also developing an Express backend that connects to Firebase for secure data storage and real time updates.
 
-The platform provides direct access to expert-curated IT courses, featuring officially endorsed content from Cisco, Microsoft, and industry thought leaders. Unlike other IT learning platforms with overwhelming course catalogs, Pearson Advantage curates only the highest-caliber courses, ensuring learners receive quality over quantity.
+For the UI, I designed and developed a component based architecture that ensures a consistent and modular design across the platform. Using custom Web Components, I helped establish a scalable design system that supports future growth while maintaining performance and accessibility.
+
+On the backend, I built an Express API that handles authentication, user progress tracking, and content delivery. By integrating Firebase, I ensured real time synchronization between users and their learning data while maintaining a secure and scalable infrastructure.
 
 
-**[Learn More]**
-
-[Learn More]: https://pearsonadvantage.com/
-{: .more-info}
-{:target="_blank"}

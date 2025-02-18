@@ -1,41 +1,34 @@
 ---
 layout: post
-title:  "Homework Pilot"
+title:  "Homework Pilot - IOS"
 date:   2024-12-01 00:00:00
 category:
   - projects
+  - React Native
+  - Expo
   - Xcode
   - Swift
   - Firestore
   - OpenAI
 
 subtitle: "AI-powered homework assistance for busy parents"
-main-image: share.jpg
+main-image: homework-app.png
 alt: "Homework Pilot app preview"
 ---
 
 **When:** 2024 - 2025
 
-**Contribution:** Founder, Designer, and Lead Developer
+**Contribution:** Founder, Designer, and Developer
 
 **Description:**  
-I designed and developed Homework Pilot, an AI-powered homework assistant that helps parents support their children's education. The app allows users to snap or upload a photo of a homework assignment and receive AI-driven, step-by-step explanations. It was built using Swift, OpenAI’s GPT API, and Firestore, integrating OCR (optical character recognition) to process assignments efficiently.
+I created Homework Pilot to empower parents in guiding their children through homework with ease. The app transforms any assignment into a personalized learning experience. Simply snap or upload a photo and AI generates step by step explanations in real time. With scan based AI assistance, interactive chat for follow up questions, and customizable learning modes, Homework Pilot adapts to different learning styles, making complex topics easier to understand.
 
-I created this app to solve a common challenge—parents struggling to assist their kids with homework while managing work and family life. Most existing solutions focus on direct student interaction, but Homework Pilot takes a different approach: helping parents become more effective guides in their child’s learning journey.
+To bring this vision to life, I initially built the app using React Native and Expo, allowing for rapid cross platform development and early user validation. After refining the core features and gathering valuable feedback, I transitioned Homework Pilot into a fully native iOS 18 application using Swift and Xcode. This shift unlocked faster performance, seamless system integration, and a smoother user experience.
 
-To achieve this, I implemented several key features. First, scan-based AI assistance, which allows users to take a picture of a problem and instantly receive structured explanations. Second, an interactive AI chat, enabling parents and students to ask follow-up questions in real time. Lastly, a customizable learning mode, allowing users to tailor explanations based on the child's learning style or subject difficulty.
+Rebuilding the app in Swift required rewriting key components, optimizing OCR performance, and leveraging Apple’s native modules to enhance response accuracy and speed. The transition significantly boosted app responsiveness, offline support, and system level capabilities, ensuring Homework Pilot delivers fast, reliable, and intelligent homework assistance whenever parents and students need it.
 
-Developing this application presented several challenges. Ensuring AI-generated responses were both accurate and easy to understand required building a context-aware adaptation layer that refines explanations dynamically. I also needed to optimize performance so that AI-generated results were delivered quickly and clearly, without overloading the mobile UI.
-
-Future updates will expand the app’s capabilities, including voice-to-text support for hands-free interaction, expanded subject matter, and gamified learning modules to make homework assistance more engaging.
-
-**[View on the App Store]**  
-**[Visit the Website]**
+**[View on the App Store]**
 
 [View on the App Store]: https://apps.apple.com/us/app/homework-pilot-parent-help/id6477803794
 {: .more-info .margin-right-25}
-{:target="_blank"}
-
-[Visit the Website]: https://homeworkpilot.com/
-{: .more-info}
 {:target="_blank"}

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Pearson Endeavor"
-date:   2016-04-26 00:00:59 -0700
+date:   2024-01-02 00:00:00
 category:
   - projects
   - Node.JS
@@ -30,9 +30,3 @@ Endeavor served as a one stop hub for project assets, design files, development 
 
 Leading this project required technical vision, architecture planning, and hands on development, while also collaborating closely with stakeholders to ensure the platform met the evolving needs of the team. Endeavor became an essential tool, driving efficiency and unifying processes across departments.
 
-
-**[Learn More]**
-
-[Learn More]: https://pearsonadvantage.com/
-{: .more-info}
-{:target="_blank"}

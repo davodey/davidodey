@@ -412,7 +412,7 @@ var requirejs, require, define, xpcUtil;
      * @returns {Error}
      */
     function makeError(id, msg, err, requireModules) {
-        var e = new Error(msg + '\nhttp://requirejs.org/docs/errors.html#' + id);
+        var e = new Error(msg + '\nhttp://requirejs.org/_site/errors.html#' + id);
         e.requireType = id;
         e.requireModules = requireModules;
         if (err) {

@@ -15,6 +15,7 @@ permalink: /:categories/:title
 excerpt_separator: "<!--more-->"
 # Build settings
 markdown: kramdown
+destination: docs
 
 blog_name:         Leveling up with David ODey UI / UX Designer & Front End Developer.
 blog_description:  A UI / UX blog sharing tips, best practice, tutorials and more...

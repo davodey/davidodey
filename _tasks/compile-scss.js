@@ -1,13 +1,13 @@
 var gulp = require('gulp'),
-    sass = require('gulp-ruby-sass'),
-    autoprefixer = require('gulp-autoprefixer'),
-    notify = require('gulp-notify');
+    sass = require('gulp-sass')(require('sass')),
+    autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('compile-scss', function () {
-    return sass('_scss/*.scss', {
-            style: 'expanded',
-            lineNumbers: true
-        })
-        .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'ie 10', 'opera 12.1', 'ios 6', 'android 4','Firefox > 16'))
+    return gulp.src('_scss/*.scss')
+        .pipe(sass({
+            outputStyle: 'expanded',
+            sourceComments: true
+        }).on('error', sass.logError))
+        .pipe(autoprefixer())
         .pipe(gulp.dest('css'));
 });

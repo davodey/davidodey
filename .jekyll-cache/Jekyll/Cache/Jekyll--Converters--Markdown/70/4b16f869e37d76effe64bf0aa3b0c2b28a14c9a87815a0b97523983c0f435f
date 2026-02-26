@@ -1,0 +1,60 @@
+I"t<p>Nodemon and node-inspector are two must-have tools if you’re using node.js.  You can manually start nodemon or node-inspector using two separate console windows, or you can do it a more efficiently using gulp.js.  It took me some time to get everything setup the way I wanted it so I’m hoping this post will save you some effort. <!--more--></p>
+
+<p>Assuming your using gulp.js as your build system, lets install both <a href="https://www.npmjs.com/package/gulp-nodemon" target="_blank">gulp-nodemon</a> and <a href="https://www.npmjs.com/package/gulp-node-inspector" target="_blank">gulp-node-inspector</a> using npm.  I prefer to install the files locally to the project, but if you like you can install them globally using the <code class="language-plaintext highlighter-rouge">-g</code> flag.  Use your console to navigate to your project folder, and run the following commands:</p>
+
+<p><code class="language-plaintext highlighter-rouge">$ npm install gulp-nodemon --save-dev</code>
+<code class="language-plaintext highlighter-rouge">$ npm install gulp-node-inspector --save-dev</code></p>
+
+<p>After your plugins are installed we need to setup your gulpfile.js.</p>
+
+<figure class="highlight" data-snap-ignore="true"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// require plugins</span>
+<span class="kd">var</span> <span class="nx">gulp</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">gulp</span><span class="dl">'</span><span class="p">),</span>
+    <span class="nx">nodeInspector</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">gulp-node-inspector</span><span class="dl">'</span><span class="p">),</span>
+    <span class="nx">nodemon</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">gulp-nodemon</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="dl">'</span><span class="s1">nodemon</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="nx">nodemon</span><span class="p">({</span>
+      
+    <span class="c1">// location of webserver module</span>
+    <span class="na">script</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./src/app</span><span class="dl">'</span><span class="p">,</span>  
+    <span class="na">ext</span><span class="p">:</span> <span class="dl">'</span><span class="s1">js</span><span class="dl">'</span><span class="p">,</span>
+    
+    <span class="c1">// enter any tasks you want to run before refreshing the server</span>
+    <span class="na">tasks</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">jshint</span><span class="dl">'</span><span class="p">],</span>  
+    
+    <span class="c1">//important must pass the debug flag to work</span>
+    <span class="na">nodeArgs</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">--debug</span><span class="dl">'</span><span class="p">]</span>  
+  <span class="p">});</span>
+<span class="p">});</span>
+
+<span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="dl">'</span><span class="s1">node-inspector</span><span class="dl">'</span><span class="p">,</span> <span class="p">[</span><span class="dl">'</span><span class="s1">nodemon</span><span class="dl">'</span><span class="p">],</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">gulp</span><span class="p">.</span><span class="nx">src</span><span class="p">([])</span>
+    <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">nodeInspector</span><span class="p">({</span>
+      <span class="na">debugPort</span><span class="p">:</span> <span class="mi">5858</span><span class="p">,</span>
+      <span class="na">webHost</span><span class="p">:</span> <span class="dl">'</span><span class="s1">0.0.0.0</span><span class="dl">'</span><span class="p">,</span>
+      <span class="na">webPort</span><span class="p">:</span> <span class="mi">8080</span><span class="p">,</span>
+      <span class="na">saveLiveEdit</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="na">preload</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="na">inject</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="na">hidden</span><span class="p">:</span> <span class="p">[],</span>
+      <span class="na">stackTraceLimit</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span>
+      <span class="na">sslKey</span><span class="p">:</span> <span class="dl">''</span><span class="p">,</span>
+      <span class="na">sslCert</span><span class="p">:</span> <span class="dl">''</span>
+    <span class="p">}));</span>
+<span class="p">});</span>
+
+<span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="dl">'</span><span class="s1">default</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+     <span class="nx">gulp</span><span class="p">.</span><span class="nx">start</span><span class="p">(</span><span class="dl">'</span><span class="s1">node-inspector</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">});</span></code></pre></figure>
+
+<p>You’re all set, just type <code class="language-plaintext highlighter-rouge">$ gulp</code> in your console.  If you use the same settings in this gulpfile.js, and your app is running on port 3000 you can open <code class="language-plaintext highlighter-rouge">http://127.0.0.1:3000/</code> to access your webserver and <code class="language-plaintext highlighter-rouge">http://127.0.0.1:8080/?port=5858</code> to access your node debugger.</p>
+
+<p>To download the example used in this project you can checkout the <a href="https://github.com/davodey/gulp-nodemon-inspector-example" target="_blank">files on Github</a>.</p>
+
+<p>For more information:<br /></p>
+
+<p><a href="http://nodemon.io/" target="_blank">Nodemon</a><br />
+<a href="https://github.com/node-inspector/node-inspector" target="_blank">Node-inspector</a><br />
+<a href="https://nodejs.org/en/" target="_blank">Node.js</a></p>
+
+:ET

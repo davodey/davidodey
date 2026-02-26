@@ -1,0 +1,2 @@
+I"U<p>Nodemon and node-inspector are two must-have tools if you’re using node.js.  You can manually start nodemon or node-inspector using two separate console windows, or you can do it a more efficiently using gulp.js.  It took me some time to get everything setup the way I wanted it so I’m hoping this post will save you some effort.</p>
+:ET

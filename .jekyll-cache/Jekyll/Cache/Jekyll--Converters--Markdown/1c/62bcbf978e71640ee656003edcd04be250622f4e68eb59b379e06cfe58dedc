@@ -1,0 +1,14 @@
+I"U<p><strong>When:</strong> 2016 - 2018</p>
+
+<p><strong>Contribution:</strong> Designer, Frontend Developer, Team Lead.</p>
+
+<p><strong>Description:</strong></p>
+
+<p>As the team lead, I led a team of three engineers in building Pearson’s Web Component Library, a scalable and accessible collection of reusable UI components designed to standardize development across teams.</p>
+
+<p>We started by crafting each component with HTML and CSS, ensuring accessibility and usability were prioritized from the ground up. Once the designs were refined and documented, we converted them into fully functional Web Components, making them framework agnostic and highly reusable across Pearson’s digital ecosystem.</p>
+
+<p>The library includes a wide range of essential UI elements, such as accordions, dropdowns, date pickers, modals, pagination, search bars, and more. Every component was meticulously designed to support ARIA standards, keyboard navigation, and WCAG compliance, ensuring a seamless experience for all users.</p>
+
+<p>Beyond the components themselves, we also spearheaded the CSS architecture, establishing base styles, utilities, and foundational design tokens to maintain consistency and flexibility. Once finalized, we published the library on NPM, enabling teams across Pearson to easily consume and integrate the components into their applications.</p>
+:ET

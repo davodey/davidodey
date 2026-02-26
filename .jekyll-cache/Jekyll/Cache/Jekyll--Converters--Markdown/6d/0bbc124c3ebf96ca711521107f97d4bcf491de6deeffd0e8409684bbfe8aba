@@ -1,0 +1,10 @@
+I"<p><strong>When:</strong> 2015 - 2016</p>
+
+<p><strong>Contribution:</strong> UI Designer / Frontend Developer</p>
+
+<p><strong>Description:</strong> Our team was tasked to integrate a support forum with live chat features, to an existing web application.  This support area would help customers find answers to some frequently asked questions, ultimately reducing phone calls to the call center.</p>
+
+<p>The platform that was chosen was Oracle’s RightNow service. We were given a clean off the shelf installation to customize.  We needed the support area to match the current look and feel of the web application and also be responsive. Our biggest challenge was customizing the UI.  It wasn’t as easy as adding a new CSS sheet, modifications had to be done to the PHP</p>
+
+<p>First we needed to stop the dynamic injection of some <code class="language-plaintext highlighter-rouge">&lt;style&gt;</code> tags that were being loaded after all the CSS sheets.  Second we needed to remove all the inline styles that were attributes of HTML elements.  Third we noticed that all the CSS written in the stylesheets was targeting ids, which made it difficult to re-use.  We ended up removing these.  Finally we wrote all new CSS.  The new CSS was written with SCSS to make it more maintainable and modular.</p>
+:ET

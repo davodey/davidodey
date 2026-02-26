@@ -1,0 +1,12 @@
+I"7<p><strong>When:</strong> 2024</p>
+
+<p><strong>Contribution:</strong> Designer, Architect, Front &amp; Backend Developer</p>
+
+<p><strong>Description:</strong><br />
+I worked closely with product owners to build the UI and backend for Pearson Advantage, an AI powered learning platform. My role focused on creating a seamless and scalable front end experience using React and Web Components, while also developing an Express backend that connects to Firebase for secure data storage and real time updates.</p>
+
+<p>For the UI, I designed and developed a component based architecture that ensures a consistent and modular design across the platform. Using custom Web Components, I helped establish a scalable design system that supports future growth while maintaining performance and accessibility.</p>
+
+<p>On the backend, I built an Express API that handles authentication, user progress tracking, and content delivery. By integrating Firebase, I ensured real time synchronization between users and their learning data while maintaining a secure and scalable infrastructure.</p>
+
+:ET

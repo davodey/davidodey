@@ -1,0 +1,12 @@
+I"i<p><strong>When:</strong> 2020 - 2021</p>
+
+<p><strong>Contribution:</strong> Backend Developer, Architect</p>
+
+<p><strong>Description:</strong><br />
+I designed and built the backend infrastructure for our Pearson Plus MVP, facilitating user testing and validation processes that enabled executives to make data-driven decisions based on real user feedback. The system was designed to streamline prototype testing, ensuring that feature development aligned with actual user needs.</p>
+
+<p>To support these efforts, I developed a custom microservice architecture using Node.js and REST APIs, allowing seamless data collection, analysis, and feedback loops from user interactions. This infrastructure enabled the validation of key product features before full-scale deployment.</p>
+
+<p>In addition to backend infrastructure, I architected and implemented a custom microservice for eText conversion, responsible for parsing EPUB format books and storing their content in the database. This service functioned as a test harness for evaluating eText prototypes, allowing teams to rapidly iterate on digital textbook experiences.</p>
+
+:ET

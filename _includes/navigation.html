@@ -1,7 +1,7 @@
 {% if page.active == "home" %}
-<li class="active"><a href="{{ site.baseurl }}/index.html"><svg class="icon"><use xlink:href="#home-alt"></use></svg> Home</a></li>
+<li class="active"><a href="{{ site.baseurl }}/index.html"><svg class="icon"><use xlink:href="#home-alt"></use></svg> Timeline</a></li>
 {% else %}
-<li><a href="{{ site.baseurl }}/index.html"><svg class="icon"><use xlink:href="#home-alt"></use></svg> Home</a></li>
+<li><a href="{{ site.baseurl }}/index.html"><svg class="icon"><use xlink:href="#home-alt"></use></svg> Timeline</a></li>
 {% endif %}
 
 {% if page.active == "portfolio" %}
@@ -9,12 +9,12 @@
 {% else %}
 <li><a href="{{ site.baseurl }}/portfolio.html"><svg class="icon book"><use xlink:href="#picture-o"></use></svg>Portfolio</a></li>
 {% endif %}
-
-{% if page.active == "blog" %}
-<li class="active"><a href="{{ site.baseurl }}/blog.html"><svg class="icon book"><use xlink:href="#book"></use></svg>Blog</a></li>
-{% else %}
-<li><a href="{{ site.baseurl }}/blog.html"><svg class="icon book"><use xlink:href="#book"></use></svg>Blog</a></li>
-{% endif %}
+<li><a href="{{ site.baseurl }}/resume" target="_blank" ><svg class="icon paperclip"><use xlink:href="#paperclip"></use></svg>Resume</a></li>
+<!--{% if page.active == "blog" %}-->
+<!--<li class="active"><a href="{{ site.baseurl }}/blog.html"><svg class="icon book"><use xlink:href="#book"></use></svg>Blog</a></li>-->
+<!--{% else %}-->
+<!--<li><a href="{{ site.baseurl }}/blog.html"><svg class="icon book"><use xlink:href="#book"></use></svg>Blog</a></li>-->
+<!--{% endif %}-->
 
 <!--{% if page.active == "resources" %}-->
 <!--<li class="active"><a href="{{ site.baseurl }}/resources.html"><svg class="icon"><use xlink:href="#paperclip"></use></svg> Resources</a></li>-->

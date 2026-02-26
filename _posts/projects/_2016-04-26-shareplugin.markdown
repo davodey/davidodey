@@ -1,34 +1,34 @@
 ---
 layout: post
-title:  "jQuery Social Share and Total Plugin"
-date:   2016-04-26 00:00:59 -0700
+title:  "Homework Pilot - IOS"
+date:   2024-12-01 00:00:00
 category:
-- projects
-- Jquery
-- Javascript
+  - projects
+  - React Native
+  - Expo
+  - Xcode
+  - Swift
+  - Firestore
+  - OpenAI
 
-subtitle: 'wordpress, html, css, javascript, mobile strategy'
-main-image: share.jpg
-alt: share plugin
+subtitle: "AI-powered homework assistance for busy parents"
+main-image: homework-app.png
+alt: "Homework Pilot app preview"
 ---
 
-**When:** 2016
+**When:** 2024 - 2025
 
-**Contribution:** jQuery Plugin Developer
+**Contribution:** Founder, Designer, and Developer
 
-**Description:** I developed a lightweight jQuery plugin that creates social sharing buttons, adds social counts and adds total counts.  Its fully customizable and easy to use.
+**Description:**  
+I created Homework Pilot to empower parents in guiding their children through homework with ease. The app transforms any assignment into a personalized learning experience. Simply snap or upload a photo and AI generates step by step explanations in real time. With scan based AI assistance, interactive chat for follow up questions, and customizable learning modes, Homework Pilot adapts to different learning styles, making complex topics easier to understand.
 
-I created this plugin for a few reasons.  One I needed one for my upcoming blog, which I plan on launching this Summer.  Two, most of the social sharing plugins I found that were already developed were a bit complex or didnt have the features I was looking for.  I wanted social sharing buttons created automatically by adding a `data-url` attribute to the markup.  I also wanted the ability to add individual share counts for each button along with the total of share counts between all the buttons.  Lastly I wanted the ability to easily toggle these features.  On our blogroll I wanted the ability to only show the total number of shares between each link, not necessarily the buttons or individual counts.  On single posts however, I wanted the whole enchilada.
+To bring this vision to life, I initially built the app using React Native and Expo, allowing for rapid cross platform development and early user validation. After refining the core features and gathering valuable feedback, I transitioned Homework Pilot into a fully native iOS 18 application using Swift and Xcode. This shift unlocked faster performance, seamless system integration, and a smoother user experience.
 
-**[See Demo]**
-**[Download on Github]**
+Rebuilding the app in Swift required rewriting key components, optimizing OCR performance, and leveraging Apple’s native modules to enhance response accuracy and speed. The transition significantly boosted app responsiveness, offline support, and system level capabilities, ensuring Homework Pilot delivers fast, reliable, and intelligent homework assistance whenever parents and students need it.
 
+**[View on the App Store]**
 
-
-[Download on Github]: https://github.com/davodey/jQuery-Social-Share-and-Total-Plugin
-{: .more-info}
-{:target="_blank"}
-
-[See Demo]: http://davidodey.com/projects/share.html
+[View on the App Store]: https://apps.apple.com/us/app/homework-pilot-parent-help/id6477803794
 {: .more-info .margin-right-25}
 {:target="_blank"}

@@ -1,0 +1,1 @@
+require(["jquery","snap"],function(e){"use strict";e(document).ready(function(){if(Modernizr.flexbox){var t=new Snap({element:document.getElementById("content")}),n=e("#open-left");n.click(function(){t.state().state==="left"?t.close():t.open("left")}),t.settings({disable:"right"})}})});

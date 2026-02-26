@@ -1,0 +1,1 @@
+define(["disqus"],function(){var e=document,t=e.createElement("script");t.src="//davidodey.disqus.com/embed.js",t.setAttribute("data-timestamp",+(new Date)),(e.head||e.body).appendChild(t)});

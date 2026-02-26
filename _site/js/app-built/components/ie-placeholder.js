@@ -1,0 +1,1 @@
+define(["placeholder","jquery"],function(e,t){t("input, textarea").placeholder()});

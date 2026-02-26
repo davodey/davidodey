@@ -1,0 +1,26 @@
+---
+layout: post
+title:  "Pearson Plus"
+date:   2024-01-01 00:00:00
+category:
+  - projects
+  - Node.JS
+  - REST API
+  - Express.JS
+
+subtitle: "Custom backend infrastructure enabling data-driven decision-making and eText conversion"
+main-image: plus.png
+alt: "Pearson Plus platform preview"
+---
+
+**When:** 2020 - 2021
+
+**Contribution:** Backend Developer, Architect
+
+**Description:**  
+I designed and built the backend infrastructure for our Pearson Plus MVP, facilitating user testing and validation processes that enabled executives to make data-driven decisions based on real user feedback. The system was designed to streamline prototype testing, ensuring that feature development aligned with actual user needs.
+
+To support these efforts, I developed a custom microservice architecture using Node.js and REST APIs, allowing seamless data collection, analysis, and feedback loops from user interactions. This infrastructure enabled the validation of key product features before full-scale deployment.
+
+In addition to backend infrastructure, I architected and implemented a custom microservice for eText conversion, responsible for parsing EPUB format books and storing their content in the database. This service functioned as a test harness for evaluating eText prototypes, allowing teams to rapidly iterate on digital textbook experiences.
+
